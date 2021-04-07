@@ -138,7 +138,7 @@ li > ul{
 }
 
 .formulario{
-    width: 50%;
+    width: 40%;
 }
 
 .mb-3 .form-control{
@@ -148,6 +148,11 @@ li > ul{
 .redes{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.redes a{
+    padding: 10px;
 }
 
 #enviar{
