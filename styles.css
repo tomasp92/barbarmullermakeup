@@ -171,14 +171,19 @@ li > ul{
     border-color: rgb(255, 100, 100);
 }
 
+#whatsapp{
+    position: fixed;
+    bottom: 29px;
+    right: 10px;
+}
+
 #misdatos{
     background-color: rgb(100, 100, 100);
     color: white;
     text-align: center;
 }
 
-footer{
-    position:fixed; 
+footer{ 
     bottom:0; 
     width: 100%;
 }
