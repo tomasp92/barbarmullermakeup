@@ -1,0 +1,227 @@
+#menu-alternativo{
+    display: none;
+}
+
+/* Logo que se muestra en la pestaña */
+#logosuperior{
+    border-radius: 50%;
+}
+
+/* Fondo */
+#content{
+    background-color: rgb(239, 211, 200);
+}
+
+/* scroll */
+html {
+    scroll-behavior: smooth;
+  }
+
+hr{
+    color:white;
+    height: 100px;
+}
+.espacio{
+    height: 80px;
+}
+
+/* Configuraciónes para el menu */
+.navegador{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background: rgba(17,17,17,0.8);
+    width:100%;
+    top: 0px;
+    height: 90px;
+}
+
+.top{
+    height: 50px;
+}
+
+ul{
+    list-style:none
+}
+
+.top .nav-menu {
+    display: flex;
+    right: 10px;
+    max-width: 90%;
+    min-width: 65%;
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+
+#menuDesplegable{
+    display:flex;
+}
+
+ul>li:hover>ul {
+    display:block;
+    background-color: rgba(17,17,17,0.8);
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+ 
+
+/* no mostrar las opciones hasta que no pasemos con el mouse */
+li > ul{
+    display: none;
+}
+
+.top .nav-menu a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-bottom:  5px solid transparent;
+    transition: all 400 ms ease;
+}
+
+.top .nav-menu a:hover{
+    border-bottom: 5px solid #c7c7c7;
+    background: 1f1f1f;
+}
+
+.logo{
+    margin: 10px;
+}
+
+#logo{
+    width:70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+}
+/*  fin Configuraciónes para el menu */
+
+#homeimg{
+    width: 100%;
+    left: 0px;
+}
+.container{
+    left:0px;
+    right: 0px;
+}
+
+.seccion{
+    margin-left: 20px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+#yo{
+    width:200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#texto{
+    max-width: 50%;
+}
+
+
+#misdatos{
+    background-color: rgb(100, 100, 100);
+    color: white;
+    text-align: center;
+}
+
+footer{
+    position:fixed; 
+    bottom:0; 
+    width: 100%;
+}
+
+
+@media screen and (max-width: 700px){
+    .navegador{
+        position: relative;
+    }
+
+    #menu-alternativo{
+        display: block;
+    }
+        
+    #logo{
+        width:170px;
+        height: 170px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    .top{
+        display: none;
+    }
+    #btn-menu, #btn-menu1, #btn-menu2, #btn-menu3{
+        display: none;
+    }
+    
+    
+    .container-menu{
+        position: fixed;
+        background: rgba(0,0,0,0.5);
+        width:100%;
+        height:200%;
+        top: 0; left: 0; bottom: 0;
+        transition: all 500 ms ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #btn-menu:checked ~ .container-menu, #btn-menu1:checked ~ .container-menu, #btn-menu2:checked ~ .container-menu, #btn-menu3:checked ~ .container-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    
+    .cont-menu{
+        width:100%;
+        max-width: 250px;
+        background: #1c1c1c;
+        height: 100%;
+        position: relative;
+        transition: all 500ms;
+        transform: translateX(-100%);
+    }
+    
+    #btn-menu:checked ~ .container-menu .cont-menu, #btn-menu1:checked ~ .container-menu .cont-menu, #btn-menu2:checked ~ .container-menu .cont-menu, #btn-menu3:checked ~ .container-menu .cont-menu{
+        transform: translateX(0%);
+    }
+    
+    .cont-menu .nav-menu a{
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        color: #c7c7c7;
+        border-left: 5px solid transparent;
+        transition: all 400 ms ease;
+    }
+    
+    .cont-menu .nav-menu a:hover{
+        border-left: 5px solid #c7c7c7;
+        background: 1f1f1f;
+    }
+    
+    .cont-menu label{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    ul>li:hover>ul {
+        background-color:initial;
+      }
+    
+
+}
