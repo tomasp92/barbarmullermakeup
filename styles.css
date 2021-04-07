@@ -123,7 +123,7 @@ li > ul{
 .flex-container{
     display: flex;
     justify-content: space-around;
-    margin: 5%;
+    margin: 1%;
 }
 
 #yo{
@@ -137,6 +137,34 @@ li > ul{
     max-width: 50%;
 }
 
+.formulario{
+    width: 50%;
+}
+
+.mb-3 .form-control{
+    background-color:  rgb(255, 176, 185);
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+}
+
+#enviar{
+    display: flex;
+    right: 0px;
+    justify-content: flex-end;
+}
+
+.btn-primary{
+    background-color:  rgb(255, 136, 130);
+    border-color: rgb(255, 100, 100);
+}
+
+.btn-primary:hover{
+    background-color:  rgb(255, 80, 110);
+    border-color: rgb(255, 100, 100);
+}
 
 #misdatos{
     background-color: rgb(100, 100, 100);
@@ -168,6 +196,11 @@ h1{
     padding: 2px;
     justify-content: space-around;   
 }
+
+#carrito:hover{
+    background-color: rgb(255, 176, 165);
+}
+
 #carrito > a{
     display: flex;
     color:black;
@@ -189,12 +222,26 @@ h1{
 }
 
 .productos{
-    background-color: blue;
     min-height: 800px;
     margin-left: 5%;
     margin-right: 5%;
 }
 
+.buscador{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    margin: auto;
+    border: none;
+    width: 60%;
+    height: 35px;
+    border-radius: 20px;
+    background-color:  rgb(255, 176, 185);
+}
+
+.buscador:hover{
+    background-color: rgb(255, 146, 165);
+}
 
 @media screen and (max-width: 700px){
     .navegador{
