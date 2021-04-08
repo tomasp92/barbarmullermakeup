@@ -120,7 +120,7 @@ li > ul{
     margin-left: 20px;
 }
 
-.flex-container{
+.contactame{
     display: flex;
     justify-content: space-around;
     margin: 1%;
@@ -334,9 +334,22 @@ h1{
     ul>li:hover>ul {
         background-color:initial;
       }
+
+    .contactame{
+        flex-direction: column-reverse;
+        }
+
+    .redes{
+        align-content: space-around;
+        right: 50px;
+    }
+    .formulario{
+        width: 90%;
+    }
+
     #carrito{
         display: none;
-    }
+        }
     #carritoinicio{
         display: flex;
         background-color:  rgb(255, 196, 185);
@@ -350,7 +363,7 @@ h1{
         justify-self: center;
         color:black;
 
-    }
+        }
 
 }
 
