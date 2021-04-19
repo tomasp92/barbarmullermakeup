@@ -1,0 +1,19 @@
+[
+    {
+        "id": "1",
+        "tituo": "Face Lotion",
+        "Linea": "Skinbioma ",
+        "precio": "",
+        "img": "img/lidherma_skinbioma_facelotion",
+        "descripción": "Face Lotion es una loción facial fresca con un efecto reparador, hidratante y anti age. Es súper práctica porque viene en spray! Apta para todo tipo de pieles: seca, normal, grasa, mixta."
+    },
+
+    {
+        "id": "2",
+        "titulo": "Face Mask",
+        "Linea": "Skinbioma ",
+        "precio": "",
+        "img": "img/lidherma_skinbioma_facemask",
+        "descripción": "Máscara facial hidratante y reparadora, protege la salud de la piel otorgándole brillo y luminosidad ✔️Recomendada para pieles sensibles, deshidratadas y con flacidez. ✔️Efecto anti age, humectante, afirmante y reparador 📝 Se deja actuar entre 10 y 15 minutos -Conseguila en mis estudios"
+    }
+]

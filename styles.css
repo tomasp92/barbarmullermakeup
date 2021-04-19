@@ -1,3 +1,7 @@
+body{
+    box-sizing: border-box;
+}
+
 #menu-alternativo{
     display: none;
 }
@@ -5,11 +9,20 @@
 /* Logo que se muestra en la pestaña */
 #logosuperior{
     border-radius: 50%;
+    
 }
 
 /* Fondo */
 #content{
-    background-color: rgb(239, 211, 200);
+    /* background-color: rgb(239, 211, 200); */
+    background-color: rgb(252, 243, 240);
+    
+}
+
+#contenedor{
+    margin: 5%;
+    margin-bottom: 0;
+    margin-top: 0px;
 }
 
 /* scroll */
@@ -33,7 +46,7 @@ hr{
     background: rgba(17,17,17,0.8);
     width:100%;
     top: 0px;
-    height: 90px;
+    height: 69px;
 }
 
 .top{
@@ -41,7 +54,8 @@ hr{
 }
 
 ul{
-    list-style:none
+    list-style:none;
+    font-weight: bold;
 }
 
 .top .nav-menu {
@@ -64,8 +78,9 @@ ul{
 ul>li:hover>ul {
     display:block;
     background-color: rgba(17,17,17,0.8);
-    margin-top: 20px;
     text-decoration: none;
+    position: absolute;
+    padding: 10px;
   }
 
   li>a:hover>.bi-chevron-right{
@@ -73,6 +88,8 @@ ul>li:hover>ul {
   }
 
   li>a:hover>.bi-chevron-down{
+    width: fit-content;
+    position: relative;
     display: inline;
 }
 
@@ -100,10 +117,11 @@ li > ul{
 }
 
 #logo{
-    width:70px;
-    height: 70px;
+    width:50px;
+    height: 50px;
     text-align: center;
     border-radius: 50%;
+  
 }
 /*  fin Configuraciónes para el menu */
 
@@ -120,8 +138,40 @@ li > ul{
     margin-left: 20px;
 }
 
+#QuienesSomos{
+    display: flex;
+    flex-direction: row;
+}
+#texto{
+    flex-grow: 100;
+}
+#reseñas{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    flex-grow: 1;
+}
+#listadoreseñas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 490px;
+    overflow:scroll;
+    width: 100%;
+}
+
+.titulo_reseñas{
+    text-align: center;
+}
+
 .contactame{
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-around;
     margin: 1%;
 }
@@ -138,37 +188,65 @@ li > ul{
 }
 
 .formulario{
-    width: 40%;
+    width: 60%;
+    margin: auto;
+}
+
+.formulario ::placeholder {
+    color: white;
 }
 
 .mb-3 .form-control{
-    background-color:  rgb(255, 176, 185);
+    background-color: rgb(239, 211, 200);
+    border-color: transparent;
 }
-
+.redesparent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+}
 .redes{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    width: 70%;
+    
 }
 .redes a{
     padding: 10px;
 }
 
+#ig{
+    height: 50px;
+    width: 50px;
+}
+
+#fb{
+    height: 70px;
+    width: 70px;
+}
+
+#in{
+    height: 70px;
+    width: 70px;
+}
+
 #enviar{
     display: flex;
     right: 0px;
-    justify-content: flex-end;
+    justify-content:flex-end;
 }
 
 .btn-primary{
-    background-color:  rgb(255, 136, 130);
-    border-color: rgb(255, 100, 100);
+    background-color: rgb(239, 211, 200);
+    border-color: transparent   ;
 }
 
 .btn-primary:hover{
-    background-color:  rgb(255, 80, 110);
-    border-color: rgb(255, 100, 100);
+    background-color:  rgb(90, 90, 90);
+    border-color: rgb(110, 110, 110);
 }
 
 #whatsapp{
@@ -192,10 +270,12 @@ footer{
 /* pagina productos */
 h1{
     text-align: center;
+    color: rgb(100, 100, 100);
+    font-family: sans-serif;
 }
-#carrito{
-    position: fixed;
-    background-color:  rgb(255, 196, 185);
+.carrito{
+    /* position: fixed;
+    background-color:  rgb(226, 171, 153);
     border-radius: 20px;
     height: 70px;
     right: 30px;
@@ -204,37 +284,91 @@ h1{
     align-items: center;
     margin: 2px;
     padding: 2px;
-    justify-content: space-around;   
+    justify-content: space-around;    */
+    background-color:  rgb(251, 234, 230);
+    border-radius: 10px;
+    width: 10%;
+    align-items: center;
+    margin-right: 20px;
+    padding: auto;
+    justify-content: space-around;
+    height: 40px;
+    margin-top: 10px;
 }
 
-#carrito:hover{
-    background-color: rgb(255, 176, 165);
+.carrito:hover{
+    background-color: rgb(239, 211, 200);
+    transition: all .3s;
+    cursor: pointer;
 }
 
-#carrito > a{
-    display: flex;
-    color:black;
+.carrito > a{
+    /* display: flex;
+    color:rgb(58, 58, 54);
     justify-content: space-around;
     align-items: center;
-    line-height:70px;
-}
+    line-height:70px; */
+    display: flex;
+    color:rgb(58, 58, 54);
+    justify-content: space-around;
+    align-items: center;
+    line-height:40px;
 
+}
+.carritodibujo{
+
+    width:20px;
+    height:20px;
+}
 #itemsnum{
     display: flex;
-    border-radius: 15px;
-    height: 40px;
-    width: 40px;
-    background-color:  rgb(250, 250, 20);
-    padding: 10px;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    background-color:  rgb(58, 58, 54);
+    color: white;
+    padding: auto;
+    font-size: 15px;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.productos{
-    min-height: 800px;
+#productos{
     margin-left: 5%;
     margin-right: 5%;
+}
+
+#listadoproductos{
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+#listadoproductos>div{
+    display: flex;
+    background-color: rgb(251, 234, 230);
+    border-radius: 10px;
+    margin: auto;
+    width: 19%;
+    align-items: center;
+    justify-content:space-around;
+    text-align: center;
+    flex-direction: column-reverse;
+    padding: 10px;
+}
+
+#listadoproductos>div:hover{
+    background-color: rgb(239, 211, 200);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#listadoproductos>div>img{
+    max-width: 100px;
+    max-height: 100px;
+    background-color: white;
 }
 
 .buscador{
@@ -243,14 +377,17 @@ h1{
     text-align: center;
     margin: auto;
     border: none;
-    width: 60%;
+    width: 40%;
     height: 35px;
     border-radius: 20px;
-    background-color:  rgb(255, 176, 185);
+    background-color:  white;
+    border: none;
 }
 
 .buscador:hover{
-    background-color: rgb(255, 146, 165);
+    background-color: rgb(239, 211, 200)
+    transition: all .3s;
+    border: none;
 }
 
 @media screen and (max-width: 700px){
@@ -346,6 +483,7 @@ h1{
     .formulario{
         width: 90%;
     }
+   
 
     #carrito{
         display: none;

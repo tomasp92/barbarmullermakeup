@@ -8,7 +8,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet">
     <title> Barbar Müller Make up y Piel </title>
-    <link id="logosuperior" rel="shortcut icon" href="img/logo.png">
+    <link id="logosuperior" rel="shortcut icon" alt="logo" href="img/logo.png">
 </head>
 <body>
     
@@ -38,20 +38,20 @@
                     <nav class="nav-menu">
                         <ul>
                             <li>
-                                <a href = "#" data-scroll>Inicio</a>
+                                <a href = "index.html" data-scroll>Inicio</a>
                             </li>
                             <li>     
-                                <a href = "#SobreMi" data-scroll>Sobre mí</a>
+                                <a href = "index.html#Nosotras" data-scroll>Sobre mí</a>
                             </li>
                             <li>
-                                <a href = "#Cursos" data-scroll> Turnos </a>
+                                <a href = "index.html#Cursos" data-scroll> Turnos </a>
                                 <ul>
                                      
                                     <li>
-                                        <a href = "#Limpieza" data-scroll> Limpieza de cutis </a>
+                                        <a href = "index.html#Limpieza" data-scroll> Limpieza de cutis </a>
                                     </li>
                                     <li>
-                                        <a href = "#Limpieza" data-scroll> Curso de Automaquillaje </a>                                   
+                                        <a href = "index.html#Limpieza" data-scroll> Curso de Automaquillaje </a>                                   
                                     </li>
                                 </ul>
                             </li>
@@ -60,7 +60,7 @@
                                 <a href = "productos.html" data-scroll> Productos </a>
                             </li>
                             <li>
-                                <a href = "#Contactame" data-scroll> Contactame </a>
+                                <a href = "index.html#Contactame" data-scroll> Contactame </a>
                             </li>                           
                         </ul>
                         
@@ -87,50 +87,76 @@
     
         </div>
         <div class="logo">
-            <img id="logo" src="img/logo.png">
+            <img id="logo" alt="logo" src="img/logo.png">
         </div>
         <!-- Menu para pantalla mas grande -->
         <div class="top">
             <nav class="nav-menu">
                 <ul id="menuDesplegable">
                     <li>
-                        <a href = "index.html">Inicio</a>
+                        <a href = "index.html#" data-scroll class="indexelement">Inicio</a>
                     </li>
                     <li>     
-                        <a href = "#SobreMi" data-scroll>Sobre mí</a>
-                    </li>
-                    <li>
-                        <a href = "#Cursos" data-scroll> Turnos </a>
+                        <a id="acursos" href = "index.html#Nosotras" data-scroll class="indexelement">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
+                            10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 
+                            0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" 
+                            height="16" fill="currentColor" class="bi bi-chevron-right" 
+                            viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 
+                            0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 
+                            8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                            Nosotras
+                        </a>
                         <ul>
-                             
+                            <li> <br> </li> 
                             <li>
-                                <a href = "#Limpieza" data-scroll> Limpieza de cutis </a>
+                                <a href = "#" data-scroll class="indexelement"> Quiénes somos </a>
                             </li>
                             <li>
-                                <a href = "#Limpieza" data-scroll> Curso de Automaquillaje </a>                                   
+                                <a href = "#" data-scroll class="indexelement"> Nuestro Equipo </a>                                   
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="acursos" href = "index.html#Cursos" data-scroll class="indexelement">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
+                            10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 
+                            0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" 
+                            height="16" fill="currentColor" class="bi bi-chevron-right" 
+                            viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 
+                            0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 
+                            8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                            Turnos
+                        </a>
+                        <ul>
+                            <li> <br> </li> 
+                            <li>
+                                <a href = "#Limpieza" data-scroll class="indexelement"> Limpieza de cutis</a>
+                            </li>
+                            <li>
+                                <a href = "#Limpieza" data-scroll class="indexelement"> Clase de Automaquillaje </a>                                   
                             </li>
                         </ul>
                     </li>
                     
                     <li>
-                        <a href = "#Productos" data-scroll> Productos </a>
+                        <a href = "productos.html" data-scroll class="indexelement"> Productos </a>
                     </li>
                     <li>
-                        <a href = "#Contactame" data-scroll> Contactame </a>
+                        <a href = "#Contactame"  onclick="SolicitarDatosDeContacto()" class="indexelement" data-scroll> Contactame </a>
                     </li>
                 </ul>
             </nav>   
         </div>
-        <div></div>   
-    </div>
-    <!-- Fin Menu -->
-    <div id="content">
-        <div>
-            <br><br><br><br>    
-        </div>
-        <div onclick="SumToCart()" id="carrito">
+        <div id="carrito" class="carrito">
             <a>
-                <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <svg id="carritodibujo" class="carritodibujo" xmlns="http://www.w3.org/2000/svg"   fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
                 <div>Carrito</div>
@@ -140,31 +166,41 @@
                     </div>
                 </div>
             </a>
+        </div>   
+    </div>
+    <!-- Fin Menu -->
+    <div id="content">
+        <div>
+            <br><br><br><br>    
         </div>
-        <div class="productos">
-            <h1> PRODUCTOS LIDHERMA </h1>
+       
+        <div id="productos">
+            <h1> PRODUCTOS Y SERVICIOS </h1>
             <br>
             <input class="buscador" type="text" placeholder="Buscar un producto">
+            <div id="listadoproductos"> </div>
         </div>
     </div>
 
     <div id="whatsapp">
-        <a href=""><img style="height: 65px; width: 65px;" src="img/whatsapp.png"></a>
+        <a href="https://api.whatsapp.com/send?phone=+5491150575667&text=Hola%20Barbara!%20Quer%C3%ADa%20saber%20mas%20sobre%20tus%20productos%20y%20cursos!"target="_blank"><img style="height: 65px; width: 65px;" alt="link a whatsapp" src="img/redes/whatsapp.png"></a>
     </div>
     <footer>
         <div id="misdatos">
             Pagina web diseñada por <a style="color:white" 
-            href="https://www.linkedin.com/in/tomaspalau/">Tomás Palau Posse
+            href="https://www.linkedin.com/in/tomaspalau/"target="_blank">Tomás Palau Posse
             <img style="background-color: white; height: 30px;width: 30px;" 
-            src="img/linkedin2.png"></a>
+            src="img/redes/linkedin2.png" alt="link a linkdein"></a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" 
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-    <script src= index.js></script>
+    <script src="js/productos.js"></script>
 </body>
 </html>

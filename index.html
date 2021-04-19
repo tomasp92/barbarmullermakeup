@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="¿Buscas una profesional  de la belleza, el maquillaje 
+    y la limpieza facial? Si vivís por San Isidro o Recoleta no busques más. Bárbara Muller Makeup!">
     <title> Barbar Müller Make up y Piel </title>
-    <link id="logosuperior" rel="shortcut icon" href="img/logo.png">
+    <link id="logosuperior" rel="shortcut icon" alt="logo" href="img/logo.png">
 </head>
 <body>
     
@@ -69,7 +71,7 @@
     
         </div>
         <div class="logo">
-            <img id="logo" src="img/logo.png">
+            <img id="logo" alt="logo" src="img/logo.png">
         </div>
         <!-- Menu para pantalla mas grande -->
         <div class="top">
@@ -79,10 +81,31 @@
                         <a href = "#" data-scroll class="indexelement">Inicio</a>
                     </li>
                     <li>     
-                        <a href = "#SobreMi" data-scroll class="indexelement">Sobre mí</a>
+                        <a id="acursos" href = "#Nosotras" data-scroll class="indexelement">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
+                            10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 
+                            0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" 
+                            height="16" fill="currentColor" class="bi bi-chevron-right" 
+                            viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 
+                            0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 
+                            8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                            Nosotras
+                        </a>
+                        <ul>
+                            <li> <br> </li> 
+                            <li>
+                                <a href = "#" data-scroll class="indexelement"> Quiénes somos </a>
+                            </li>
+                            <li>
+                                <a href = "#" data-scroll class="indexelement"> Nuestro Equipo </a>                                   
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href = "#Cursos" data-scroll class="indexelement">
+                        <a id="acursos" href = "#Cursos" data-scroll class="indexelement">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
                             fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
@@ -96,12 +119,12 @@
                             Turnos
                         </a>
                         <ul>
-                             
+                            <li> <br> </li> 
                             <li>
-                                <a href = "#Limpieza" data-scroll class="indexelement"> Limpieza de cutis </a>
+                                <a href = "#Limpieza" data-scroll class="indexelement"> Limpieza de cutis</a>
                             </li>
                             <li>
-                                <a href = "#Limpieza" data-scroll class="indexelement"> Curso de Automaquillaje </a>                                   
+                                <a href = "#Limpieza" data-scroll class="indexelement"> Clase de Automaquillaje </a>                                   
                             </li>
                         </ul>
                     </li>
@@ -110,110 +133,222 @@
                         <a href = "productos.html" data-scroll class="indexelement"> Productos </a>
                     </li>
                     <li>
-                        <a href = "#Contactame" data-scroll class="indexelement"> Contactame </a>
+                        <a href = "#Contactame"  onclick="SolicitarDatosDeContacto()" class="indexelement" data-scroll> Contactame </a>
                     </li>
                 </ul>
             </nav>   
         </div>
-        <div></div>   
+        <div id="carrito" class="carrito">
+            <a>
+                <svg id="carritodibujo" class="carritodibujo" xmlns="http://www.w3.org/2000/svg"   fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div>Carrito</div>
+                <div> 
+                    <div id="itemsnum">
+                        0
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="shop"  class="carrito">
+            <a href = "productos.html">
+                <svg class="carritodibujo" xmlns="http://www.w3.org/2000/svg"   fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div>Shop</div>
+            </a>
+        </div>     
     </div>
     <!-- Fin Menu -->
     <div id="content">
-        <div id="home">
-            <img id="homeimg" src="img/inicio.jpg">
-        </div>
         
-        <div class="seccion" id="SobreMi">
-            <h2> Sobre mí </h2>
-            <div class="flex-container">
-                <div id="divyo">
-                    <img id="yo" src="img/yo.jpg">
+        <div id="home">
+            <img id="homeimg"  src="img/inicio.jpg" alt="imagen de pinceles, inicio de la pagina">
+        </div>
+        <div id="contenedor"> 
+            
+            <div class="seccion" id="Cursos">
+                <br><br><br><br>
+            </div>
+            <h2> Cursos </h2>
+            <div class="seccion" id="Limpieza">
+                <h2> Limpieza </h2>
+                
+            </div>
+            <div class="seccion" id="Productos">
+                <h2> Productos </h2>
+               
+            </div>
+            <div id="Nosotras">
+                <br><br><br><br>
+            </div>
+            <div class="seccion" id="NuestroEstudio">
+                <h2> Nosotras </h2>
+                <div id="QuienesSomos">
+                    <div id="texto"> 
+                        <p>Bárbara Muller se formó en el estudio Lanusse-Matarazzo</p>
+                        <p>Desde ese entonces, sigue perfeccionándose con diferentes profesionales 
+                            y nutriéndose de las alumnas que asisten a sus cursos y seminarios.</p>
+                    </div>
+                    <div id="reseñas">
+                        <h3 class="titulo_reseñas"> Reseñas </h3>
+                        <br>
+                        <div id="listadoreseñas">
+                            <div id="reseñasbigbox">
+                                <center>
+                                    <a href="https://www.bigbox.com.ar/regalos/mix/box-blend/barbara-muller-relax/"target="_blank"> 
+                                        <img src="img/reseñas/logo_bigbox.png">
+                                    </a>
+                                </center>
+                                
+                                <div>
+                                    <a href="https://www.bigbox.com.ar/regalos/mix/box-blend/barbara-muller-relax/"target="_blank">
+                                        <img  src="img/reseñas/reseña_bigbox2.jpg">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.bigbox.com.ar/regalos/mix/box-blend/barbara-muller-relax/"target="_blank">
+                                        <img  src="img/reseñas/reseña_bigbox1.jpg">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.bigbox.com.ar/regalos/mix/box-blend/barbara-muller-relax/"target="_blank">
+                                        <img  src="img/reseñas/reseña_bigbox3.jpg">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.bigbox.com.ar/regalos/bienestar/box-vitalite/barbara-muller-vitalite/"target="_blank">
+                                        <img  src="img/reseñas/reseña_bigbox4.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="reseñasgoogle">
+                                <div>
+                                    <center>
+                                        <a href="https://www.google.com/maps/place/B%C3%A1rbara+M%C3%BCller+Make+Up+%26+Piel/@-34.5917187,-58.398522,17z/data=!4m8!3m7!1s0x95bcca986afe2305:0x18cff186327da5b4!8m2!3d-34.5917231!4d-58.3963333!9m1!1b1!16s%2Fg%2F11fxcg4h4y?hl=es-419"target="_blank"> 
+                                            <img src="img/reseñas/logo_google.png">
+                                        </a>
+                                    </center>
+                                    
+                                </div>
+                                <div class="fotosreseñas">
+                                    <a href="https://www.google.com/maps/place/B%C3%A1rbara+M%C3%BCller+Make+Up+%26+Piel/@-34.5917187,-58.398522,17z/data=!4m8!3m7!1s0x95bcca986afe2305:0x18cff186327da5b4!8m2!3d-34.5917231!4d-58.3963333!9m1!1b1!16s%2Fg%2F11fxcg4h4y?hl=es-419"target="_blank">
+                                        <img  src="img/reseñas/reseñas_google.png">
+                                    </a>
+                                </div>
+                                <br>
+                                <div class="fotosreseñas">
+                                    <a href="https://goo.gl/maps/iy8hWWSUUF9Cn1GbA"target="_blank">
+                                        <img src="img/reseñas/reseña_google1.jpg">
+                                    </a>
+                                </div>
+                                <br>
+                                <div class="fotosreseñas">
+                                    <a href="https://goo.gl/maps/V49S2qdqkH8tiAeS8"target="_blank">
+                                        <img src="img/reseñas/reseña_google2.png">
+                                    </a>
+                                </div>
+                                <br>
+                                <div class="fotosreseñas">
+                                    <a href="https://goo.gl/maps/V49S2qdqkH8tiAeS8"target="_blank">
+                                        <img src="img/reseñas/reseña_google3.jpg">
+                                    </a>
+                                </div>
+                                <br>
+                                <div class="fotosreseñas">
+                                    <a href="https://goo.gl/maps/ScpwbVBNWWaUySoEA"target="_blank">
+                                        <img src="img/reseñas/reseña_google4.jpg">
+                                    </a>
+                                </div>
+                            </div><br><br><br>
+                            <div id="reseñaswonoma"> 
+                                <a href="https://mobile.wonoma.com/?redirect=buscador&filter=barbara_muller#/centro/386"target="_blank">
+                                    <img src="img/reseñas/reseñas_wonoma.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="NuestroEquipo">
+
+                </div>
+            </div>
+            <div class="seccion" id="Contactame">
+                <h2> Contactame </h2>
+                <div class="contactame">
+                    
+                    <div class="redesparent">
+                        <h4>Seguinos en redes: </h4>
+                        <div class="redes">
+                            <a href="https://www.instagram.com/barbaramullermakeup/"target="_blank"><img id="ig" alt="hipervinculo a instagram"  src="img/redes/instagram.png">
+                            </a>
+                            <a href="http://www.facebook.com/bebumuller"target="_blank"><img  id="fb" alt="hipervinculo a facebook" src="img/redes/facebook.png">
+                            </a>
+                            <a href="https://www.linkedin.com/in/b%C3%A1rbara-m%C3%BCller-429987b2/"target="_blank"> <img id="in"  alt="hipervinculo a linkedin" src="img/redes/linkedin.png">
+                            </a>
+                        </div>
+                        <div></div>
+                        <br>
+                    </div>
+                    
+                    <div>
+                        <br>
+                        <center>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.4919901168937!2d-58.39852198533417!3d-34.59171866436927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca986afe2305%3A0x18cff186327da5b4!2sB%C3%A1rbara%20M%C3%BCller%20Make%20Up%20%26%20Piel!5e0!3m2!1ses-419!2sar!4v1618787988194!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </center>
+                        <br>
+                    </div>
+                    <div class="formulario">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                                <div id="nombreHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="tel" placeholder="Telefono">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Mensaje" id="FormControlTextarea" rows="3"></textarea>
+                            </div>
+                            <div id="enviar">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 
-                <div id="texto"> 
-                    <p>Bárbara Muller se formó en el estudio Lanusse-Matarazzo</p>
-                    <p>Desde ese entonces, sigue perfeccionándose con diferentes profesionales 
-                        y nutriéndose de las alumnas que asisten a sus cursos y seminarios.</p>
-                </div>
             </div>
-           
-        </div>
-        <div class="seccion" id="Cursos">
-            <h2> Cursos </h2>
-            
-        </div>
-        <div class="seccion" id="Limpieza">
-            <h2> Limpieza </h2>
-            
-        </div>
-        <div class="seccion" id="Productos">
-            <h2> Productos </h2>
-           
-        </div>
-        <div class="seccion" id="Contactame">
-            <h2> Contactame </h2>
-            <div class="contactame">
-                <div>
-                    <h4>Seguinos en redes: </h4>
-                    <div class="redes">
-                        <a href="https://www.instagram.com/barbaramullermakeup/">
-                            @barbaramullermakeup <img style="height: 70px;width: 70px;" src="img/instagram.png">
-                        </a>
-                        <a href="http://www.facebook.com/bebumuller">
-                            @bebumuller <img style="height: 80px;width: 80px;" src="img/facebook.png">
-                        </a>
-                        <a href="https://www.linkedin.com/in/b%C3%A1rbara-m%C3%BCller-429987b2/">
-                            Bárbara Muller <img style="height: 65px;width: 65px;" src="img/linkedin.png">
-                        </a>
-
-
-                    </div>
-                   
-                </div>
-                <div class="formulario">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
-                            <div id="nombreHelp" class="form-text"></div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="InputEmail" placeholder="Email">
-                            <div id="emailHelp" class="form-text"></div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="tel" placeholder="Telefono">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" placeholder="Mensaje" id="FormControlTextarea" rows="3"></textarea>
-                        </div>
-                        <div id="enviar">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </form>
-                </div>
+            <div id="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=+5491150575667&text=Hola%20Barbara!%20Quer%C3%ADa%20saber%20mas%20sobre%20tus%20productos%20y%20cursos!"target="_blank""target="_blank">
+                    <img style="height: 65px; width: 65px;" alt="link a whatsapp" src="img/redes/whatsapp.png">
+                </a>
             </div>
-            
+            <br> <br>
         </div>
-        <div id="whatsapp">
-            <a href=""><img style="height: 65px; width: 65px;" src="img/whatsapp.png"></a>
-        </div>
-        <br> <br>
     </div>
+        
     
     <footer>    
         <div id="misdatos">
             Pagina web diseñada por <a style="color:white" 
-            href="https://www.linkedin.com/in/tomaspalau/">Tomás Palau Posse
-            <img style="background-color: white; height: 30px;width: 30px;" 
-            src="img/linkedin2.png"></a>
+            href="https://www.linkedin.com/in/tomaspalau/"target="_blank">Tomás Palau Posse
+            <img style="height: 30px;width: 30px;"  alt="link a linkedin"
+            src="img/redes/linkedin2.png"></a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" 
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-    <script src= index.js></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
