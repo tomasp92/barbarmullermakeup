@@ -144,6 +144,12 @@ li > ul{
 }
 #texto{
     flex-grow: 100;
+    display: flex;
+    flex-direction: column;
+}
+#imagenesnosostras img{
+    max-width: 250px;
+    max-height: auto;
 }
 #reseñas{
     background-color: white;
