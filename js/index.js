@@ -3,6 +3,7 @@ const datosDeContacto = [];
 document.addEventListener('DOMContentLoaded', function() {
     let totalcarrito = 0;
     DisplayCarrito(totalcarrito);
+    DisplayCarouselProductosyServicios();
 });
 function SolicitarDatosDeContacto(){
     let aceptado = false;
@@ -36,3 +37,29 @@ function DisplayCarrito(carrito) {
         document.querySelector('#shop').style.display = 'none';
     }
 }
+
+// carousels con productos y servicios
+function DisplayCarouselProductosyServicios(){
+    // let productos = fs.readFileSync('productos.json', 'utf8');
+    // productos = JSON.parse(productos);
+    counterProductos = 0;
+    counterServicios = 0;
+    for (let producto of productos){
+        console.log(producto);
+        const element = document.createElement('div');
+        element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
+        <div class="precio">$${producto.precio}</div>
+        <div class="categoria">${producto.Categoría}</div>
+        <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+        <div class="subtitulo">${producto.subtitulo}</div>
+        <div class="titulo">${producto.titulo}</div>`;
+        if (producto.Categoría != 'Servicios'){
+            document.querySelector('#carouselproductos').appendChild(element);
+            counterProductos ++;
+        }else{
+            document.querySelector('#carouselservicios').appendChild(element);
+            counterServicios ++;
+        }
+        
+    }
+} 

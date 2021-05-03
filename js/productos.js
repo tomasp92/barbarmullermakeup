@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const productos = 
 [
     {
-        id: 10,
+        id: 1,
         titulo: "Limpieza de Cutis completa",
         subtitulo: "",
         Categoría: "Servicios",
@@ -21,9 +21,9 @@ const productos =
         modoDeUso: "<p></p> <p> </p>"
     },
     {
-        id: 11,
-        titulo: "Limpieza de Cutis con electroporación",
-        subtitulo: "",
+        id: 2,
+        titulo: "Limpieza de Cutis ",
+        subtitulo: "con electroporación",
         Categoría: "Servicios",
         precio: 2800,
         img: "./img/productos/limpieza_electroporacion.jpeg",
@@ -32,11 +32,11 @@ const productos =
         modoDeUso: "<p></p> <p> </p>"  
     },
     {
-        id: 12,
-        titulo: "Peeling x3",
-        subtitulo: "",
+        id: 3,
+        titulo: "Peeling x4",
+        subtitulo: "4 sesiones",
         Categoría: "Servicios",
-        precio: 0,
+        precio: 8000,
         img: "./img/productos/peeling.jpeg",
         descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
         otraInfo:"<p></p> <p></p>",
@@ -44,11 +44,11 @@ const productos =
     },
 
     {
-        id: 13,
-        titulo: "Peeling x6",
-        subtitulo: "",
+        id: 4,
+        titulo: "Peeling x8",
+        subtitulo: "8 sesiones",
         Categoría: "Servicios",
-        precio: 0,
+        precio: 15000,
         img: "./img/productos/peeling.jpeg",
         descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
         otraInfo:"<p></p> <p></p>",
@@ -56,18 +56,18 @@ const productos =
     },
 
     {
-        id: 14,
+        id: 5,
         titulo: "Perfilado de cejas",
         subtitulo: "",
         Categoría: "Servicios",
-        precio: 700,
+        precio: 800,
         img: "./img/productos/perfilado_de_cejas.jpg",
         descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
         otraInfo:"<p></p> <p></p>",
         modoDeUso: "<p></p> <p> </p>"
     },
     {
-        id: 15,
+        id: 6,
         titulo: "Clase de automaquillaje",
         subtitulo: "",
         Categoría: "Servicios",
@@ -82,7 +82,7 @@ const productos =
     {
         id: 7,
         titulo: "Jabon Liquido",
-        subtitulo: "Oil Free",
+        subtitulo: "oil Free",
         Categoría: "Limpieza",
         precio: 1070,
         img: "./img/productos/jabon_liquido.jpg",
@@ -105,7 +105,7 @@ const productos =
 
     {
         id: 9,
-        titulo: "PRO FRESH CLEAN ",
+        titulo: "Pro fresh clean ",
         subtitulo: "",
         Categoría: "Limpieza",
         precio: 1060,
@@ -120,7 +120,7 @@ const productos =
         titulo: "Face Lotion",
         subtitulo: "",
         Categoría: "Lociones",
-        precio: 0,
+        precio: 1265,
         img: "./img/productos/lidherma_skinbioma_facelotion.png",
         descripción: "Face Lotion es una loción facial fresca con un efecto reparador, hidratante y anti age. Es súper práctica porque viene en spray! Apta para todo tipo de pieles: seca, normal, grasa, mixta.",
         otraInfo: "",
@@ -129,8 +129,8 @@ const productos =
 
     {
         id: 11,
-        titulo: "PRO ECLAIR",
-        subtitulo: "GLOW TONIC",
+        titulo: "Pro eclair",
+        subtitulo: "glow tonic",
         Categoría: "Lociones",
         precio: 1060,
         img: "./img/productos/eclair.png",
@@ -141,8 +141,8 @@ const productos =
 
     {
         id: 12,
-        titulo: "CREMA TERMAL",
-        subtitulo: "HIDRATANTE LIGERA",
+        titulo: "Crema termal",
+        subtitulo: "hidrante ligera",
         Categoría: "día",
         precio: 1322,
         img: "./img/productos/thermal_new.png",
@@ -151,22 +151,60 @@ const productos =
         modoDeUso: "<p> MODO DE USO </p> <p> Luego de realizar la rutina diaria de higiene y tonificación, colocar una pequeña cantidad de producto y masajear hasta total su absorción en rostro, cuello y escote. </p>"
     },
 
+    {
+        id: 13,
+        titulo: " Nutrisomas ",
+    	subtitulo: " ",
+    	Categoría: " día ",
+    	precio: 1360,
+    	img: "./img/productos/nutrisomas.jpg",
+    	descripción: " Crema ultra emoliente que repara, hidrata y brinda una sensación de confort extremo. Contiene un concentrado de activo vegetal que ayudan a regenerar las pieles maduras, dañadas o muy secas. Proporciona suavidad y flexibilidad. ",
+        otraInfo:"<p> . Por función: Humectación, Arrugas profundas, Arrugas finas, Hombre, Antioxidantes </p> <p> . Tipo de piel: Seca, Normal </p><p> . Para pieles: Con arrugas y/o lí­neas de expresión, Involutivas, Fotodañadas, Deshidratadas </p>",
+    	modoDeUso: "<p>. Efecto: Antiage, Humectante, Antioxidante, Reparador </p> <p> . Tipo: Rostro </p>"
+
+    },
+
+    {
+    	id: 14,
+    	titulo: " Complejo Rejuvenecedor ",
+    	subtitulo: " con acido glicolico ",
+    	Categoría: ["Noche","renovadores celulares" ],
+    	precio: 1531,
+    	img: "./img/productos/complejo_rejuvenecedor.jpg",
+    	descripción: " Activa la renovación celular provocando una suave descamación de las capas superficiales de la piel. Otorga elasticidad, hidratación y turgencia al cutis. Ayuda a prevenir y disminuir arrugas.",
+        otraInfo:"<p> Ingredientes activos:</p> <p> Alfahidroxiacidos de origen vegetal: Ácido glicólico, láctico, cítrico, málico y tartárico, Vitamina E y Fosfolípidos purificados de lecitina de Soja. </p> ",
+    	modoDeUso: "<p> Tipo de piel:</p> <p> Todo tipo de piel, especialmente pieles maduras. </p><p> ¿Por qué es diferente? </p> <p> · Blend de ácidos renovadores </p><p> · Activos liposomados </p> <p> · Mineral Oil Free</p>"
+    },
+
+
 
 
     {
-        id: 13,
-        titulo: " GEL CREAM ",
-        subtitulo: " RENOVADORA CUTIS GRASO (EFECTO MICROPEELING)",
+        id: 15,
+        titulo: " Gel cream",
+        subtitulo: " renovadora cutis graso (efecto micropeeling)",
         Categoría: ["Noche","renovadores celulares" ],
-        precio: 1449,
+        precio: 1594,
         img: "./img/productos/gel_cream_renovadora.jpg",
         descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
         otraInfo:"<p> Ácidos glicólico </p> <p> Ácidos glicólico mandélico </p><p> Ácidos cítrico (Alfahidroxiácidos) </p> <p> Ácidos salicílico (betahidroxiácido) </p><p> Ácido lipoico </p> <p> Ácido fítico </p><p> Tipo de piel:</p> <p>Piel grasa. </p><p> ¿Por qué es diferente?</p>· Multibenefit, 4 ácidos exfoliantes y 2 antioxidantes <p> · Formulación biotecnológica, microesponjas que evitan el shock de pH cutáneo </p>p> · Mineral Oil Free</p><p> · Paraben Free</p>" ,
         modoDeUso: "<p> MODO DE USO:</p> <p>Se recomienda utilizar durante la noche. Durante el día complementar con el Gel Cream Renovador (COD.924) u otros productos hidratantes para piel grasa, y protección solar </p>"
     },
     {
-        id: 14,
-        titulo: "MANDELICO CREMA ",
+        id: 16,
+        titulo: "Crema activa renovadora",
+        subtitulo: " cutis normal a seco (efecto micropeeling)",
+        Categoría: ["Noche","renovadores celulares" ],
+        precio: 1594,
+        img: "./img/productos/crema_activa_renovadora.jpg",
+        descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
+        otraInfo:" <p>PRINCIPIOS ACTIVOS</p> </p>Ácido glicólico<p></p> <p> Ácido mandélico</p><p>Ácido cítrico (Alfahidroxiácidos)</p> <p> Ácido salicílico (betahidroxiácido) </p> Ácido lipoico<p> Ácido fítico. </p> <p>Piel normal y seca. </p> ",
+        modoDeUso: "<p> Porque es diferente: </p> Multibenefit, 4 ácidos exfoliantes y 2 antioxidantes <p> Formulación biotecnológica, microesponjas que evitan el shock de pH cutáneo </p> Mineral Oil Free <p> Paraben Free </p><p> MODO DE USO: </p><p> Se recomienda utilizar durante la noche. Durante el día complementar con la Crema Renovadora (COD.923) u otros productos hidratantes y protección solar. La piel que lisa, luminosa y homogénea. Sus Componentes ayudan a evitar los signos del envejecimiento prematuro de la piel </p>"
+    },
+
+    {
+        id: 17,
+        titulo: "Mandelico Crema ",
         subtitulo: "",
         Categoría: ["Noche","renovadores celulares" ],
         precio: 1390,
@@ -176,25 +214,11 @@ const productos =
         modoDeUso: "<p>-Activos: </p><p> Ácido Mandélico / Escualeno </p>",
     },
 
-    {
-        id: 15,
-        titulo: "CREMA ACTIVA RENOVADORA",
-        subtitulo: "CUTIS NORMAL A SECO (EFECTO MICROPEELING)",
-        Categoría: ["renovadores celulares","Noche" ],
-        precio: 1599,
-        img: "./img/productos/crema_activa_renovadora.jpg",
-        descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
-        otraInfo:" <p>PRINCIPIOS ACTIVOS</p> </p>Ácido glicólico<p></p> <p> Ácido mandélico</p><p>Ácido cítrico (Alfahidroxiácidos)</p> <p> Ácido salicílico (betahidroxiácido) </p> Ácido lipoico<p> Ácido fítico. </p> <p>Piel normal y seca. </p> ",
-        modoDeUso: "<p> Porque es diferente: </p> Multibenefit, 4 ácidos exfoliantes y 2 antioxidantes <p> Formulación biotecnológica, microesponjas que evitan el shock de pH cutáneo </p> Mineral Oil Free <p> Paraben Free </p><p> MODO DE USO: </p><p> Se recomienda utilizar durante la noche. Durante el día complementar con la Crema Renovadora (COD.923) u otros productos hidratantes y protección solar. La piel que lisa, luminosa y homogénea. Sus Componentes ayudan a evitar los signos del envejecimiento prematuro de la piel </p>"
-    },
-
-  
-   
 
     {
-        id: 16,
+        id: 18,
         titulo: "Vitamin C Eyes",
-        subtitulo: "Serum Contorno de Ojos",
+        subtitulo: "serum Contorno de Ojos",
         Categoría: "ojos y labios",
         precio: 1611,
         img: "./img/productos/vitamina_c_eyes_serum.jpg",
@@ -203,35 +227,25 @@ const productos =
         modoDeUso: "<p>MODO DE USO: </p> <p> Desplazar el aplicador masajeador con suavidad por el contorno de los ojos, previamente limpios y tonificados, de forma lenta hasta total absorción.</p><p> Luego colocar el producto de tratamiento habitual y/o maquillaje. Se puede utilizar por la mañana y por la noche. </p>"
     },
 
-     
+  
+
+
+    
     {
-        id: 17,
-        titulo: "GEL PARA CONTORNO DE OJOS",
-        subtitulo: "CON UNIESFERAS Y ALOE",
+        id: 19,
+        titulo: "Gel para contorno de ojos",
+        subtitulo: "con uniesferas y aloe",
         Categoría: "ojos y labios",
-        precio: 988,
+        precio: 1087,
         img: "./img/productos/gel_contorno_ojos.jpg",
         descripción: "Gel de agradable textura, refrescante y de alto poder hidratante. Ideal para la piel del área del contorno de los ojos. Ayuda a disminuir la formación de pliegues y bolsas palpebrales. El gel de Aloe vera aporta Oligoelementos, Aminoácidos y Vitaminas del complejo B. Sus ¨Uniesferas¨ vehiculizan Vitaminas A, E y Clorofilina.",
         otraInfo:"<p>PRINCIPIOS ACTIVOS</p> <p> Gel de Aloe vera. </p> <p>Extractos de Malva y Hamamelis</p><p>Esferas vitaminizadas (Vitamina A y E)</p> <p> Clorofilina.</p>",
         modoDeUso: "<p>¿Por qué es diferente?</p> <p>  · Contiene uniesferas de vitaminas</p><p>· Mineral Oil Free </p>"
     },
-
     {
-        id: 18,
-        titulo: "LIP BALM",
-        subtitulo: "BÁLSAMO PARA LABIOS",
-        Categoría: "ojos y labios",
-        precio: 670,
-        img: "./img/productos/balsamo_labios.png",
-        descripción: "",
-        otraInfo:"<p> ✓ Restaura y acondiconado los labios otorgando máxima suavidad.</p> <p> ✓ Tratamiento emoliente que contribuye a combatir la sequedad al instante.</p><p> ✓ Nutre, restaura y fortalece la barrera de hidratación natural de la piel.</p> <p>✓ Estimula la síntesis d Ácido Hialurónico, por lo que logra un efecto voluminizador </p>",
-        modoDeUso: ""
-    },
-
-    {
-        id: 19,
-        titulo: "PRO HYALURON EYES ",
-        subtitulo: " ACIDO HIALURONICO CONTORNO DE OJOS ",
+        id: 20,
+        titulo: "Pro Hyaluron eyes ",
+        subtitulo: "acido hialuronico contorno de ojos",
         Categoría: "Ojos y labios",
         precio: 1473,
         img: "./img/productos/prohyalurom_eyes.png",
@@ -239,13 +253,54 @@ const productos =
         otraInfo:" . <p> BENEFICIOS </p> <p> Revierte el aspecto envejecido de la piel. </p><p> Brinda una hidratación profunda en la zona de los ojos. </p> <p> Aporta luminosidad y disminuye la profundidad de las arrugas. </p> <p> Provoca un efecto de seda en la piel. </p><p> Sin Parabenos </p> <p> Sin Colorantes Artificiales </p> <p> Sin Aceites Minerales </p><p> Sin Fragancia </p> PRINCIPIOS ACTIVOS, Ácido y <p> Acetyl Tetrapeptido-5 </p> <p> Hialurónico </p><p> Diffuporine®.  </p> ",
         modoDeUso: "<p> MODO DE USO: </p> <p> Luego de realizar la rutina diaria de higiene y tonificación, colocar una pequeña porción de producto en los dedos y desplazar con suavidad por el contorno de ojos y párpados y masajear a favor de las fibras del musculo orbicular de los ojos, de forma lenta y suave hasta total absorción. Se sugiere utilizar día y noche. </p>"
     },
+
+    {
+        id: 21,
+        titulo: "Lip Balm",
+        subtitulo: "bálsamo para labios",
+        Categoría: "ojos y labios",
+        precio: 686,
+        img: "./img/productos/balsamo_labios.png",
+        descripción: "",
+        otraInfo:"<p> ✓ Restaura y acondiconado los labios otorgando máxima suavidad.</p> <p> ✓ Tratamiento emoliente que contribuye a combatir la sequedad al instante.</p><p> ✓ Nutre, restaura y fortalece la barrera de hidratación natural de la piel.</p> <p>✓ Estimula la síntesis d Ácido Hialurónico, por lo que logra un efecto voluminizador </p>",
+        modoDeUso: ""
+    },
+    {
+    	id: 22,
+    	titulo: " Depure ",
+    	subtitulo: " Control treatment",
+    	Categoría: " Tratamientos especiales",
+    	precio: 1540,
+    	img: "./img/productos/control_treatment.png",
+    	descripción: "Emulsión de textura muy liviana que regula la producción de sebo y evita la formación de lesiones inflamatorias. Mejora las manifestaciones específicas y localizadas de la piel grasa y con acné. Sus activos hidratantes mantienen el confort de la piel, evitan la irritación y protegen las zonas saludables. ",
+        otraInfo:"<p> Por función: Pieles grasas y acneicas </p> <p>Líneas Premium: Acnex Depure </p>  <p> Tipo de piel: Grasa </p> <p>Para pieles: Con lesiones inestéticas, Seborreicas  </p> <p> ,Efecto: Humectante </p> <p> Tipo: Rostro </p>",
+    	modoDeUso: "<p> Emulsión liviana. </p> <p> Acné.  </p><p> Seborrea. </p> <p> Previene lesiones inflamatorias.   </p>"
+
+    
+    },
+
+
+    {
+    	id: 23,
+    	titulo: " Ampollas ",
+    	subtitulo: "DMAE + Silicio Orgánico",
+    	Categoría: "Ampollas",
+    	precio: 825,
+    	img: "./img/productos/ampollas.jpg",
+    	descripción: "Tratamiento de lifting facial y antiage “todo en uno”, que combina dos fuertes agentes rejuvenecedores. El Dmae + Silicio Orgánico tonifica y suaviza inmediatamente la piel, protegiéndola de los radicales libres. Es efectiva no sólo para el rostro sino también para tratar la piel flácida en brazos, abdomen, piernas y glúteos.",
+        	otraInfo:"<p>DMAE (1%)</p> <p> Precursor de la Acetilcolina. Produce un efecto lifting. Resulta de una combinación sinérgica de efectos a diferentes niveles: tensión celular en células dérmicas no musculares, cohesión y desplazamiento de queratinocitos, hidratación y elasticidad del estrato córneo. Mejora la piel, antioxidante. Actúa rápidamente y tiene un efecto residual. Facial: Efecto lifting inmediato Corporal: Efecto reafirmante y tensor. Imperfecciones de la piel y mejora las estrías. </p><p>Silicio orgánico (0.5%)  </p>  <p>  Componente estructural del tejido conectivo. Favorece la regeneración de las fibras elásticas y colágenas. Precursor del colágeno Hidrata, reafirma y actúa como antioxidante. Facial: Estimulador y regulador de los fibroblastos. Previene el envejecimiento prematuro y es antioxidante de especies reactivas de oxígeno. Normaliza el metabolismo celular. Corporal: Normaliza el metabolismo celular, regenera el tejido y ayuda a minimizar las inesteticidades producto de la PEFE. </p>",
+    	modoDeUso: "<p>  Modo de empleo: </p> <p>  Uso tópico exclusivo. Aplicar con un suave masaje. Mejora su efectividad si se usa conjuntamente con mesoterapia transadérmica por electroporación </p>"
+    },
+
+    
+
     
     {
-        id: 20,
-        titulo: "XL URBAN FACE PROTECTOR",
-        subtitulo: "SPF 60 COLOR",
+        id: 24,
+        titulo: "XL Urban Face Protector",
+        subtitulo: " spf 60 color",
         Categoría: "Protección Solar",
-        precio: 988,
+        precio: 1087,
         img: "./img/productos/protector_spf.jpg",
         descripción: "Crema de tratamiento y protección integral de amplio espectro. Una poderosa formulación multiacción. Forma un film resistente a los rayos UVA/UVB y a los radicales libres..",
         otraInfo:"<p>PRINCIPIOS ACTIVOS</p> <p> 5% Vitamina C AA2G</p> <p>3% Lipomoist 2036</p><p>0,2% Vitamina A + E</p> <p> 1% Proteínas de soja </p> <p> 0,5% Colágeno </p>",
@@ -285,20 +340,17 @@ function ListadoCarrito(precioproducto){
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(){
-    console.log("onfunction")
     // let productos = fs.readFileSync('productos.json', 'utf8');
     // productos = JSON.parse(productos);
     for (let producto of productos){
         console.log(producto);
         const element = document.createElement('div');
-        const img = document.createElement("img");
-        img.src = producto.img;
-        img.alt = `Foto del producto ${producto.titulo}`;
         element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
-        <div>$${producto.precio}</div>
-        <div>${producto.Categoría}</div>
-        <div>${producto.titulo}</div>`;
-        element.appendChild(img);
+        <div class="precio">$${producto.precio}</div>
+        <div class="categoria">${producto.Categoría}</div>
+        <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+        <div class="subtitulo">${producto.subtitulo}</div>
+        <div class="titulo">${producto.titulo}</div>`;
         document.querySelector('#listadoproductos').appendChild(element);
     }
 } 
