@@ -1,5 +1,23 @@
 // import totalcarrito from './productos.js'
-const datosDeContacto = [];
+class Contacto{
+    constructor(nombre, apellido, mail, telefono){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.mail = mail;
+        this.telefono = telefono;
+        
+    }
+    Acepta(){
+        let acepta = prompt (`Nombre y Apellido: ${this.nombre} ${this.apellido}, Mail: ${this.mail}, 
+        Teléfono: ${this.telefono} ¿Estos son tus datos de contacto? 
+        en caso de confirmar escribe si, en caso de querer 
+        editarlos acepta sin escribir si`);
+        return acepta;
+    }
+
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
     let totalcarrito = 0;
     DisplayCarrito(totalcarrito);
@@ -8,14 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
 function SolicitarDatosDeContacto(){
     let aceptado = false;
     do{
-        alert("¿Te gustaría saber mas de nosotros? dejanos tus datos para que podamos contactarte")
-        datosDeContacto[0] = prompt("Nombre: ");
-        datosDeContacto[1] = prompt("Apellido: ");
-        datosDeContacto[2] = prompt("Un mail: ");
-        datosDeContacto[3] = prompt("Un telefono: ");
+        alert("¿Te gustaría saber mas de nosotros? dejanos tus datos para que podamos contactarte");
+        
+        nombre = prompt("Nombre: ");
+        apellido = prompt("Apellido: ");
+        mail = prompt("Un mail: ");
+        tel = prompt("Un telefono: ");
+        const datosDeContacto = new Contacto(nombre, apellido, mail, tel);
         console.log(datosDeContacto);
-        acepta = prompt (`Nombre y Apellido: ${datosDeContacto[0]} ${datosDeContacto[1]}, Mail: ${datosDeContacto[2]}, Teléfono: ${datosDeContacto[0]} ¿Estos son tus datos de contacto? en caso de confirmar escribe si, en caso de querer editarlos acepta sin escribir si`)
-        console.log(acepta)
+        acepta = datosDeContacto.Acepta();
         if(acepta == "si"){
             aceptado = true;
         }

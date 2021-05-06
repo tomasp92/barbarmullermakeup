@@ -16,9 +16,9 @@ const productos =
         Categoría: "Servicios",
         precio: 2500,
         img: "./img/productos/limpieza_completa.jpeg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"
+        descripción: "<p> Incluye: </p> <p> Punta de diamante, extracciónes, mascaras y perfilado de cejas </p>",
+        otraInfo: " También te damos asesoramiento en el cuidado personal",
+        modoDeUso: "<p> Sesión de una hora </p>"
     },
     {
         id: 2,
@@ -27,9 +27,9 @@ const productos =
         Categoría: "Servicios",
         precio: 2800,
         img: "./img/productos/limpieza_electroporacion.jpeg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"  
+        descripción: "<p> Incluye: </p> <p> Limpieza, exfoliación, y los activos a electroporar",
+        otraInfo:"También te damos asesoramiento en el cuidado personal",
+        modoDeUso: "<p> Sesión de una hora </p>"  
     },
     {
         id: 3,
@@ -38,9 +38,9 @@ const productos =
         Categoría: "Servicios",
         precio: 8000,
         img: "./img/productos/peeling.jpeg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"  
+        descripción: "<p> Incluye: </p> <p> Una primera limpieza profunda, con punta de diamente, con la colocación del ácido a convenir y tres sesiones posteriores</p>",
+        otraInfo:"",
+        modoDeUso: " Sesiones de 40 minutos"  
     },
 
     {
@@ -50,9 +50,9 @@ const productos =
         Categoría: "Servicios",
         precio: 15000,
         img: "./img/productos/peeling.jpeg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"  
+        descripción: "<p> Incluye: </p> <p> Una primera limpieza profunda, con punta de diamente, con la colocación del ácido a convenir y siete sesiones posteriores</p>",
+        otraInfo:"",
+        modoDeUso: "Sesiones de 40 minutos"  
     },
 
     {
@@ -62,10 +62,39 @@ const productos =
         Categoría: "Servicios",
         precio: 800,
         img: "./img/productos/perfilado_de_cejas.jpg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"
+        descripción: "Depilación con pincita y recorte.",
+        otraInfo:"",
+        modoDeUso: "<p> Duración: 20 minutos </p>"
     },
+
+    {
+    	id: 25,
+    	titulo: " Electroporación x4 ",
+    	subtitulo: " 4 sesiones ",
+    	Categoría: " Servicios ",
+    	precio: 6000,
+    	img: "./img/productos/",
+    	descripción: " La primera sesion incluye un pulido ",
+        otraInfo:"",
+    	modoDeUso: " Cuatro sesiones de media hora "
+    },
+
+    {
+    	id: 26,
+    	titulo: " Electroporación x8 ",
+    	subtitulo: " 8 sesiones ",
+    	Categoría: " Servicios ",
+    	precio: 1200,
+    	img: "./img/productos/",
+    	descripción: " La primera sesion incluye un pulido ",
+        otraInfo:"",
+    	modoDeUso: "Ocho sesiones de media hora"
+    },
+
+
+
+
+
     {
         id: 6,
         titulo: "Clase de automaquillaje",
@@ -73,9 +102,9 @@ const productos =
         Categoría: "Servicios",
         precio: 3000,
         img: "./img/productos/automaquillaje.jpeg",
-        descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
-        otraInfo:"<p></p> <p></p>",
-        modoDeUso: "<p></p> <p> </p>"
+        descripción: " <p>Preparación de la piel</p> <p>base</p><p>corrector</p> <p>rubor</p><p>ojos: Sombra, delineado y profundidad</p> <p>labios</p><p>diferentes tipos de productos, como aplicarlos según cada rostro</p><p>diferentes tipos de pinceles y modos de utilizarlos</p>",
+        otraInfo:"<p>Te brindamos todos los materiales necesarios para la clase</p>",
+        modoDeUso: "Duración: una clase de dos horas"
     },
     
     
@@ -354,5 +383,7 @@ function DisplayProductos(){
         document.querySelector('#listadoproductos').appendChild(element);
     }
 } 
+
+
 
 // export const totalcarrito = 'totalcarrito';
