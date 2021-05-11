@@ -34,7 +34,7 @@ function SolicitarDatosDeContacto(){
         tel = prompt("Un telefono: ");
         const datosDeContacto = new Contacto(nombre, apellido, mail, tel);
         console.log(datosDeContacto);
-        acepta = datosDeContacto.Acepta();
+        acepta = datosDeContacto.Acepta;
         if(acepta == "si"){
             aceptado = true;
         }

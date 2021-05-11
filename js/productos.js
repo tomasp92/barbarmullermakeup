@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    DisplayProductos();
-});
-
-
-// cada producto tiene que tener precio, nombre del producto y una imagen  
-//  como caracteristicas, tal vez categoría, tal vez alguna reseña
-// cada producto del carrito tiene que hacer referencia al 
-// producto y sumarle la caracteristica de cantidad de productos en el carrito
 const productos = 
 [
     {
@@ -338,6 +329,23 @@ const productos =
     
 ]
 
+// cada producto tiene que tener precio, nombre del producto y una imagen  
+//  como caracteristicas, tal vez categoría, tal vez alguna reseña
+// cada producto del carrito tiene que hacer referencia al 
+// producto y sumarle la caracteristica de cantidad de productos en el carrito
+
+document.addEventListener('DOMContentLoaded', function() {
+    DisplayProductos(productos);
+    filtros = prompt('Si quieres ordenar productos por precio tipe "si", si quieres filtrarlos por categoría escribe filtrar');
+    if(filtros == "si"){
+        Order(productos);
+    }
+});
+
+
+
+
+
 
 let totaldeproductos = 0;
 
@@ -368,7 +376,7 @@ function ListadoCarrito(precioproducto){
 
 
 // Función para desplegar los productos en la pagina
-function DisplayProductos(){
+function DisplayProductos(productos){
     // let productos = fs.readFileSync('productos.json', 'utf8');
     // productos = JSON.parse(productos);
     for (let producto of productos){
@@ -384,6 +392,26 @@ function DisplayProductos(){
     }
 } 
 
+
+function Order(productos) {
+    productos.sort(function (a,b) {
+            if(a.precio > b.precio){
+                    return 1;
+            }else if(a.precio < b.precio){
+                    return -1;
+            }else{
+                    return 0;
+            }
+            
+    });
+    console.log("productos ordenados por precio: ");
+    console.log(productos);
+ }
+//  function Filter(productos){
+//     productosCategoria = productos.filter(elemento=> elemento.categoria == categoria);
+//     return productosCategoria;
+//  }
+ 
 
 
 // export const totalcarrito = 'totalcarrito';
