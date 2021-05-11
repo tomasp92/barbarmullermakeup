@@ -59,10 +59,10 @@ const productos =
     },
 
     {
-    	id: 25,
+    	id: 6,
     	titulo: " Electroporación x4 ",
     	subtitulo: " 4 sesiones ",
-    	Categoría: " Servicios ",
+    	Categoría: "Servicios",
     	precio: 6000,
     	img: "./img/productos/",
     	descripción: " La primera sesion incluye un pulido ",
@@ -71,10 +71,10 @@ const productos =
     },
 
     {
-    	id: 26,
+    	id: 7,
     	titulo: " Electroporación x8 ",
     	subtitulo: " 8 sesiones ",
-    	Categoría: " Servicios ",
+    	Categoría: "Servicios",
     	precio: 1200,
     	img: "./img/productos/",
     	descripción: " La primera sesion incluye un pulido ",
@@ -82,12 +82,8 @@ const productos =
     	modoDeUso: "Ocho sesiones de media hora"
     },
 
-
-
-
-
     {
-        id: 6,
+        id: 8,
         titulo: "Clase de automaquillaje",
         subtitulo: "",
         Categoría: "Servicios",
@@ -100,7 +96,7 @@ const productos =
     
     
     {
-        id: 7,
+        id: 9,
         titulo: "Jabon Liquido",
         subtitulo: "oil Free",
         Categoría: "Limpieza",
@@ -112,7 +108,7 @@ const productos =
     },
 
     {
-        id: 8,
+        id: 10,
         titulo: "Leche de Limpieza",
         subtitulo: "con siliconas",
         Categoría: "Limpieza",
@@ -124,7 +120,7 @@ const productos =
     },
 
     {
-        id: 9,
+        id: 11,
         titulo: "Pro fresh clean ",
         subtitulo: "",
         Categoría: "Limpieza",
@@ -136,7 +132,7 @@ const productos =
     },
 
     {
-        id: 10,
+        id: 12,
         titulo: "Face Lotion",
         subtitulo: "",
         Categoría: "Lociones",
@@ -148,7 +144,7 @@ const productos =
     },
 
     {
-        id: 11,
+        id: 13,
         titulo: "Pro eclair",
         subtitulo: "glow tonic",
         Categoría: "Lociones",
@@ -160,10 +156,10 @@ const productos =
     },
 
     {
-        id: 12,
+        id: 14,
         titulo: "Crema termal",
         subtitulo: "hidrante ligera",
-        Categoría: "día",
+        Categoría: "Día",
         precio: 1322,
         img: "./img/productos/thermal_new.png",
         descripción: " <p> BENEFICIOS:  </p><p> >■ Hidratación inmediata que permanece por 24 horas.  </p><p>■ Tiene propiedades calmantes y desensibilizantes. </p> <p> ■ Refresca y brinda luminosidad.</p><p> ■ Refuerza la barrera cutánea </p> ",
@@ -172,10 +168,10 @@ const productos =
     },
 
     {
-        id: 13,
+        id: 15,
         titulo: " Nutrisomas ",
     	subtitulo: " ",
-    	Categoría: " día ",
+    	Categoría: "Día",
     	precio: 1360,
     	img: "./img/productos/nutrisomas.jpg",
     	descripción: " Crema ultra emoliente que repara, hidrata y brinda una sensación de confort extremo. Contiene un concentrado de activo vegetal que ayudan a regenerar las pieles maduras, dañadas o muy secas. Proporciona suavidad y flexibilidad. ",
@@ -185,10 +181,10 @@ const productos =
     },
 
     {
-    	id: 14,
+    	id: 16,
     	titulo: " Complejo Rejuvenecedor ",
     	subtitulo: " con acido glicolico ",
-    	Categoría: ["Noche","renovadores celulares" ],
+    	Categoría: ["Noche","Renovadores celulares" ],
     	precio: 1531,
     	img: "./img/productos/complejo_rejuvenecedor.jpg",
     	descripción: " Activa la renovación celular provocando una suave descamación de las capas superficiales de la piel. Otorga elasticidad, hidratación y turgencia al cutis. Ayuda a prevenir y disminuir arrugas.",
@@ -200,10 +196,10 @@ const productos =
 
 
     {
-        id: 15,
+        id: 17,
         titulo: " Gel cream",
         subtitulo: " renovadora cutis graso (efecto micropeeling)",
-        Categoría: ["Noche","renovadores celulares" ],
+        Categoría: ["Noche","Renovadores celulares" ],
         precio: 1594,
         img: "./img/productos/gel_cream_renovadora.jpg",
         descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
@@ -211,10 +207,10 @@ const productos =
         modoDeUso: "<p> MODO DE USO:</p> <p>Se recomienda utilizar durante la noche. Durante el día complementar con el Gel Cream Renovador (COD.924) u otros productos hidratantes para piel grasa, y protección solar </p>"
     },
     {
-        id: 16,
+        id: 18,
         titulo: "Crema activa renovadora",
         subtitulo: " cutis normal a seco (efecto micropeeling)",
-        Categoría: ["Noche","renovadores celulares" ],
+        Categoría: ["Noche","Renovadores celulares" ],
         precio: 1594,
         img: "./img/productos/crema_activa_renovadora.jpg",
         descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
@@ -223,10 +219,10 @@ const productos =
     },
 
     {
-        id: 17,
+        id: 19,
         titulo: "Mandelico Crema ",
         subtitulo: "",
-        Categoría: ["Noche","renovadores celulares" ],
+        Categoría: ["Noche","Renovadores celulares" ],
         precio: 1390,
         img: "./img/productos/mandelico_crema.png",
         descripción: "Renovador celular en crema. Mejora la textura general de la piel otorgándole luminosidad. Potente crema antiséptica y renovadora celular. Tiene un efecto extraordinario sobre la textura general de la piel. Provee luminosidad.",
@@ -236,10 +232,10 @@ const productos =
 
 
     {
-        id: 18,
+        id: 20,
         titulo: "Vitamin C Eyes",
         subtitulo: "serum Contorno de Ojos",
-        Categoría: "ojos y labios",
+        Categoría: "Ojos y labios",
         precio: 1611,
         img: "./img/productos/vitamina_c_eyes_serum.jpg",
         descripción: "■ Ilumina la mirada y aclara las ojeras. ■ Hidrata y mejora la apariencia de la finas arrugas. ■ Aumenta la elasticidad de la piel.",
@@ -252,10 +248,10 @@ const productos =
 
     
     {
-        id: 19,
+        id: 21,
         titulo: "Gel para contorno de ojos",
         subtitulo: "con uniesferas y aloe",
-        Categoría: "ojos y labios",
+        Categoría: "Ojos y labios",
         precio: 1087,
         img: "./img/productos/gel_contorno_ojos.jpg",
         descripción: "Gel de agradable textura, refrescante y de alto poder hidratante. Ideal para la piel del área del contorno de los ojos. Ayuda a disminuir la formación de pliegues y bolsas palpebrales. El gel de Aloe vera aporta Oligoelementos, Aminoácidos y Vitaminas del complejo B. Sus ¨Uniesferas¨ vehiculizan Vitaminas A, E y Clorofilina.",
@@ -263,7 +259,7 @@ const productos =
         modoDeUso: "<p>¿Por qué es diferente?</p> <p>  · Contiene uniesferas de vitaminas</p><p>· Mineral Oil Free </p>"
     },
     {
-        id: 20,
+        id: 22,
         titulo: "Pro Hyaluron eyes ",
         subtitulo: "acido hialuronico contorno de ojos",
         Categoría: "Ojos y labios",
@@ -275,10 +271,10 @@ const productos =
     },
 
     {
-        id: 21,
+        id: 23,
         titulo: "Lip Balm",
         subtitulo: "bálsamo para labios",
-        Categoría: "ojos y labios",
+        Categoría: "Ojos y labios",
         precio: 686,
         img: "./img/productos/balsamo_labios.png",
         descripción: "",
@@ -286,10 +282,10 @@ const productos =
         modoDeUso: ""
     },
     {
-    	id: 22,
+    	id: 24,
     	titulo: " Depure ",
     	subtitulo: " Control treatment",
-    	Categoría: " Tratamientos especiales",
+    	Categoría: "Tratamientos especiales",
     	precio: 1540,
     	img: "./img/productos/control_treatment.png",
     	descripción: "Emulsión de textura muy liviana que regula la producción de sebo y evita la formación de lesiones inflamatorias. Mejora las manifestaciones específicas y localizadas de la piel grasa y con acné. Sus activos hidratantes mantienen el confort de la piel, evitan la irritación y protegen las zonas saludables. ",
@@ -301,7 +297,7 @@ const productos =
 
 
     {
-    	id: 23,
+    	id: 25,
     	titulo: " Ampollas ",
     	subtitulo: "DMAE + Silicio Orgánico",
     	Categoría: "Ampollas",
@@ -316,7 +312,7 @@ const productos =
 
     
     {
-        id: 24,
+        id: 26,
         titulo: "XL Urban Face Protector",
         subtitulo: " spf 60 color",
         Categoría: "Protección Solar",
@@ -336,9 +332,12 @@ const productos =
 
 document.addEventListener('DOMContentLoaded', function() {
     DisplayProductos(productos);
-    filtros = prompt('Si quieres ordenar productos por precio tipe "si", si quieres filtrarlos por categoría escribe filtrar');
+    filtros = prompt('Si quieres ordenar productos por precio tipa "si", si quieres filtrarlos por categoría escribe "filtrar"');
     if(filtros == "si"){
         Order(productos);
+    } else if (filtros == "filtrar"){
+        categoria = prompt('¿Que Categoría desea filtrar? Lista de Categorias: Servicios, Limpieza, Lociones, Día, Noche, Renovadores celulares, Ojos y labios, Tratamientos especiales, Ampollas, Protección Solar');
+        Filter(categoria);
     }
 });
 
@@ -407,10 +406,24 @@ function Order(productos) {
     console.log("productos ordenados por precio: ");
     console.log(productos);
  }
-//  function Filter(productos){
-//     productosCategoria = productos.filter(elemento=> elemento.categoria == categoria);
-//     return productosCategoria;
-//  }
+ function Filter(categoria){
+    let productosCategoria = productos.filter(elemento=> {
+        if (elemento.Categoría == categoria){
+            return elemento
+        } else if(Array.isArray(elemento.Categoría)){
+            found = elemento.Categoría.find(element => element == categoria);
+            if(found != undefined){
+                return found
+            }
+
+        }
+
+        });
+
+    
+    console.log("productos filtrados por categoria: " + categoria );
+    console.log(productosCategoria)
+ }
  
 
 
