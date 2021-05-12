@@ -1,4 +1,4 @@
-const Categorias = ["Servicios", "Limpieza", "Lociones", "Día", "Noche", "Renovadores celulares", "Ojos y labios", "Tratamientos especiales", "Ampollas", "Protección Solar"];
+const Categorias = ["Servicios", "Limpieza", "Lociones", "Día", "Noche", "Renovadores celulares", "Ojos y labios", "Tratamientos especiales", "Ampollas", "Protección Solar", "Todos"];
 const Productos = 
 [
     {
@@ -388,17 +388,19 @@ function DisplayProductos(productos){
     // let productos = fs.readFileSync('productos.json', 'utf8');
     // productos = JSON.parse(productos);
     for (let producto of productos){
-        console.log(producto);
         const element = document.createElement('div');
         if(Array.isArray(producto.Categoría)){
-            const VariasCategorias = document.createElement('div', {id: "VariasCategorias"});
+            let VariasCategorias = document.createElement('div');
+            VariasCategorias.setAttribute("id", "VariasCategorias");
             
-            for (let cat of producto.Categoría){
+            for (let cate of producto.Categoría){
                 const cat = document.createElement('div');
                 cat.className = "categoria";
+                cat.innerHTML = cate;
                 VariasCategorias.appendChild(cat);
             }
-                
+            VariasCategorias = VariasCategorias.outerHTML
+            
             element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
             <div class="precio">$${producto.precio}</div>
             ${VariasCategorias}
@@ -436,6 +438,7 @@ function Order(productos) {
  }
 
  function Filter(categoria){
+    console.log(categoria);
     let productosCategoria = productos.filter(elemento=> {
         if (elemento.Categoría == categoria){
             return elemento
@@ -456,10 +459,10 @@ function Order(productos) {
  }
  
 function DesplegableCategorias(){
-    desplegableCategorias = document.getElementBy(desplegableCategorias);
+    desplegableCategorias = document.getElementById("desplegableCategorias");
     for (let Categoria of Categorias){
         const opcionCategoria = document.createElement('option');
-        opcionCategoria.innerHTML = `<option value=${Categoria}>${Categoria}</option>`;
+        opcionCategoria.innerHTML = `<option onclick="Filter(${Categoria});" value=${Categoria}>${Categoria}</option>`;
         desplegableCategorias.appendChild(opcionCategoria);
     }
    

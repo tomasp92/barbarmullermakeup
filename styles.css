@@ -346,13 +346,20 @@ h1{
     margin: auto;
     margin-top: 10px;
     width: 24.5%;
-    height: 350px;
+    height: 360px;
     align-items: center;
     justify-content:space-around;
     text-align: center;
     flex-direction: column-reverse;
     padding: 10px;
     color: rgba(0,0,0,0.5);
+}
+#listadoproductos>div:hover{
+    background-color: rgb(239, 211, 200);
+    transition: all .3s;
+    cursor: pointer;
+    width: 25.5%;
+    height: 365px;
 }
 
 .precio{
@@ -370,21 +377,7 @@ h1{
     margin-top: 0px;
 }
 
-.categoria{
-    background-color: white;
-    border-radius: 15px;
-    font-size: 12px;
-    padding: 4px;
-    min-width: 100px;
-}
 
-#listadoproductos>div:hover{
-    background-color: rgb(239, 211, 200);
-    transition: all .3s;
-    cursor: pointer;
-    width: 25.5%;
-    height: 355px;
-}
 
 #listadoproductos>div img{
     max-width: 510px;
@@ -403,6 +396,31 @@ h1{
 #listadoproductos>div>button:hover{
     background-color:  rgb(110, 110, 110);
     color: white;
+}
+
+.categoria{
+    background-color: white;
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 4px;
+    min-width: 80px;
+}
+
+#VariasCategorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    justify-items: baseline;
+    align-content: center;
+    text-align: center;
+}
+
+#VariasCategorias .categoria{
+    margin: 2%;
+    height: fit-content;
+    width: fit-content;
+    min-width: 110px;
+
 }
 
 .buscador{
@@ -548,7 +566,8 @@ h1{
         padding: 10px;
         color: rgba(0,0,0,0.5);
     }
-   
+
+    
 
     #carrito{
         display: none;
