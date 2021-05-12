@@ -1,10 +1,11 @@
-const productos = 
+const Categorias = ["Servicios", "Limpieza", "Lociones", "Día", "Noche", "Renovadores celulares", "Ojos y labios", "Tratamientos especiales", "Ampollas", "Protección Solar"];
+const Productos = 
 [
     {
         id: 1,
         titulo: "Limpieza de Cutis completa",
         subtitulo: "",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 2500,
         img: "./img/productos/limpieza_completa.jpeg",
         descripción: "<p> Incluye: </p> <p> Punta de diamante, extracciónes, mascaras y perfilado de cejas </p>",
@@ -15,7 +16,7 @@ const productos =
         id: 2,
         titulo: "Limpieza de Cutis ",
         subtitulo: "con electroporación",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 2800,
         img: "./img/productos/limpieza_electroporacion.jpeg",
         descripción: "<p> Incluye: </p> <p> Limpieza, exfoliación, y los activos a electroporar",
@@ -26,7 +27,7 @@ const productos =
         id: 3,
         titulo: "Peeling x4",
         subtitulo: "4 sesiones",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 8000,
         img: "./img/productos/peeling.jpeg",
         descripción: "<p> Incluye: </p> <p> Una primera limpieza profunda, con punta de diamente, con la colocación del ácido a convenir y tres sesiones posteriores</p>",
@@ -38,7 +39,7 @@ const productos =
         id: 4,
         titulo: "Peeling x8",
         subtitulo: "8 sesiones",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 15000,
         img: "./img/productos/peeling.jpeg",
         descripción: "<p> Incluye: </p> <p> Una primera limpieza profunda, con punta de diamente, con la colocación del ácido a convenir y siete sesiones posteriores</p>",
@@ -50,7 +51,7 @@ const productos =
         id: 5,
         titulo: "Perfilado de cejas",
         subtitulo: "",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 800,
         img: "./img/productos/perfilado_de_cejas.jpg",
         descripción: "Depilación con pincita y recorte.",
@@ -62,7 +63,7 @@ const productos =
     	id: 6,
     	titulo: " Electroporación x4 ",
     	subtitulo: " 4 sesiones ",
-    	Categoría: "Servicios",
+    	Categoría: Categorias[0],
     	precio: 6000,
     	img: "./img/productos/",
     	descripción: " La primera sesion incluye un pulido ",
@@ -74,7 +75,7 @@ const productos =
     	id: 7,
     	titulo: " Electroporación x8 ",
     	subtitulo: " 8 sesiones ",
-    	Categoría: "Servicios",
+    	Categoría: Categorias[0],
     	precio: 1200,
     	img: "./img/productos/",
     	descripción: " La primera sesion incluye un pulido ",
@@ -86,7 +87,7 @@ const productos =
         id: 8,
         titulo: "Clase de automaquillaje",
         subtitulo: "",
-        Categoría: "Servicios",
+        Categoría: Categorias[0],
         precio: 3000,
         img: "./img/productos/automaquillaje.jpeg",
         descripción: " <p>Preparación de la piel</p> <p>base</p><p>corrector</p> <p>rubor</p><p>ojos: Sombra, delineado y profundidad</p> <p>labios</p><p>diferentes tipos de productos, como aplicarlos según cada rostro</p><p>diferentes tipos de pinceles y modos de utilizarlos</p>",
@@ -99,7 +100,7 @@ const productos =
         id: 9,
         titulo: "Jabon Liquido",
         subtitulo: "oil Free",
-        Categoría: "Limpieza",
+        Categoría: Categorias[1],
         precio: 1070,
         img: "./img/productos/jabon_liquido.jpg",
         descripción: "Limpia los poros en forma suave y profunda dejando el rostro libre de brillo e impurezas.",
@@ -111,7 +112,7 @@ const productos =
         id: 10,
         titulo: "Leche de Limpieza",
         subtitulo: "con siliconas",
-        Categoría: "Limpieza",
+        Categoría: Categorias[1],
         precio: 720,
         img: "./img/productos/leche_de_limpieza.jpg",
         descripción: "Emulsión liviana adecuada para remover suciedad, resto de células muertas, residuos de smog respetando la fisiología normal de la piel. \n El aporte del extracto de caléndula como calmante permite barrer las impurezas sin causar irritación.",
@@ -123,7 +124,7 @@ const productos =
         id: 11,
         titulo: "Pro fresh clean ",
         subtitulo: "",
-        Categoría: "Limpieza",
+        Categoría: Categorias[1],
         precio: 1060,
         img: "./img/productos/pro_fresh_clean.png",
         descripción: "Gel de limpieza y demaquillante ideal para pieles grasas, incluendo las más sensibles. De textura suave, aromática y fresca, proporciona inmediato bienestar. Se desliza sin producir fricciones y se enjuaga con facilidad. Luego se aplica el tónico adecuado. Contiene tensioactivos muy suaves, extractos de Caléndula y Camomila y exquisito aroma a pomelo rosado.",
@@ -135,7 +136,7 @@ const productos =
         id: 12,
         titulo: "Face Lotion",
         subtitulo: "",
-        Categoría: "Lociones",
+        Categoría: Categorias[2],
         precio: 1265,
         img: "./img/productos/lidherma_skinbioma_facelotion.png",
         descripción: "Face Lotion es una loción facial fresca con un efecto reparador, hidratante y anti age. Es súper práctica porque viene en spray! Apta para todo tipo de pieles: seca, normal, grasa, mixta.",
@@ -147,7 +148,7 @@ const productos =
         id: 13,
         titulo: "Pro eclair",
         subtitulo: "glow tonic",
-        Categoría: "Lociones",
+        Categoría: Categorias[2],
         precio: 1060,
         img: "./img/productos/eclair.png",
         descripción: "Tonico con efecto luminoso. Aplicar sobre la piel limpia en todo el rostro durante todo el día. Refresca, vitaliza y da un delicado efecto luminoso. Agitar antes de usar.",
@@ -159,7 +160,7 @@ const productos =
         id: 14,
         titulo: "Crema termal",
         subtitulo: "hidrante ligera",
-        Categoría: "Día",
+        Categoría: Categorias[3],
         precio: 1322,
         img: "./img/productos/thermal_new.png",
         descripción: " <p> BENEFICIOS:  </p><p> >■ Hidratación inmediata que permanece por 24 horas.  </p><p>■ Tiene propiedades calmantes y desensibilizantes. </p> <p> ■ Refresca y brinda luminosidad.</p><p> ■ Refuerza la barrera cutánea </p> ",
@@ -171,7 +172,7 @@ const productos =
         id: 15,
         titulo: " Nutrisomas ",
     	subtitulo: " ",
-    	Categoría: "Día",
+    	Categoría: Categorias[3],
     	precio: 1360,
     	img: "./img/productos/nutrisomas.jpg",
     	descripción: " Crema ultra emoliente que repara, hidrata y brinda una sensación de confort extremo. Contiene un concentrado de activo vegetal que ayudan a regenerar las pieles maduras, dañadas o muy secas. Proporciona suavidad y flexibilidad. ",
@@ -184,7 +185,7 @@ const productos =
     	id: 16,
     	titulo: " Complejo Rejuvenecedor ",
     	subtitulo: " con acido glicolico ",
-    	Categoría: ["Noche","Renovadores celulares" ],
+    	Categoría: [Categorias[4],Categorias[5] ],
     	precio: 1531,
     	img: "./img/productos/complejo_rejuvenecedor.jpg",
     	descripción: " Activa la renovación celular provocando una suave descamación de las capas superficiales de la piel. Otorga elasticidad, hidratación y turgencia al cutis. Ayuda a prevenir y disminuir arrugas.",
@@ -199,7 +200,7 @@ const productos =
         id: 17,
         titulo: " Gel cream",
         subtitulo: " renovadora cutis graso (efecto micropeeling)",
-        Categoría: ["Noche","Renovadores celulares" ],
+        Categoría: [Categorias[4],Categorias[5] ],
         precio: 1594,
         img: "./img/productos/gel_cream_renovadora.jpg",
         descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
@@ -210,7 +211,7 @@ const productos =
         id: 18,
         titulo: "Crema activa renovadora",
         subtitulo: " cutis normal a seco (efecto micropeeling)",
-        Categoría: ["Noche","Renovadores celulares" ],
+        Categoría: [Categorias[4],Categorias[5] ],
         precio: 1594,
         img: "./img/productos/crema_activa_renovadora.jpg",
         descripción: "Renueva las células superficiales del estrato córneo. Homogeniza, atenúa hiperpigmentaciones y mejora la textura de la piel.",
@@ -222,7 +223,7 @@ const productos =
         id: 19,
         titulo: "Mandelico Crema ",
         subtitulo: "",
-        Categoría: ["Noche","Renovadores celulares" ],
+        Categoría: [Categorias[4],Categorias[5]],
         precio: 1390,
         img: "./img/productos/mandelico_crema.png",
         descripción: "Renovador celular en crema. Mejora la textura general de la piel otorgándole luminosidad. Potente crema antiséptica y renovadora celular. Tiene un efecto extraordinario sobre la textura general de la piel. Provee luminosidad.",
@@ -235,7 +236,7 @@ const productos =
         id: 20,
         titulo: "Vitamin C Eyes",
         subtitulo: "serum Contorno de Ojos",
-        Categoría: "Ojos y labios",
+        Categoría: Categorias[6],
         precio: 1611,
         img: "./img/productos/vitamina_c_eyes_serum.jpg",
         descripción: "■ Ilumina la mirada y aclara las ojeras. ■ Hidrata y mejora la apariencia de la finas arrugas. ■ Aumenta la elasticidad de la piel.",
@@ -251,7 +252,7 @@ const productos =
         id: 21,
         titulo: "Gel para contorno de ojos",
         subtitulo: "con uniesferas y aloe",
-        Categoría: "Ojos y labios",
+        Categoría: Categorias[6],
         precio: 1087,
         img: "./img/productos/gel_contorno_ojos.jpg",
         descripción: "Gel de agradable textura, refrescante y de alto poder hidratante. Ideal para la piel del área del contorno de los ojos. Ayuda a disminuir la formación de pliegues y bolsas palpebrales. El gel de Aloe vera aporta Oligoelementos, Aminoácidos y Vitaminas del complejo B. Sus ¨Uniesferas¨ vehiculizan Vitaminas A, E y Clorofilina.",
@@ -262,7 +263,7 @@ const productos =
         id: 22,
         titulo: "Pro Hyaluron eyes ",
         subtitulo: "acido hialuronico contorno de ojos",
-        Categoría: "Ojos y labios",
+        Categoría: Categorias[6],
         precio: 1473,
         img: "./img/productos/prohyalurom_eyes.png",
         descripción: " Reestablece la barrera cutánea mantiene la hidratación a lo largo del día. De acción hidratante y humectante, o sea que no solo retiene el agua en la superficie, sino que facilita su ingreso a travez de la epidermis y su circulación a travez del tejido",
@@ -274,7 +275,7 @@ const productos =
         id: 23,
         titulo: "Lip Balm",
         subtitulo: "bálsamo para labios",
-        Categoría: "Ojos y labios",
+        Categoría: Categorias[6],
         precio: 686,
         img: "./img/productos/balsamo_labios.png",
         descripción: "",
@@ -285,7 +286,7 @@ const productos =
     	id: 24,
     	titulo: " Depure ",
     	subtitulo: " Control treatment",
-    	Categoría: "Tratamientos especiales",
+    	Categoría: Categorias[7],
     	precio: 1540,
     	img: "./img/productos/control_treatment.png",
     	descripción: "Emulsión de textura muy liviana que regula la producción de sebo y evita la formación de lesiones inflamatorias. Mejora las manifestaciones específicas y localizadas de la piel grasa y con acné. Sus activos hidratantes mantienen el confort de la piel, evitan la irritación y protegen las zonas saludables. ",
@@ -300,7 +301,7 @@ const productos =
     	id: 25,
     	titulo: " Ampollas ",
     	subtitulo: "DMAE + Silicio Orgánico",
-    	Categoría: "Ampollas",
+    	Categoría: Categorias[8],
     	precio: 825,
     	img: "./img/productos/ampollas.jpg",
     	descripción: "Tratamiento de lifting facial y antiage “todo en uno”, que combina dos fuertes agentes rejuvenecedores. El Dmae + Silicio Orgánico tonifica y suaviza inmediatamente la piel, protegiéndola de los radicales libres. Es efectiva no sólo para el rostro sino también para tratar la piel flácida en brazos, abdomen, piernas y glúteos.",
@@ -315,7 +316,7 @@ const productos =
         id: 26,
         titulo: "XL Urban Face Protector",
         subtitulo: " spf 60 color",
-        Categoría: "Protección Solar",
+        Categoría: Categorias[9],
         precio: 1087,
         img: "./img/productos/protector_spf.jpg",
         descripción: "Crema de tratamiento y protección integral de amplio espectro. Una poderosa formulación multiacción. Forma un film resistente a los rayos UVA/UVB y a los radicales libres..",
@@ -325,20 +326,28 @@ const productos =
     
 ]
 
+let totaldeproductos = 0;
 // cada producto tiene que tener precio, nombre del producto y una imagen  
 //  como caracteristicas, tal vez categoría, tal vez alguna reseña
 // cada producto del carrito tiene que hacer referencia al 
 // producto y sumarle la caracteristica de cantidad de productos en el carrito
 
 document.addEventListener('DOMContentLoaded', function() {
-    DisplayProductos(productos);
-    filtros = prompt('Si quieres ordenar productos por precio tipa "si", si quieres filtrarlos por categoría escribe "filtrar"');
-    if(filtros == "si"){
-        Order(productos);
-    } else if (filtros == "filtrar"){
-        categoria = prompt('¿Que Categoría desea filtrar? Lista de Categorias: Servicios, Limpieza, Lociones, Día, Noche, Renovadores celulares, Ojos y labios, Tratamientos especiales, Ampollas, Protección Solar');
-        Filter(categoria);
+    DisplayProductos(Productos);
+    DesplegableCategorias();
+    function Filtros(){
+        filtros = prompt('Si quieres ordenar productos por precio tipa "si", si quieres filtrarlos por categoría escribe "filtrar"');
+        if(filtros == "si"){
+            ProductosPorPrecio = Order(Productos);
+            DisplayProductos(ProductosPorPrecio);
+        } else if (filtros == "filtrar"){
+            categoria = prompt('¿Que Categoría desea filtrar? Lista de Categorias: Servicios, Limpieza, Lociones, Día, Noche, Renovadores celulares, Ojos y labios, Tratamientos especiales, Ampollas, Protección Solar');
+            ProductosPorCategoria = Filter(categoria);
+            DisplayProductos(ProductosPorCategoria);
+        }
     }
+   
+    setTimeout(Filtros,500);
 });
 
 
@@ -346,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-let totaldeproductos = 0;
+
 
 // funcion para sumar al total de productos del carrito
 function SumRestToCart(operacion, cantidad){
@@ -381,12 +390,30 @@ function DisplayProductos(productos){
     for (let producto of productos){
         console.log(producto);
         const element = document.createElement('div');
-        element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
-        <div class="precio">$${producto.precio}</div>
-        <div class="categoria">${producto.Categoría}</div>
-        <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
-        <div class="subtitulo">${producto.subtitulo}</div>
-        <div class="titulo">${producto.titulo}</div>`;
+        if(Array.isArray(producto.Categoría)){
+            const VariasCategorias = document.createElement('div', {id: "VariasCategorias"});
+            
+            for (let cat of producto.Categoría){
+                const cat = document.createElement('div');
+                cat.className = "categoria";
+                VariasCategorias.appendChild(cat);
+            }
+                
+            element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
+            <div class="precio">$${producto.precio}</div>
+            ${VariasCategorias}
+            <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+            <div class="subtitulo">${producto.subtitulo}</div>
+            <div class="titulo">${producto.titulo}</div>`;
+        }else{
+            element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
+            <div class="precio">$${producto.precio}</div>
+            <div class="categoria">${producto.Categoría}</div>
+            <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+            <div class="subtitulo">${producto.subtitulo}</div>
+            <div class="titulo">${producto.titulo}</div>`;
+        }
+        
         document.querySelector('#listadoproductos').appendChild(element);
     }
 } 
@@ -405,7 +432,9 @@ function Order(productos) {
     });
     console.log("productos ordenados por precio: ");
     console.log(productos);
+    return productos;
  }
+
  function Filter(categoria){
     let productosCategoria = productos.filter(elemento=> {
         if (elemento.Categoría == categoria){
@@ -423,8 +452,17 @@ function Order(productos) {
     
     console.log("productos filtrados por categoria: " + categoria );
     console.log(productosCategoria)
+    return productosCategoria;
  }
  
-
+function DesplegableCategorias(){
+    desplegableCategorias = document.getElementBy(desplegableCategorias);
+    for (let Categoria of Categorias){
+        const opcionCategoria = document.createElement('option');
+        opcionCategoria.innerHTML = `<option value=${Categoria}>${Categoria}</option>`;
+        desplegableCategorias.appendChild(opcionCategoria);
+    }
+   
+}
 
 // export const totalcarrito = 'totalcarrito';
