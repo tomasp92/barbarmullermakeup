@@ -1,4 +1,17 @@
-const Categorias = ["Servicios", "Limpieza", "Lociones", "Día", "Noche", "Renovadores celulares", "Ojos y labios", "Tratamientos especiales", "Ampollas", "Protección Solar", "Todos"];
+const Categorias = [
+    "Servicios", 
+    "Limpieza", 
+    "Lociones", 
+    "Día", 
+    "Noche", 
+    "Renovadores celulares", 
+    "Ojos y labios", 
+    "Tratamientos especiales", 
+    "Ampollas", 
+    "Protección Solar", 
+    "Todos"
+];
+    
 const Productos = 
 [
     {
@@ -65,7 +78,7 @@ const Productos =
     	subtitulo: " 4 sesiones ",
     	Categoría: Categorias[0],
     	precio: 6000,
-    	img: "./img/productos/",
+    	img: "./img/productos/electroporacion.jpg",
     	descripción: " La primera sesion incluye un pulido ",
         otraInfo:"",
     	modoDeUso: " Cuatro sesiones de media hora "
@@ -77,8 +90,8 @@ const Productos =
     	subtitulo: " 8 sesiones ",
     	Categoría: Categorias[0],
     	precio: 1200,
-    	img: "./img/productos/",
-    	descripción: " La primera sesion incluye un pulido ",
+    	img: "./img/productos/electroporacion.jpg",
+    	descripción: "La primera sesion incluye un pulido",
         otraInfo:"",
     	modoDeUso: "Ocho sesiones de media hora"
     },
@@ -326,7 +339,10 @@ const Productos =
     
 ]
 
+// if()
 let totaldeproductos = 0;
+
+
 // cada producto tiene que tener precio, nombre del producto y una imagen  
 //  como caracteristicas, tal vez categoría, tal vez alguna reseña
 // cada producto del carrito tiene que hacer referencia al 
@@ -365,6 +381,7 @@ function SumRestToCart(operacion, cantidad){
         totaldeproductos --;
     }
     document.getElementById("itemsnum").innerHTML = totaldeproductos;
+    localStorage.setItem("TotalCarrito", totaldeproductos);
     console.log("total de productos en carrito: " + totaldeproductos);
 }
 
@@ -378,15 +395,17 @@ function ListadoCarrito(precioproducto){
     totalcarrito = totalcarrito + precioproducto*cantidad;
     console.log(`total carrito ${totalcarrito}`);
     SumRestToCart('suma', cantidad);
-    
-
 }
 
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
-    // let productos = fs.readFileSync('productos.json', 'utf8');
+    // const productos = fs.readFileSync('productos.json', 'utf8');
     // productos = JSON.parse(productos);
+
+    // fetch('./productos.json')
+    // .then(response => response.json())
+    // .then(productos => console.log(productos));
     for (let producto of productos){
         const element = document.createElement('div');
         if(Array.isArray(producto.Categoría)){
