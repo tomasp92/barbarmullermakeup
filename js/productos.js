@@ -485,32 +485,35 @@ function Order(productos, tipo) {
  }
 
  function Filter(categoria){
-    console.log(categoria);
-    let productosCategoria = Productos.filter(elemento=> {
-        if (elemento.Categoría == categoria){
-            return elemento
-        } else if(Array.isArray(elemento.Categoría)){
-            found = elemento.Categoría.find(element => element == categoria);
-            if(found != undefined){
-                return found
-            }
-
-        }
-
-        });
-
+     let productosCategoria = Productos;
+    if (categoria != "Todos"){
+        productosCategoria = Productos.filter(elemento=> {
+            if (elemento.Categoría == categoria){
+                return elemento
+            } else if(Array.isArray(elemento.Categoría)){
+                found = elemento.Categoría.find(element => element == categoria);
+                if(found != undefined){
+                    return found
+                }
     
+            }
+    
+            });
+    
+        
+       
+    }
     console.log("productos filtrados por categoria: " + categoria );
     console.log(productosCategoria);
+    
     DisplayProductos(productosCategoria);
-    return productosCategoria;
  }
  
 function DesplegableCategorias(){
     opcionesCategorias = document.getElementById("opcionesCategorias");
     for (let Categoria of Categorias){
         const opcionCategoria = document.createElement('p');
-        opcionCategoria.innerHTML = `<button class="categoria" onclick="Filter(${Categoria});" >${Categoria}</button>`;
+        opcionCategoria.innerHTML = `<button class="categoria" onclick="Filter('${Categoria}');" >${Categoria}</button>`;
         opcionesCategorias.appendChild(opcionCategoria);
     }
    
