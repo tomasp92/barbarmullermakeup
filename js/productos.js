@@ -370,9 +370,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // funcion para sumar al total de productos del carrito
-function SumRestToCart(operacion, cantidad){
+function SumRestToCart(operacion){
     if (operacion == "suma"){
-        totaldeproductos = totaldeproductos + cantidad;
+        totaldeproductos ++;
     }else{
         totaldeproductos --;
     }
@@ -386,11 +386,8 @@ let carrito = [];
 let totalcarrito = 0;
 // Función para hacer el listado de productos del carrito (actualmente solo calcula el precio final que ese listado sumado arrojaría)
 function ListadoCarrito(precioproducto){
-    let cantidad = parseInt(prompt(`Su producto cuesta $${precioproducto} cuantos quiere agregar al carrito comprar`));
-    console.log(`Agrego ${cantidad} del producto al carrito`);
-    totalcarrito = totalcarrito + precioproducto*cantidad;
-    console.log(`total carrito ${totalcarrito}`);
-    SumRestToCart('suma', cantidad);
+    totalcarrito = totalcarrito + precioproducto;
+    SumRestToCart('suma');
 }
 
 
