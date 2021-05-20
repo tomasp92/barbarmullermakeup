@@ -360,19 +360,6 @@ let totaldeproductos = 0;
 document.addEventListener('DOMContentLoaded', function() {
     DisplayProductos(Productos);
     DesplegableCategorias();
-    function Filtros(){
-        filtros = prompt('Si quieres ordenar productos por precio tipa "si", si quieres filtrarlos por categoría escribe "filtrar"');
-        if(filtros == "si"){
-            ProductosPorPrecio = Order(Productos);
-            DisplayProductos(ProductosPorPrecio);
-        } else if (filtros == "filtrar"){
-            categoria = prompt('¿Que Categoría desea filtrar? Lista de Categorias: Servicios, Limpieza, Lociones, Día, Noche, Renovadores celulares, Ojos y labios, Tratamientos especiales, Ampollas, Protección Solar');
-            ProductosPorCategoria = Filter(categoria);
-            DisplayProductos(ProductosPorCategoria);
-        }
-    }
-   
-    setTimeout(Filtros,500);
 });
 
 
