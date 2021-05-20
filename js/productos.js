@@ -337,7 +337,16 @@ const Productos =
         modoDeUso: "<p>MODO DE USO: </p> <p> Desplazar el aplicador masajeador con suavidad por el contorno de los ojos, previamente limpios y tonificados, de forma lenta hasta total absorción.</p><p> Luego colocar el producto de tratamiento habitual y/o maquillaje. Se puede utilizar por la mañana y por la noche. </p>"
     },
     
-]
+];
+
+let OrdenarPorMenorPrecio = document.getElementById("menor");
+OrdenarPorMenorPrecio.onclick = () => Order(Productos, "menor");
+let OrdenarPorMayorPrecio = document.getElementById("mayor");
+OrdenarPorMayorPrecio.onclick = () => Order(Productos, "mayor");
+let OrdenarPorCategorias = document.getElementById("porCategorias");
+OrdenarPorCategorias.onclick = () => Order(Productos, "Categorias");
+
+
 
 // if()
 let totaldeproductos = 0;
@@ -400,6 +409,9 @@ function ListadoCarrito(precioproducto){
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
+    let listadoProductos = document.querySelector('#listadoproductos');
+    listadoProductos.innerHTML = "";
+
     // const productos = fs.readFileSync('productos.json', 'utf8');
     // productos = JSON.parse(productos);
 
@@ -435,30 +447,46 @@ function DisplayProductos(productos){
             <div class="titulo">${producto.titulo}</div>`;
         }
         
-        document.querySelector('#listadoproductos').appendChild(element);
+        listadoProductos.appendChild(element);
     }
 } 
 
 
-function Order(productos) {
+function Order(productos, tipo) {
+    // switch(tipo){
+    //     case menor:
     productos.sort(function (a,b) {
-            if(a.precio > b.precio){
-                    return 1;
-            }else if(a.precio < b.precio){
-                    return -1;
-            }else{
-                    return 0;
-            }
-            
+        
+        if(a.precio > b.precio && tipo == "menor"){
+            return 1;
+        }else if(a.precio < b.precio && tipo == "menor"){
+                return -1;
+        }else if(a.precio == b.precio && tipo == "menor"){
+                return 0;
+        } else if(a.precio > b.precio && tipo == "mayor"){
+            return -1;
+        }else if(a.precio < b.precio && tipo == "mayor"){
+                return 1;
+        }else if(a.precio == b.precio && tipo == "mayor"){
+                return 0;
+        } else if(a.id > b.id){
+            return 1;
+        }else if(a.id < b.id ){
+            return -1;
+        }else {
+            return 0;
+        }
+          
     });
-    console.log("productos ordenados por precio: ");
+    console.log("productos ordenados");
     console.log(productos);
+    DisplayProductos(productos);
     return productos;
  }
 
  function Filter(categoria){
     console.log(categoria);
-    let productosCategoria = productos.filter(elemento=> {
+    let productosCategoria = Productos.filter(elemento=> {
         if (elemento.Categoría == categoria){
             return elemento
         } else if(Array.isArray(elemento.Categoría)){
@@ -473,16 +501,17 @@ function Order(productos) {
 
     
     console.log("productos filtrados por categoria: " + categoria );
-    console.log(productosCategoria)
+    console.log(productosCategoria);
+    DisplayProductos(productosCategoria);
     return productosCategoria;
  }
  
 function DesplegableCategorias(){
-    desplegableCategorias = document.getElementById("desplegableCategorias");
+    opcionesCategorias = document.getElementById("opcionesCategorias");
     for (let Categoria of Categorias){
-        const opcionCategoria = document.createElement('option');
-        opcionCategoria.innerHTML = `<option onclick="Filter(${Categoria});" value=${Categoria}>${Categoria}</option>`;
-        desplegableCategorias.appendChild(opcionCategoria);
+        const opcionCategoria = document.createElement('p');
+        opcionCategoria.innerHTML = `<button class="categoria" onclick="Filter(${Categoria});" >${Categoria}</button>`;
+        opcionesCategorias.appendChild(opcionCategoria);
     }
    
 }

@@ -1,17 +1,21 @@
 // import totalcarrito from './productos.js'
+let botonFormulario = document.getElementById("SolicitarDatosDeContacto");
+botonFormulario.addEventListener("click", SoalicitarDatosDeContacto);
+
+
+
 class Contacto{
-    constructor(nombre, apellido, mail, telefono){
+    constructor(nombre, mail, telefono, mensaje){
         this.nombre = nombre;
-        this.apellido = apellido;
         this.mail = mail;
         this.telefono = telefono;
+        this.mensaje = mensaje;
         
     }
     Acepta(){
-        let acepta = prompt (`Nombre y Apellido: ${this.nombre} ${this.apellido}, Mail: ${this.mail}, 
-        Teléfono: ${this.telefono} ¿Estos son tus datos de contacto? 
-        en caso de confirmar escribe si, en caso de querer 
-        editarlos acepta sin escribir si`);
+        let acepta = prompt (`Nombre y Apellido: ${this.nombre}, Mail: ${this.mail}, 
+        Teléfono: ${this.telefono} Mensaje: ${this.mensaje} ¿Estos son tus datos de contacto? ¿Es este el mensaje que desea enviar?
+        en caso de confirmar escribe si, en caso contrario escribe no y vuelve a enviar el formulario con los datos correctos`);
         return acepta;
     }
 
@@ -23,23 +27,19 @@ document.addEventListener('DOMContentLoaded', function() {
     DisplayCarrito(totalcarrito);
     DisplayCarouselProductosyServicios();
 });
+
+
+
 function SolicitarDatosDeContacto(){
-    let aceptado = false;
-    do{
-        alert("¿Te gustaría saber mas de nosotros? dejanos tus datos para que podamos contactarte");
-        
-        nombre = prompt("Nombre: ");
-        apellido = prompt("Apellido: ");
-        mail = prompt("Un mail: ");
-        tel = prompt("Un telefono: ");
-        const datosDeContacto = new Contacto(nombre, apellido, mail, tel);
-        console.log(datosDeContacto);
-        acepta = datosDeContacto.Acepta;
-        if(acepta == "si"){
-            aceptado = true;
-        }
-    } while (!aceptado);
+    nombre = document.getElementById("nombre").value;
+    mail = document.getElementById("InputEmail").value;
+    tel = document.getElementById("tel").value;
+    mensaje = document.getElementById("mensaje").value;
     
+    const datosDeContacto = new Contacto(nombre, mail, tel, mensaje);
+
+
+    acepta = datosDeContacto.Acepta();
 
 }
 

@@ -37,31 +37,20 @@
                 <div class="cont-menu">
                     <nav class="nav-menu">
                         <ul>
-                            <li>
-                                <a href = "index.html" data-scroll>Inicio</a>
-                            </li>
-                            <li>     
-                                <a href = "index.html#Nosotras" data-scroll>Sobre mí</a>
-                            </li>
-                            <li>
-                                <a href = "index.html#Cursos" data-scroll> Turnos </a>
-                                <ul>
-                                     
-                                    <li>
-                                        <a href = "index.html#Limpieza" data-scroll> Limpieza de cutis </a>
-                                    </li>
-                                    <li>
-                                        <a href = "index.html#Limpieza" data-scroll> Curso de Automaquillaje </a>                                   
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                            <li>
-                                <a href = "productos.html" data-scroll> Productos </a>
-                            </li>
-                            <li>
-                                <a href = "index.html#Contactame" data-scroll> Contactame </a>
-                            </li>                           
+                            <ul>
+                                <li>
+                                    <a href = "#" data-scroll class="indexelement">Inicio</a>
+                                </li>
+                                <li>     
+                                    <a id="acursos" href = "#Nosotras" data-scroll class="indexelement">Nosotras</a>
+                                </li>
+                                <li>
+                                    <a href = "productos.html" data-scroll class="indexelement"> Productos </a>
+                                </li>
+                                <li>
+                                    <a href = "#Contactame" class="indexelement" data-scroll> Contactame </a>
+                                </li>
+                            </ul>                         
                         </ul>
                         
                         <a id="carritoinicio">
@@ -94,62 +83,16 @@
             <nav class="nav-menu">
                 <ul id="menuDesplegable">
                     <li>
-                        <a href = "index.html#" data-scroll class="indexelement">Inicio</a>
+                        <a href = "#" data-scroll class="indexelement">Inicio</a>
                     </li>
                     <li>     
-                        <a id="acursos" href = "index.html#Nosotras" data-scroll class="indexelement">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
-                            10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 
-                            0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" 
-                            height="16" fill="currentColor" class="bi bi-chevron-right" 
-                            viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 
-                            0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 
-                            8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-                            Nosotras
-                        </a>
-                        <ul>
-                            <li> <br> </li> 
-                            <li>
-                                <a href = "#" data-scroll class="indexelement"> Quiénes somos </a>
-                            </li>
-                            <li>
-                                <a href = "#" data-scroll class="indexelement"> Nuestro Equipo </a>                                   
-                            </li>
-                        </ul>
+                        <a id="acursos" href = "#Nosotras" data-scroll class="indexelement">Nosotras</a>
                     </li>
-                    <li>
-                        <a id="acursos" href = "index.html#Cursos" data-scroll class="indexelement">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
-                            10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 
-                            0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" 
-                            height="16" fill="currentColor" class="bi bi-chevron-right" 
-                            viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 
-                            0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 
-                            8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-                            Turnos
-                        </a>
-                        <ul>
-                            <li> <br> </li> 
-                            <li>
-                                <a href = "#Limpieza" data-scroll class="indexelement"> Limpieza de cutis</a>
-                            </li>
-                            <li>
-                                <a href = "#Limpieza" data-scroll class="indexelement"> Clase de Automaquillaje </a>                                   
-                            </li>
-                        </ul>
-                    </li>
-                    
                     <li>
                         <a href = "productos.html" data-scroll class="indexelement"> Productos </a>
                     </li>
                     <li>
-                        <a href = "#Contactame"  onclick="SolicitarDatosDeContacto()" class="indexelement" data-scroll> Contactame </a>
+                        <a href = "#Contactame" class="indexelement" data-scroll> Contactame </a>
                     </li>
                 </ul>
             </nav>   
@@ -180,10 +123,14 @@
             <input class="buscador" type="text" placeholder="Buscar un producto">
             <div id="filtros">
                 <div id="Categorías">
-                    <p> Categorías: <select id="desplegableCategorias"> </select> </p> 
+                    <p> Categorías: <p id="opcionesCategorias"> </p> </p> 
                 </div>
                 <div id="Ordenar">
-                    
+                    <p> Ordenar por 
+                        <button id="mayor">Mayor precio</button>
+                        <button id="menor">Menor precio</button>
+                        <button id="porCategorias">Categorías</button>
+                    </p> 
                 </div>        
 
             </div>

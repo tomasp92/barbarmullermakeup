@@ -332,6 +332,21 @@ h1{
     margin-right: 5%;
 }
 
+#Categorías{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#opcionesCategorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #listadoproductos{
     display: flex;
     margin-top: 50px;
