@@ -346,20 +346,25 @@ OrdenarPorMayorPrecio.onclick = () => Order(Productos, "mayor");
 let OrdenarPorCategorias = document.getElementById("porCategorias");
 OrdenarPorCategorias.onclick = () => Order(Productos, "Categorias");
 
+let carrito = [];
 
 
-// if()
-let totaldeproductos = 0;
+//variable que guarda el total de productos en el carrito
+let totaldeproductos = parseInt(localStorage.TotalDeProductosCarrito);
+// variable que guarda la suma de los precios de esos productos
+let totalcarrito = parseInt(localStorage.SumaPreciosCarrito);
 
 
-// cada producto tiene que tener precio, nombre del producto y una imagen  
-//  como caracteristicas, tal vez categoría, tal vez alguna reseña
-// cada producto del carrito tiene que hacer referencia al 
-// producto y sumarle la caracteristica de cantidad de productos en el carrito
+
+if(totalcarrito === null){
+    totalcarrito = 0;
+    totaldeproductos = 0;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     DisplayProductos(Productos);
     DesplegableCategorias();
+    SumRestToCart("");
 });
 
 
@@ -373,20 +378,31 @@ document.addEventListener('DOMContentLoaded', function() {
 function SumRestToCart(operacion){
     if (operacion == "suma"){
         totaldeproductos ++;
-    }else{
+    }else if(operacion == "resta"){
         totaldeproductos --;
     }
     document.getElementById("itemsnum").innerHTML = totaldeproductos;
-    localStorage.setItem("TotalCarrito", totaldeproductos);
+    localStorage.setItem("TotalDeProductosCarrito", totaldeproductos);
     console.log("total de productos en carrito: " + totaldeproductos);
 }
 
 
-let carrito = [];
-let totalcarrito = 0;
+
 // Función para hacer el listado de productos del carrito (actualmente solo calcula el precio final que ese listado sumado arrojaría)
-function ListadoCarrito(precioproducto){
-    totalcarrito = totalcarrito + precioproducto;
+function ListadoCarrito(productoid){
+    let productoEnCarrito = carrito.find(element => element.id == productoid);
+    if(productoEnCarrito === undefined){
+        console.log("todavía no agregue al carrito");
+        productoEnCarrito = Object.assign({}, Productos.find(element => element.id == productoid));
+        productoEnCarrito.cantidad = 1;
+        carrito.push(productoEnCarrito);
+    }else{
+        productoEnCarrito.cantidad ++;
+    }
+    console.log("🚀 ~ carrito", carrito);
+    totalcarrito = totalcarrito + productoEnCarrito.precio;
+    localStorage.setItem("SumaPreciosCarrito", totalcarrito);
+    localStorage.setItem("ListaCarrito", carrito);
     SumRestToCart('suma');
 }
 
@@ -416,14 +432,14 @@ function DisplayProductos(productos){
             }
             VariasCategorias = VariasCategorias.outerHTML
             
-            element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
+            element.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
             <div class="precio">$${producto.precio}</div>
             ${VariasCategorias}
             <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
             <div class="subtitulo">${producto.subtitulo}</div>
             <div class="titulo">${producto.titulo}</div>`;
         }else{
-            element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
+            element.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
             <div class="precio">$${producto.precio}</div>
             <div class="categoria">${producto.Categoría}</div>
             <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
@@ -437,8 +453,6 @@ function DisplayProductos(productos){
 
 
 function Order(productos, tipo) {
-    // switch(tipo){
-    //     case menor:
     productos.sort(function (a,b) {
         
         if(a.precio > b.precio && tipo == "menor"){
@@ -487,9 +501,6 @@ function Order(productos, tipo) {
         
        
     }
-    console.log("productos filtrados por categoria: " + categoria );
-    console.log(productosCategoria);
-    
     DisplayProductos(productosCategoria);
  }
  

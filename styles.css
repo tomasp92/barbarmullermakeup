@@ -266,9 +266,12 @@ li > ul{
 }
 
 #misdatos{
+    position:relative;
     background-color: rgb(100, 100, 100);
     color: white;
     text-align: center;
+    bottom: 0;
+    
 }
 
 footer{ 
@@ -461,6 +464,12 @@ h1{
     width: 15%;
 }
 
+
+/* Pagina Carrito */
+
+#listadocarrito{
+    min-height: 600px;
+}
 @media screen and (max-width: 1400px){
     #listadoproductos>div img{
         max-width: 80%;
