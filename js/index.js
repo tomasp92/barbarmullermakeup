@@ -1,59 +1,17 @@
 // import totalcarrito from './productos.js'
-let botonFormulario = document.getElementById("SolicitarDatosDeContacto");
-botonFormulario.addEventListener("click", SoalicitarDatosDeContacto);
 
+let divCarrito = document.querySelector('#carrito');
+let divShop = document.querySelector('#shop');
 
-
-class Contacto{
-    constructor(nombre, mail, telefono, mensaje){
-        this.nombre = nombre;
-        this.mail = mail;
-        this.telefono = telefono;
-        this.mensaje = mensaje;
-        
-    }
-    Acepta(){
-        let acepta = prompt (`Nombre y Apellido: ${this.nombre}, Mail: ${this.mail}, 
-        Teléfono: ${this.telefono} Mensaje: ${this.mensaje} ¿Estos son tus datos de contacto? ¿Es este el mensaje que desea enviar?
-        en caso de confirmar escribe si, en caso contrario escribe no y vuelve a enviar el formulario con los datos correctos`);
-        return acepta;
-    }
-
-};
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    let totalcarrito = 0;
-    DisplayCarrito(totalcarrito);
-    DisplayCarouselProductosyServicios();
-});
-
-
-
-function SolicitarDatosDeContacto(){
-    nombre = document.getElementById("nombre").value;
-    mail = document.getElementById("InputEmail").value;
-    tel = document.getElementById("tel").value;
-    mensaje = document.getElementById("mensaje").value;
-    
-    const datosDeContacto = new Contacto(nombre, mail, tel, mensaje);
-
-
-    acepta = datosDeContacto.Acepta();
-
-}
-
-/* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 
- si no hay productos en el carrito No esta funcional todavía*/
 function DisplayCarrito(carrito) {
-    console.log(carrito);
-    if(carrito == 0){
-        console.log(carrito);
-        document.querySelector('#carrito').style.display = 'none';
-        document.querySelector('#shop').style.display = 'block';
+    console.log('carrito: ' + carrito);
+    if(carrito > 0){
+        divCarrito.style.display = 'block';
+        divShop.style.display = 'none';
+        document.getElementById("itemsnum").innerHTML = window.totaldeproductos;
     }else{
-        document.querySelector('#carrito').style.display = 'block';
-        document.querySelector('#shop').style.display = 'none';
+        divCarrito.style.display = 'none';
+        divShop.style.display = 'block';
     }
 }
 
@@ -82,3 +40,13 @@ function DisplayCarouselProductosyServicios(){
         
     }
 } 
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(" addevent" + window.totaldeproductos)
+    DisplayCarrito(window.totaldeproductos);
+    // DisplayCarouselProductosyServicios();
+    SumRestToCart("")
+});
+
+/* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 
+ si no hay productos en el carrito No esta funcional todavía*/
