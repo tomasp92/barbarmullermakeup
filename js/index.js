@@ -40,12 +40,32 @@ function DisplayCarouselProductosyServicios(){
         
     }
 } 
-
+let totaldeproductos = 0;
+let totalcarrito = 0;
+let Carrito = [];
 document.addEventListener('DOMContentLoaded', function() {
-    console.log(" addevent" + window.totaldeproductos)
-    DisplayCarrito(window.totaldeproductos);
+    console.log(" addevent" + totaldeproductos)
+    DisplayCarrito(totaldeproductos);
     // DisplayCarouselProductosyServicios();
+    
+    storagevalues = localStorage.TotalDeProductosCarrito;
+    
+    if (storagevalues == null){
+        totaldeproductos = 0;
+        console.log("🚀 ~ totaldeproductos", totaldeproductos)
+        totalcarrito = 0;
+        console.log("🚀 ~ totalcarrito", totalcarrito);
+        Carrito = [];
+        console.log("🚀 ~ Carrito", Carrito);
+    }else{
+        totaldeproductos = parseInt(localStorage.TotalDeProductosCarrito);
+        totalcarrito = parseInt(localStorage.SumaPreciosCarrito);
+        Carrito = JSON.parse(localStorage.ListaCarrito);
+        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
+    
+    }
     SumRestToCart("")
+    console.log("total de productos en carrito before function: " + totaldeproductos); 
 });
 
 /* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 

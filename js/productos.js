@@ -10,12 +10,6 @@ function DisplayProductos(productos){
     let listadoProductos = document.querySelector('#listadoproductos');
     listadoProductos.innerHTML = "";
 
-    // const productos = fs.readFileSync('productos.json', 'utf8');
-    // productos = JSON.parse(productos);
-
-    // fetch('./productos.json')
-    // .then(response => response.json())
-    // .then(productos => console.log(productos));
     for (let producto of productos){
         const element = document.createElement('div');
         if(Array.isArray(producto.Categoría)){
@@ -112,11 +106,30 @@ function DesplegableCategorias(){
    
 }
 
+let totaldeproductos = 0;
+let totalcarrito = 0;
+let Carrito = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     DisplayProductos(Productos);
     DesplegableCategorias();
-    SumRestToCart("");
+    storagevalues = localStorage.TotalDeProductosCarrito;
+    
+    if (storagevalues == null){
+        totaldeproductos = 0;
+        console.log("🚀 ~ totaldeproductos", totaldeproductos)
+        totalcarrito = 0;
+        console.log("🚀 ~ totalcarrito", totalcarrito);
+        Carrito = [];
+        console.log("🚀 ~ Carrito", Carrito);
+    }else{
+        totaldeproductos = parseInt(localStorage.TotalDeProductosCarrito);
+        totalcarrito = parseInt(localStorage.SumaPreciosCarrito);
+        Carrito = JSON.parse(localStorage.ListaCarrito);
+        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
+    
+    }
+    SumRestToCart('');
 });
 
 

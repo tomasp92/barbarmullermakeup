@@ -11,7 +11,7 @@
         "modoDeUso": "<p> Sesión de una hora </p>"
     },
     {
-        "id": 2,
+        "id": "2",
         "titulo": "Limpieza de Cutis ",
         "subtitulo": "con electroporación",
         "Categoría": "Categorias[0]",
@@ -32,7 +32,6 @@
         "otraInfo":"",
         "modoDeUso": " Sesiones de 40 minutos"  
     },
-
     {
         "id": "4",
         "titulo": "Peeling x8",
@@ -44,7 +43,6 @@
         "otraInfo":"",
         "modoDeUso": "Sesiones de 40 minutos"  
     },
-
     {
         "id": "5",
         "titulo": "Perfilado de cejas",
@@ -56,33 +54,30 @@
         "otraInfo":"",
         "modoDeUso": "<p> Duración: 20 minutos </p>"
     },
-
     {
-    	"id": 6,
-    	"titulo": " Electroporación x4 ",
-    	"subtitulo": " 4 sesiones ",
-    	"Categoría": "Categorias[0]",
-    	"precio": "6000",
-    	"img": "./img/productos/electroporacion.jpg",
-    	"descripción": " La primera sesion incluye un pulido ",
+        "id": "6",
+        "titulo": " Electroporación x4 ",
+        "subtitulo": " 4 sesiones ",
+        "Categoría": "Categorias[0]",
+        "precio": "6000",
+        "img": "./img/productos/electroporacion.jpg",
+        "descripción": " La primera sesion incluye un pulido ",
         "otraInfo":"",
-    	"modoDeUso": " Cuatro sesiones de media hora "
+        "modoDeUso": " Cuatro sesiones de media hora "
     },
-
     {
-    	"id": "7",
-    	"titulo": " Electroporación x8 ",
-    	"subtitulo": " 8 sesiones ",
-    	"Categoría": "Categorias[0]",
-    	"precio": "1200",
-    	"img": "./img/productos/electroporacion.jpg",
-    	"descripción": "La primera sesion incluye un pulido",
+        "id": "7",
+        "titulo": " Electroporación x8 ",
+        "subtitulo": " 8 sesiones ",
+        "Categoría": "Categorias[0]",
+        "precio": "1200",
+        "img": "./img/productos/electroporacion.jpg",
+        "descripción": "La primera sesion incluye un pulido",
         "otraInfo":"",
-    	"modoDeUso": "Ocho sesiones de media hora"
+        "modoDeUso": "Ocho sesiones de media hora"
     },
-
     {
-        "id": 8,
+        "id": "8",
         "titulo": "Clase de automaquillaje",
         "subtitulo": "",
         "Categoría": "Categorias[0]",
@@ -92,10 +87,8 @@
         "otraInfo":"<p>Te brindamos todos los materiales necesarios para la clase</p>",
         "modoDeUso": "Duración: una clase de dos horas"
     },
-    
-    
     {
-        "id": 9,
+        "id": "9",
         "titulo": "Jabon Liquido",
         "subtitulo": "oil Free",
         "Categoría": "Categorias[1]",
@@ -105,7 +98,6 @@
         "otraInfo":"<p>ACTIVOS:</p> <p>Sepicontrol A5®</p> <p> Acido salicílico</p> <p>Sauce blanco</p> <p>Caléndula</p>",
         "modoDeUso": "MODO DE USO:  Aplicar sobre el rostro humedecido con masajes suaves hasta formar espuma y enjuagar."
     },
-
     {
         "id": "10",
         "titulo": "Leche de Limpieza",
@@ -117,9 +109,8 @@
         "otraInfo":"<p>Ingredientes activos: </p> <p> Filtros UVB y UVA. Ectoína, Extracto de células de levaduras, Manteca de karité, ADN vegetal y Aloe vera.</p> <p>Tipo de piel:  Todo tipo de piel.</p>",
         "modoDeUso": "<p>¿Por qué es diferente? </p> <p>· Multibenefit, protección de amplio espectro, hidratación y antioxidación</p> <p>· Máximos niveles de protección UVA</p> <p>· Ligera coloración que disimula imperfecciones</p> <p>· Producto OTC según normas FDA</p> <p>· PABA Free</p> <p>· Mineral Oil Free</p> <p>· Paraben Free </p>"
     },
-
     {
-        "id": 11,
+        "id": "11",
         "titulo": "Pro fresh clean ",
         "subtitulo": "",
         "Categoría": "Categorias[1]",
@@ -129,7 +120,6 @@
         "otraInfo": "false",
         "modoDeUso": "false"
     },
-
     {
         "id": "12",
         "titulo": "Face Lotion",
@@ -141,7 +131,6 @@
         "otraInfo": "",
         "modoDeUso": ""
     },
-
     {
         "id": "13",
         "titulo": "Pro eclair",
@@ -165,35 +154,29 @@
         "otraInfo":"<p> PRINCIPIOS ACTIVOS </p> <p> Agua termal</p><p>Remineralizante</p> <p> Soja activa de alta pureza </p><p> Hidratante y muy antioxidante debido al alto contenido de vitaminas, minerales y sobre todo isoflavonas. </p> <p> Estimula la producción de proteínas en la dermis y promueve su reparación. </p>",
         "modoDeUso": "<p> MODO DE USO </p> <p> Luego de realizar la rutina diaria de higiene y tonificación, colocar una pequeña cantidad de producto y masajear hasta total su absorción en rostro, cuello y escote. </p>"
     },
-
     {
         "id": "15",
         "titulo": " Nutrisomas ",
-    	"subtitulo": " ",
-    	"Categoría": "Categorias[3]",
-    	"precio": "1360",
-    	"img": "./img/productos/nutrisomas.jpg",
-    	"descripción": " Crema ultra emoliente que repara, hidrata y brinda una sensación de confort extremo. Contiene un concentrado de activo vegetal que ayudan a regenerar las pieles maduras, dañadas o muy secas. Proporciona suavidad y flexibilidad. ",
+        "subtitulo": " ",
+        "Categoría": "Categorias[3]",
+        "precio": "1360",
+        "img": "./img/productos/nutrisomas.jpg",
+        "descripción": " Crema ultra emoliente que repara, hidrata y brinda una sensación de confort extremo. Contiene un concentrado de activo vegetal que ayudan a regenerar las pieles maduras, dañadas o muy secas. Proporciona suavidad y flexibilidad. ",
         "otraInfo":"<p> . Por función: Humectación, Arrugas profundas, Arrugas finas, Hombre, Antioxidantes </p> <p> . Tipo de piel: Seca, Normal </p><p> . Para pieles: Con arrugas y/o lí­neas de expresión, Involutivas, Fotodañadas, Deshidratadas </p>",
-    	"modoDeUso": "<p>. Efecto: Antiage, Humectante, Antioxidante, Reparador </p> <p> . Tipo: Rostro </p>"
+        "modoDeUso": "<p>. Efecto: Antiage, Humectante, Antioxidante, Reparador </p> <p> . Tipo: Rostro </p>"
 
     },
-
     {
-    	"id": "16",
-    	"titulo": " Complejo Rejuvenecedor ",
-    	"subtitulo": " con acido glicolico ",
-    	"Categoría": "[Categorias[4],Categorias[5]]",
-    	"precio": "1531",
-    	"img": "./img/productos/complejo_rejuvenecedor.jpg",
-    	"descripción": " Activa la renovación celular provocando una suave descamación de las capas superficiales de la piel. Otorga elasticidad, hidratación y turgencia al cutis. Ayuda a prevenir y disminuir arrugas.",
+        "id": "16",
+        "titulo": " Complejo Rejuvenecedor ",
+        "subtitulo": " con acido glicolico ",
+        "Categoría": "[Categorias[4],Categorias[5]]",
+        "precio": "1531",
+        "img": "./img/productos/complejo_rejuvenecedor.jpg",
+        "descripción": " Activa la renovación celular provocando una suave descamación de las capas superficiales de la piel. Otorga elasticidad, hidratación y turgencia al cutis. Ayuda a prevenir y disminuir arrugas.",
         "otraInfo":"<p> Ingredientes activos:</p> <p> Alfahidroxiacidos de origen vegetal: Ácido glicólico, láctico, cítrico, málico y tartárico, Vitamina E y Fosfolípidos purificados de lecitina de Soja. </p> ",
-    	"modoDeUso": "<p> Tipo de piel:</p> <p> Todo tipo de piel, especialmente pieles maduras. </p><p> ¿Por qué es diferente? </p> <p> · Blend de ácidos renovadores </p><p> · Activos liposomados </p> <p> · Mineral Oil Free</p>"
+        "modoDeUso": "<p> Tipo de piel:</p> <p> Todo tipo de piel, especialmente pieles maduras. </p><p> ¿Por qué es diferente? </p> <p> · Blend de ácidos renovadores </p><p> · Activos liposomados </p> <p> · Mineral Oil Free</p>"
     },
-
-
-
-
     {
         "id": "17",
         "titulo": " Gel cream",
@@ -216,7 +199,6 @@
         "otraInfo":" <p>PRINCIPIOS ACTIVOS</p> </p>Ácido glicólico<p></p> <p> Ácido mandélico</p><p>Ácido cítrico (Alfahidroxiácidos)</p> <p> Ácido salicílico (betahidroxiácido) </p> Ácido lipoico<p> Ácido fítico. </p> <p>Piel normal y seca. </p> ",
         "modoDeUso": "<p> Porque es diferente: </p> Multibenefit, 4 ácidos exfoliantes y 2 antioxidantes <p> Formulación biotecnológica, microesponjas que evitan el shock de pH cutáneo </p> Mineral Oil Free <p> Paraben Free </p><p> MODO DE USO: </p><p> Se recomienda utilizar durante la noche. Durante el día complementar con la Crema Renovadora (COD.923) u otros productos hidratantes y protección solar. La piel que lisa, luminosa y homogénea. Sus Componentes ayudan a evitar los signos del envejecimiento prematuro de la piel </p>"
     },
-
     {
         "id": "19",
         "titulo": "Mandelico Crema ",
@@ -228,8 +210,6 @@
         "otraInfo":"<p>-Efecto: Renovador / Blanqueador </p> <p> -Para pieles: Involutivas / Fotodañadas / Con manchas</p> <p> -Por función: Arrugas profundas</p> <p>-No recomendado para pieles: Seborreicas </p>",
         "modoDeUso": "<p>-Activos: </p><p> Ácido Mandélico / Escualeno </p>"
     },
-
-
     {
         "id": "20",
         "titulo": "Vitamin C Eyes",
@@ -241,11 +221,6 @@
         "otraInfo":"<p>PRINCIPIOS ACTIVOS</p> <p> 5% Vitamina C AA2G</p> <p>3% Lipomoist 2036</p><p>0,2% Vitamina A + E</p> <p> 1% Proteínas de soja </p> <p> 0,5% Colágeno </p>",
         "modoDeUso": "<p>MODO DE USO: </p> <p> Desplazar el aplicador masajeador con suavidad por el contorno de los ojos, previamente limpios y tonificados, de forma lenta hasta total absorción.</p><p> Luego colocar el producto de tratamiento habitual y/o maquillaje. Se puede utilizar por la mañana y por la noche. </p>"
     },
-
-  
-
-
-    
     {
         "id": "21",
         "titulo": "Gel para contorno de ojos",
@@ -281,28 +256,28 @@
         "modoDeUso": ""
     },
     {
-    	"id": "24",
-    	"titulo": " Depure ",
-    	"subtitulo": " Control treatment",
-    	"Categoría": "Categorias[7]",
-    	"precio": "1540",
-    	"img": "./img/productos/control_treatment.png",
-    	"descripción": "Emulsión de textura muy liviana que regula la producción de sebo y evita la formación de lesiones inflamatorias. Mejora las manifestaciones específicas y localizadas de la piel grasa y con acné. Sus activos hidratantes mantienen el confort de la piel, evitan la irritación y protegen las zonas saludables. ",
+        "id": "24",
+        "titulo": " Depure ",
+        "subtitulo": " Control treatment",
+        "Categoría": "Categorias[7]",
+        "precio": "1540",
+        "img": "./img/productos/control_treatment.png",
+        "descripción": "Emulsión de textura muy liviana que regula la producción de sebo y evita la formación de lesiones inflamatorias. Mejora las manifestaciones específicas y localizadas de la piel grasa y con acné. Sus activos hidratantes mantienen el confort de la piel, evitan la irritación y protegen las zonas saludables. ",
         "otraInfo":"<p> Por función: Pieles grasas y acneicas </p> <p>Líneas Premium: Acnex Depure </p>  <p> Tipo de piel: Grasa </p> <p>Para pieles: Con lesiones inestéticas, Seborreicas  </p> <p> ,Efecto: Humectante </p> <p> Tipo: Rostro </p>",
-    	"modoDeUso": "<p> Emulsión liviana. </p> <p> Acné.  </p><p> Seborrea. </p> <p> Previene lesiones inflamatorias.   </p>"
+        "modoDeUso": "<p> Emulsión liviana. </p> <p> Acné.  </p><p> Seborrea. </p> <p> Previene lesiones inflamatorias.   </p>"
 
     
     },
     {
-    	"id": "25",
-    	"titulo": " Ampollas ",
-    	"subtitulo": "DMAE + Silicio Orgánico",
-    	"Categoría": "Categorias[8]",
-    	"precio": "825",
-    	"img": "./img/productos/ampollas.jpg",
-    	"descripción": "Tratamiento de lifting facial y antiage “todo en uno”, que combina dos fuertes agentes rejuvenecedores. El Dmae + Silicio Orgánico tonifica y suaviza inmediatamente la piel, protegiéndola de los radicales libres. Es efectiva no sólo para el rostro sino también para tratar la piel flácida en brazos, abdomen, piernas y glúteos.",
+        "id": "25",
+        "titulo": " Ampollas ",
+        "subtitulo": "DMAE + Silicio Orgánico",
+        "Categoría": "Categorias[8]",
+        "precio": "825",
+        "img": "./img/productos/ampollas.jpg",
+        "descripción": "Tratamiento de lifting facial y antiage “todo en uno”, que combina dos fuertes agentes rejuvenecedores. El Dmae + Silicio Orgánico tonifica y suaviza inmediatamente la piel, protegiéndola de los radicales libres. Es efectiva no sólo para el rostro sino también para tratar la piel flácida en brazos, abdomen, piernas y glúteos.",
         "otraInfo":"<p>DMAE (1%)</p> <p> Precursor de la Acetilcolina. Produce un efecto lifting. Resulta de una combinación sinérgica de efectos a diferentes niveles: tensión celular en células dérmicas no musculares, cohesión y desplazamiento de queratinocitos, hidratación y elasticidad del estrato córneo. Mejora la piel, antioxidante. Actúa rápidamente y tiene un efecto residual. Facial: Efecto lifting inmediato Corporal: Efecto reafirmante y tensor. Imperfecciones de la piel y mejora las estrías. </p><p>Silicio orgánico (0.5%)  </p>  <p>  Componente estructural del tejido conectivo. Favorece la regeneración de las fibras elásticas y colágenas. Precursor del colágeno Hidrata, reafirma y actúa como antioxidante. Facial: Estimulador y regulador de los fibroblastos. Previene el envejecimiento prematuro y es antioxidante de especies reactivas de oxígeno. Normaliza el metabolismo celular. Corporal: Normaliza el metabolismo celular, regenera el tejido y ayuda a minimizar las inesteticidades producto de la PEFE. </p>",
-    	"modoDeUso": "<p>  Modo de empleo: </p> <p>  Uso tópico exclusivo. Aplicar con un suave masaje. Mejora su efectividad si se usa conjuntamente con mesoterapia transadérmica por electroporación </p>"
+        "modoDeUso": "<p>  Modo de empleo: </p> <p>  Uso tópico exclusivo. Aplicar con un suave masaje. Mejora su efectividad si se usa conjuntamente con mesoterapia transadérmica por electroporación </p>"
     },
     {
         "id": "26",
@@ -315,4 +290,5 @@
         "otraInfo":"<p>PRINCIPIOS ACTIVOS</p> <p> 5% Vitamina C AA2G</p> <p>3% Lipomoist 2036</p><p>0,2% Vitamina A + E</p> <p> 1% Proteínas de soja </p> <p> 0,5% Colágeno </p>",
         "modoDeUso": "<p>MODO DE USO: </p> <p> Desplazar el aplicador masajeador con suavidad por el contorno de los ojos, previamente limpios y tonificados, de forma lenta hasta total absorción.</p><p> Luego colocar el producto de tratamiento habitual y/o maquillaje. Se puede utilizar por la mañana y por la noche. </p>"
     }
+
 ]

@@ -402,7 +402,6 @@ h1{
     max-height: 170px;
     margin:5px;
     padding: auto;
-    background-color: white;
 }
 #listadoproductos>div>button{
     border-radius: 10px;
@@ -469,7 +468,74 @@ h1{
 
 #listadocarrito{
     min-height: 600px;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    align-self: center;
+    flex-direction: column;
 }
+
+#listadocarrito>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(251, 234, 230);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 120px;
+    margin: 1%;
+}
+
+#listadocarrito .lado{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+}
+#listadocarrito .cantidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 10%;
+}
+#listadocarrito .cantidad div{
+    width: 40%;
+}
+
+
+#listadocarrito .titulos{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 45%;
+    align-content: space-around;
+    text-align: center;
+}
+
+#listadocarrito .titulo{
+    margin-bottom:5%;
+}
+
+#listadocarrito>div:hover{
+    background-color: rgb(239, 211, 200);
+    transition: all .3s;
+    cursor: pointer;
+    width: 92%;
+    height: 122px;
+}
+
+#listadocarrito>div .img{
+    width: 45%;
+    text-align: center;
+}
+
+#listadocarrito>div img{
+    max-height: 115px;
+    margin: auto;
+}
+
 @media screen and (max-width: 1400px){
     #listadoproductos>div img{
         max-width: 80%;
