@@ -1,3 +1,23 @@
+    let totaldeproductos = 0;
+    let totalcarrito = 0;
+    let Carrito = [];
+
+    storagevalues = localStorage.Carrito;
+    if (storagevalues === null){
+        totaldeproductos = 0;
+        console.log("🚀 ~ totaldeproductos storagevalues null", totaldeproductos)
+        totalcarrito = 0;
+        console.log("🚀 ~ totalcarrito", totalcarrito);
+        Carrito = [];
+        
+    }else{
+        Carrito = JSON.parse(localStorage.ListaCarrito);
+        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
+    
+    }
+    console.log("🚀 ~ Carrito", Carrito);
+
+
 function DesplegarProductosCarrito(carrito){
     console.log("🚀 ~ carrito", carrito)
     let productosCarrito = document.querySelector('#listadocarrito');
@@ -8,7 +28,7 @@ function DesplegarProductosCarrito(carrito){
         productosCarrito.appendChild(boton);
     }
    
-    if (carrito.length >1){
+    if (carrito.length >0){
         productosCarrito.innerHTML = "";
         for (let producto of carrito){
             const element = document.createElement('div');
@@ -30,36 +50,22 @@ function DesplegarProductosCarrito(carrito){
        
             productosCarrito.appendChild(element);
         }
-    }else{
-        productosCarrito.innerHTML = "";
-        productosCarrito.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
-            <div class="precio">$${producto.precio}</div>
-            <div class="categoria">${producto.Categoría}</div>
-            <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
-            <div class="subtitulo">${producto.subtitulo}</div>
-            <div class="titulo">${producto.titulo}</div>`;  
     }
+    // else{
+    //     productosCarrito.innerHTML = "";
+    //     productosCarrito.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
+    //         <div class="precio">$${producto.precio}</div>
+    //         <div class="categoria">${producto.Categoría}</div>
+    //         <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+    //         <div class="subtitulo">${producto.subtitulo}</div>
+    //         <div class="titulo">${producto.titulo}</div>`;  
+    // }
 
 };
-    let totaldeproductos = 0;
-    let totalcarrito = 0;
-    let Carrito = [];
-document.addEventListener('DOMContentLoaded', function() {
-    storagevalues = localStorage.TotalDeProductosCarrito;
-    if (storagevalues == null){
-        totaldeproductos = 0;
-        console.log("🚀 ~ totaldeproductos", totaldeproductos)
-        totalcarrito = 0;
-        console.log("🚀 ~ totalcarrito", totalcarrito);
-        Carrito = [];
-        console.log("🚀 ~ Carrito", Carrito);
-    }else{
-        totaldeproductos = parseInt(localStorage.TotalDeProductosCarrito);
-        totalcarrito = parseInt(localStorage.SumaPreciosCarrito);
-        Carrito = JSON.parse(localStorage.ListaCarrito);
-        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
     
-    }
+document.addEventListener('DOMContentLoaded', function() {
     DesplegarProductosCarrito(Carrito);
-    SumRestToCart('');
+    totalcarrito = PrecioTotal();
+    totaldeproductos = TotalDeProductos();
+    $('#itemsnum').html(totaldeproductos);
 });

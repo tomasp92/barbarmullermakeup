@@ -16,35 +16,21 @@ if(localStorage.TotalDeProductosCarrito == null){
 }*/
 
 // funcion para sumar al total de productos del carrito
-function SumRestToCart(operacion){
-    if (operacion == "suma"){
-        totaldeproductos ++;
-    }else if(operacion == "resta"){
-        totaldeproductos --;
-    }
-    document.getElementById("itemsnum").innerHTML = totaldeproductos;
-    console.log("🚀 ~ totaldeproductos", totaldeproductos)
-    
-    localStorage.setItem("TotalDeProductosCarrito", totaldeproductos);
-    console.log("total de productos en carrito: " + totaldeproductos);
+function PrecioTotal(){
+    let total = 0;
+    Carrito.map(producto => total = total + producto.cantidad * producto.precio);
+    return total
+}
+function TotalDeProductos(){
+    let total = 0;
+    Carrito.map(producto => total = total + producto.cantidad)
+    $('#itemsnum').html(totaldeproductos);
+    return total;
 }
 
 // Función para hacer el listado de productos del carrito
 function ListadoCarrito(productoid){
-    let productoEnCarrito;
-    console.log("🚀 ~ Carrito f", Carrito.length)
-    if (Carrito.length > 0){
-       
-        console.log("Carrito: " + Carrito.length)
-        if(Carrito.lenght > 1){
-            productoEnCarrito = Carrito.find(element => element.id == productoid);
-        }
-        else if(Carrito[0].id == productoid){
-            productoEnCarrito = Carrito[0];
-        }
-        
-    }
-    
+    let productoEnCarrito = Carrito.find(element => element.id == productoid);
     if(productoEnCarrito === undefined){
         console.log("todavía no agregue al carrito");
         productoEnCarrito = Object.assign({}, Productos.find(element => element.id == productoid));
@@ -54,9 +40,9 @@ function ListadoCarrito(productoid){
         productoEnCarrito.cantidad ++;
     }
     totalcarrito = totalcarrito + productoEnCarrito.precio;
-    localStorage.setItem("SumaPreciosCarrito", totalcarrito);
     localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));
-    SumRestToCart('suma');
+    totalcarrito = PrecioTotal();
+    totaldeproductos = TotalDeProductos();
 }
 
 function EliminarDelCarrito(productoid){
@@ -64,8 +50,9 @@ function EliminarDelCarrito(productoid){
     let productoEnCarrito = Carrito.find(element => element.id == productoid);
     console.log("🚀 ~ productoEnCarrito", productoEnCarrito)
     Carrito.splice(Carrito.indexOf(productoEnCarrito), 1);
-    localStorage.setItem("SumaPreciosCarrito", totalcarrito);
     localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));
+    totalcarrito = PrecioTotal();
+    totaldeproductos = TotalDeProductos();
     DesplegarProductosCarrito(Carrito);
 
 }

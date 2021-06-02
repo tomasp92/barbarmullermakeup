@@ -48,9 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     DisplayCarrito(totaldeproductos);
     // DisplayCarouselProductosyServicios();
     
-    storagevalues = localStorage.TotalDeProductosCarrito;
-    
-    if (storagevalues == null){
+    storagevalues = localStorage.Carrito;
+    if (storagevalues === null){
         totaldeproductos = 0;
         console.log("🚀 ~ totaldeproductos", totaldeproductos)
         totalcarrito = 0;
@@ -58,14 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
         Carrito = [];
         console.log("🚀 ~ Carrito", Carrito);
     }else{
-        totaldeproductos = parseInt(localStorage.TotalDeProductosCarrito);
-        totalcarrito = parseInt(localStorage.SumaPreciosCarrito);
         Carrito = JSON.parse(localStorage.ListaCarrito);
         console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
     
     }
-    SumRestToCart("")
-    console.log("total de productos en carrito before function: " + totaldeproductos); 
+    totalcarrito = PrecioTotal();
+    totaldeproductos = TotalDeProductos();
 });
 
 /* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 
