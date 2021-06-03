@@ -43,6 +43,7 @@ function ListadoCarrito(productoid){
     localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
+    $('#itemsnum').html(totaldeproductos);
 }
 
 function EliminarDelCarrito(productoid){
@@ -54,5 +55,6 @@ function EliminarDelCarrito(productoid){
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
     DesplegarProductosCarrito(Carrito);
+    $('#itemsnum').html(totaldeproductos);
 
 }
