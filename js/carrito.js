@@ -23,9 +23,9 @@ function DesplegarProductosCarrito(carrito){
     let productosCarrito = document.querySelector('#listadocarrito');
     if(carrito.length < 1){
         productosCarrito.innerHTML = "No hay productos en el carrito";
-        const boton = document.createElement('button');
-        boton.innerHTML = "volver a productos";
-        productosCarrito.appendChild(boton);
+        const AProductos = document.createElement('div');
+        AProductos.innerHTML = "<a href='productos.html'>volver a productos</a>";
+        productosCarrito.appendChild(AProductos);
         $('#itemsnum').html("0");
     }
    

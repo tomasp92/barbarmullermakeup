@@ -8,7 +8,7 @@ function DisplayCarrito(carrito) {
     if(carrito > 0){
         divCarrito.style.display = 'block';
         divShop.style.display = 'none';
-        document.getElementById("itemsnum").innerHTML = window.totaldeproductos;
+        $('#itemsnum').html(totaldeproductos);
     }else{
         divCarrito.style.display = 'none';
         divShop.style.display = 'block';
