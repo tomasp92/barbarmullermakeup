@@ -43,7 +43,7 @@ function DisplayCarouselProductosyServicios(){
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
-document.addEventListener('DOMContentLoaded', function() {
+$(()=>  {
     console.log(" addevent" + totaldeproductos)
     DisplayCarrito(totaldeproductos);
     // DisplayCarouselProductosyServicios();

@@ -21,14 +21,15 @@
 function DesplegarProductosCarrito(carrito){
     console.log("🚀 ~ carrito", carrito)
     let productosCarrito = document.querySelector('#listadocarrito');
-    if(carrito.length > 1){
+    if(carrito.length < 1){
         productosCarrito.innerHTML = "No hay productos en el carrito";
         const boton = document.createElement('button');
         boton.innerHTML = "volver a productos";
         productosCarrito.appendChild(boton);
+        $('#itemsnum').html("0");
     }
    
-    if (carrito.length >0){
+    if (carrito.length > 0){
         productosCarrito.innerHTML = "";
         for (let producto of carrito){
             const element = document.createElement('div');
@@ -63,7 +64,8 @@ function DesplegarProductosCarrito(carrito){
 
 };
     
-document.addEventListener('DOMContentLoaded', function() {
+$(()=> {
+    console.log("funcionando");
     DesplegarProductosCarrito(Carrito);
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();

@@ -511,6 +511,8 @@ h1{
     height: 80%;
     width: 45%;
     align-content: space-around;
+    justify-content: center;
+    margin: auto;
     text-align: center;
 }
 

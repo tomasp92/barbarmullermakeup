@@ -1,9 +1,6 @@
-let OrdenarPorMenorPrecio = document.getElementById("menor");
-OrdenarPorMenorPrecio.onclick = () => Order(Productos, "menor");
-let OrdenarPorMayorPrecio = document.getElementById("mayor");
-OrdenarPorMayorPrecio.onclick = () => Order(Productos, "mayor");
-let OrdenarPorCategorias = document.getElementById("porCategorias");
-OrdenarPorCategorias.onclick = () => Order(Productos, "Categorias");
+$('#menor').on('click',()=> Order(Productos, "menor"));
+$('#mayor').on('click',()=> Order(Productos, "mayor"));
+$('#porCategorias').on('click',()=> Order(Productos, "Categorias"));
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
@@ -68,8 +65,6 @@ function Order(productos, tipo) {
         }
           
     });
-    console.log("productos ordenados");
-    console.log(productos);
     DisplayProductos(productos);
     return productos;
  }
@@ -85,32 +80,23 @@ function Order(productos, tipo) {
                 if(found != undefined){
                     return found
                 }
-    
             }
-    
             });
-    
-        
-       
     }
     DisplayProductos(productosCategoria);
  }
  
 function DesplegableCategorias(){
-    opcionesCategorias = document.getElementById("opcionesCategorias");
     for (let Categoria of Categorias){
-        const opcionCategoria = document.createElement('p');
-        opcionCategoria.innerHTML = `<button class="categoria" onclick="Filter('${Categoria}');" >${Categoria}</button>`;
-        opcionesCategorias.appendChild(opcionCategoria);
+        $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria}');" >${Categoria}</button></p>`);
     }
-   
 }
 
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 
-document.addEventListener('DOMContentLoaded', function() {
+$(()=>  {
     DisplayProductos(Productos);
     DesplegableCategorias();
     storagevalues = localStorage.Carrito;
