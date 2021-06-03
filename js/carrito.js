@@ -43,7 +43,7 @@ function DesplegarProductosCarrito(carrito){
             </div>
             <div class="lado">
                 <div class="cantidad">
-                    <div>-</div><div> ${producto.cantidad}</div> <div onclick="ListadoCarrito(${producto.id});">+</div>
+                    <div onclick="RestarAlCarito(${producto.id});">-</div><div> ${producto.cantidad}</div> <div onclick="ListadoCarrito(${producto.id});">+</div>
                 </div>
                 <div class="precio">$${producto.precio}</div>
                 <div onclick="EliminarDelCarrito(${producto.id});">X</div>

@@ -44,6 +44,19 @@ function ListadoCarrito(productoid){
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
     $('#itemsnum').html(totaldeproductos);
+    DesplegarProductosCarrito(Carrito);
+}
+
+function RestarAlCarito(productoid){
+    let productoEnCarrito = Carrito.find(element => element.id == productoid);
+    if (productoEnCarrito.cantidad > 1){
+        productoEnCarrito.cantidad --;
+        localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));
+        totalcarrito = PrecioTotal();
+        totaldeproductos = TotalDeProductos();
+        $('#itemsnum').html(totaldeproductos);
+        DesplegarProductosCarrito(Carrito);
+    }
 }
 
 function EliminarDelCarrito(productoid){
