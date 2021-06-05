@@ -139,8 +139,8 @@ const Productos = [
         precio: 1060,
         img: "./img/productos/pro_fresh_clean.png",
         descripción: "Gel de limpieza y demaquillante ideal para pieles grasas, incluendo las más sensibles. De textura suave, aromática y fresca, proporciona inmediato bienestar. Se desliza sin producir fricciones y se enjuaga con facilidad. Luego se aplica el tónico adecuado. Contiene tensioactivos muy suaves, extractos de Caléndula y Camomila y exquisito aroma a pomelo rosado.",
-        otraInfo: false,
-        modoDeUso: false,
+        otraInfo: "",
+        modoDeUso: "",
     },
 
     {
