@@ -174,7 +174,7 @@ const Productos = [
         Categoría: Categorias[3],
         precio: 1322,
         img: "./img/productos/thermal_new.png",
-        descripción: " <p> BENEFICIOS:  </p><p> >■ Hidratación inmediata que permanece por 24 horas.  </p><p>■ Tiene propiedades calmantes y desensibilizantes. </p> <p> ■ Refresca y brinda luminosidad.</p><p> ■ Refuerza la barrera cutánea </p> ",
+        descripción: " <p> BENEFICIOS:  </p><p> ■ Hidratación inmediata que permanece por 24 horas.  </p><p>■ Tiene propiedades calmantes y desensibilizantes. </p> <p> ■ Refresca y brinda luminosidad.</p><p> ■ Refuerza la barrera cutánea </p> ",
         otraInfo:"<p> PRINCIPIOS ACTIVOS </p> <p> Agua termal</p><p>Remineralizante</p> <p> Soja activa de alta pureza </p><p> Hidratante y muy antioxidante debido al alto contenido de vitaminas, minerales y sobre todo isoflavonas. </p> <p> Estimula la producción de proteínas en la dermis y promueve su reparación. </p>",
         modoDeUso: "<p> MODO DE USO </p> <p> Luego de realizar la rutina diaria de higiene y tonificación, colocar una pequeña cantidad de producto y masajear hasta total su absorción en rostro, cuello y escote. </p>"
     },

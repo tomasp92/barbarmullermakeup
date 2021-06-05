@@ -415,6 +415,75 @@ h1{
     color: white;
 }
 
+#producto{
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    min-height: 700px;
+}
+
+#producto>div{
+    display: flex;
+    background-color: rgb(251, 234, 230);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    min-height: 500px;
+    align-items: center;
+    justify-content:space-around;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    color: rgba(0,0,0,0.5);
+}
+/* #producto>div:hover{
+    background-color: rgb(239, 211, 200);
+    transition: all .3s;
+    cursor: pointer;
+    width: 25.5%;
+    height: 365px;
+} */
+
+#producto>div .row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction:row;
+    padding: 10px;
+    margin: 20px;
+    color: rgba(0,0,0,0.5);
+}
+
+#producto>div .column2{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction:column;
+    padding: 10px;
+    color: rgba(0,0,0,0.5);
+    min-height: 300px;
+} 
+
+#producto>div img{
+    max-width: 510px;
+    margin:5px;
+}
+
+#producto>div button{
+    border-radius: 10px;
+    background-color: rgb(239, 211, 200);
+    border-color: white;
+    color:rgb(110, 110, 110);
+}
+
+#producto>div button:hover{
+    background-color:  rgb(110, 110, 110);
+    color: white;
+}
+
+
 .categoria{
     background-color: white;
     border-radius: 15px;

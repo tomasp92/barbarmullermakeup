@@ -9,6 +9,7 @@ function DisplayProductos(productos){
 
     for (let producto of productos){
         const element = document.createElement('div');
+        element.onclick = ()=>DisplayOneProducto(producto.id);
         if(Array.isArray(producto.Categoría)){
             let VariasCategorias = document.createElement('div');
             VariasCategorias.setAttribute("id", "VariasCategorias");

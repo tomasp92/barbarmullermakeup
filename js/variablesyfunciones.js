@@ -71,3 +71,8 @@ function EliminarDelCarrito(productoid){
     $('#itemsnum').html(totaldeproductos);
 
 }
+
+
+function DisplayOneProducto(productoid){
+    window.location = "producto.html"+"?prodId=" + productoid;
+}
