@@ -39,6 +39,7 @@ function ShowProducto(){
                 </div>
             </div>
             <div class="row2">
+                <div class="descripcion"> Descripción </div>
                 <div>${producto.descripción}</div>
                 <div>${producto.otraInfo}</div>
                 <div>${producto.modoDeUso}</div>
@@ -59,6 +60,7 @@ function ShowProducto(){
                 </div>
             </div>
             <div class="row2">
+                <div class="descripcion"> Descripción </div>
                 <div>${producto.descripción}</div>
                 <div>${producto.otraInfo}</div>
                 <div>${producto.modoDeUso}</div>

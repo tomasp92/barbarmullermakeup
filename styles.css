@@ -395,7 +395,13 @@ h1{
     margin-top: 0px;
 }
 
-
+.categoria{
+    background-color: white;
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 4px;
+    min-width: 80px;
+}
 
 #listadoproductos>div img{
     max-width: 510px;
@@ -467,7 +473,8 @@ h1{
 } 
 
 #producto>div img{
-    max-width: 510px;
+    max-width: 300px;
+    max-height: 400px;
     margin:5px;
 }
 
@@ -483,14 +490,31 @@ h1{
     color: white;
 }
 
-
-.categoria{
-    background-color: white;
-    border-radius: 15px;
-    font-size: 10px;
-    padding: 4px;
-    min-width: 80px;
+#producto .titulo{
+    font-size: 35px;
+    height: 40px;
 }
+
+#producto .subtitulo{
+    font-size: 17px;
+    height: 20px;
+    margin-top: 0px;
+}
+
+#producto .categoria{
+    font-size: 15px;
+    height: 30px;
+}
+
+#producto .descripcion{
+    font-size: 35px;
+    text-anchor: start;
+}
+
+#producto .sub{
+    font-size: 25px;
+}
+
 
 #VariasCategorias{
     display: flex;
@@ -535,13 +559,18 @@ h1{
 
 /* Pagina Carrito */
 
-#listadocarrito{
+#Carrito{
     min-height: 600px;
+}
+
+#listadocarrito{
     width: 90%;
     display: flex;
     margin: auto;
     align-self: center;
     flex-direction: column;
+    text-align: center;
+    font-size: x-large;
 }
 
 #listadocarrito>div{
@@ -588,13 +617,35 @@ h1{
 #listadocarrito .titulo{
     margin-bottom:5%;
 }
+#listadocarrito svg{
+    height: 30px;
+    margin-right: 20px;
+}
+
+#listadocarrito svg:hover{
+    height: 32px;
+}
+
+#listadocarrito .borrar{
+    margin-right: 20px;
+    height: 10px;
+}
 
 #listadocarrito>div:hover{
     background-color: rgb(239, 211, 200);
     transition: all .3s;
     cursor: pointer;
-    width: 92%;
-    height: 122px;
+}
+
+.cantidad{
+    font-size: 20px;
+    color:grey;
+}
+
+
+.modify:hover{
+    border-radius: 100%;
+    color: black;
 }
 
 #listadocarrito>div .img{
@@ -605,6 +656,53 @@ h1{
 #listadocarrito>div img{
     max-height: 115px;
     margin: auto;
+}
+
+#totales{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+#totales>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    height: 40px;
+    margin: 1%;
+}
+
+#totales button{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content:center;
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: none;
+}
+
+#totales #vaciarCarrito {
+    width: 45%;
+    background-color: rgb(239, 211, 200);
+}
+
+#totales #Comprar {
+    width: 30%;
+}
+
+#totales #vaciarCarrito:hover {
+    background-color:  rgb(110, 110, 110);
+    color: white;
+    width: 55%;
 }
 
 @media screen and (max-width: 1400px){

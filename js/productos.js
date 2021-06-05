@@ -9,7 +9,6 @@ function DisplayProductos(productos){
 
     for (let producto of productos){
         const element = document.createElement('div');
-        element.onclick = ()=>DisplayOneProducto(producto.id);
         if(Array.isArray(producto.Categoría)){
             let VariasCategorias = document.createElement('div');
             VariasCategorias.setAttribute("id", "VariasCategorias");
@@ -22,19 +21,20 @@ function DisplayProductos(productos){
             }
             VariasCategorias = VariasCategorias.outerHTML
             
-            element.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
-            <div class="precio">$${producto.precio}</div>
+            element.innerHTML = `
+            <button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
+            <div class="precio" onclick="DisplayOneProducto(${producto.id});">$${producto.precio}</div>
             ${VariasCategorias}
-            <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
-            <div class="subtitulo">${producto.subtitulo}</div>
-            <div class="titulo">${producto.titulo}</div>`;
+            <div onclick="DisplayOneProducto(${producto.id});"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+            <div class="subtitulo" onclick="DisplayOneProducto(${producto.id});">${producto.subtitulo}</div>
+            <div class="titulo" onclick="DisplayOneProducto(${producto.id});">${producto.titulo}</div>`;
         }else{
             element.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
-            <div class="precio">$${producto.precio}</div>
+            <div class="precio" onclick="DisplayOneProducto(${producto.id});">$${producto.precio}</div>
             <div class="categoria">${producto.Categoría}</div>
-            <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
-            <div class="subtitulo">${producto.subtitulo}</div>
-            <div class="titulo">${producto.titulo}</div>`;
+            <div onclick="DisplayOneProducto(${producto.id});"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
+            <div class="subtitulo" onclick="DisplayOneProducto(${producto.id});">${producto.subtitulo}</div>
+            <div class="titulo" onclick="DisplayOneProducto(${producto.id});">${producto.titulo}</div>`;
         }
         
         listadoProductos.appendChild(element);
