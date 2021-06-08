@@ -43,12 +43,12 @@ function DisplayCarouselProductosyServicios(){
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
+let storagevalues = localStorage.Carrito;
 $(()=>  {
-    console.log(" addevent" + totaldeproductos)
-    DisplayCarrito(totaldeproductos);
+   
     // DisplayCarouselProductosyServicios();
     
-    storagevalues = localStorage.Carrito;
+    
     if (storagevalues === null){
         totaldeproductos = 0;
         console.log("🚀 ~ totaldeproductos", totaldeproductos)
@@ -63,6 +63,7 @@ $(()=>  {
     }
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
+    DisplayCarrito(totaldeproductos);
 });
 
 /* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 

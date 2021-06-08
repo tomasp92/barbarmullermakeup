@@ -52,8 +52,8 @@ function DesplegarProductosCarrito(carrito){
         $('#totales').html(
             `
             <button id='vaciarCarrito'>Vaciar carrito</button>
-            <div>
-                <p><div>Total: </div><div>$${totalcarrito}</div></p>
+            <div id="preciototal" >
+                <p ><div>Total: $</div><div id="total"> ${totalcarrito}</div></p>
             </div>
             <button id='Comprar'>Comprar</button>
             `);
@@ -63,9 +63,9 @@ function DesplegarProductosCarrito(carrito){
 };
     
 $(()=> {
-    console.log("funcionando");
-    DesplegarProductosCarrito(Carrito);
-    totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
     $('#itemsnum').html(totaldeproductos);
+    totalcarrito = PrecioTotal();
+    console.log(totalcarrito);
+    DesplegarProductosCarrito(Carrito);
 });

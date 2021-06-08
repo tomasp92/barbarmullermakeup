@@ -1,6 +1,6 @@
-$('#menor').on('click',()=> Order(Productos, "menor"));
-$('#mayor').on('click',()=> Order(Productos, "mayor"));
-$('#porCategorias').on('click',()=> Order(Productos, "Categorias"));
+$('#menor').on('change',()=> Order(Productos, "menor"));
+$('#mayor').on('change',()=> Order(Productos, "mayor"));
+$('#porCategorias').on('change',()=> Order(Productos, "Categorias"));
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){

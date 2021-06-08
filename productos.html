@@ -104,9 +104,7 @@
                 </svg>
                 <div>Carrito</div>
                 <div> 
-                    <div id="itemsnum">
-                        0
-                    </div>
+                    <div id="itemsnum"> 0</div>
                 </div>
             </a>
         </div>   
@@ -126,15 +124,16 @@
                     <p> Categorías: <p id="opcionesCategorias"> </p> </p> 
                 </div>
                 <div id="Ordenar">
-                    <p> Ordenar por 
-                        <button id="mayor">Mayor precio</button>
-                        <button id="menor">Menor precio</button>
-                        <button id="porCategorias">Categorías</button>
-                    </p> 
+                    <select id="selectOrder" aria-label="Default select example">
+                        <option id="mayor" value="Mayor"> Mayor precio</option>
+                        <option id="menor" value="Menor precio"> Menor precio</option>
+                        <option selected id="porCategorias" value="Categorías">Categorías</option>
+                      </select>
                 </div>        
 
             </div>
             <div id="listadoproductos"> </div>
+            <br>
         </div>
     </div>
 

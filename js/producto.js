@@ -71,4 +71,26 @@ function ShowProducto(){
     $('#producto').html(element);
 } 
 
-$(()=> ShowProducto());
+let totaldeproductos = 0;
+let totalcarrito = 0;
+let Carrito = [];
+
+$(()=>  {
+    let storagevalues = localStorage.Carrito;
+
+    if (storagevalues === null){
+        totaldeproductos = 0;
+        console.log("🚀 ~ totaldeproductos", totaldeproductos)
+        totalcarrito = 0;
+        console.log("🚀 ~ totalcarrito", totalcarrito);
+        Carrito = [];
+        console.log("🚀 ~ Carrito", Carrito);
+    }else{
+        Carrito = JSON.parse(localStorage.ListaCarrito);
+    }
+    totalcarrito = PrecioTotal();
+    totaldeproductos = TotalDeProductos();
+    
+    $('#itemsnum').html(totaldeproductos);
+    ShowProducto()
+});

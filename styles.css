@@ -470,6 +470,7 @@ h1{
     padding: 10px;
     color: rgba(0,0,0,0.5);
     min-height: 300px;
+    margin-left: 50px;
 } 
 
 #producto>div img{
@@ -697,12 +698,27 @@ h1{
 
 #totales #Comprar {
     width: 30%;
+    background-color: white;
+}
+
+#totales #Comprar:hover {
+    width: 35%;
+    background-color: grey;
 }
 
 #totales #vaciarCarrito:hover {
     background-color:  rgb(110, 110, 110);
     color: white;
     width: 55%;
+}
+
+#totales #preciototal{
+    font-size: 30px;
+    margin: 15px;
+}
+
+#totales #total{
+    background-color: rgb(251, 234, 230);;
 }
 
 @media screen and (max-width: 1400px){
