@@ -26,11 +26,6 @@ function ListadoCarrito(productoid){
     localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
-    // let id = `#productoN${productoid}`;
-    // let animacion = document.getElementById(id).cloneNode(true);
-    //         console.log(id)
-    //         $(animacion).css("height","200px", "width", "100px")
-    //              .css("position", "absolute","right","0px")
     $('#itemsnum').html(totaldeproductos);
     DesplegarProductosCarrito(Carrito);
 }
@@ -62,7 +57,8 @@ function EliminarDelCarrito(productoid){
         
     }else{
         let id = `#producto${productoid}`;
-        $(id).slideUp(1000);
+        $(id).animate({opacity: '0',},'slow')
+        .slideUp(800);
         let productoEnCarrito = Carrito.find(element => element.id == productoid);
         console.log("🚀 ~ productoEnCarrito", productoEnCarrito)
         Carrito.splice(Carrito.indexOf(productoEnCarrito), 1);
