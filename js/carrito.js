@@ -23,6 +23,7 @@ function DesplegarProductosCarrito(carrito){
         productosCarrito.innerHTML = "";
         for (let producto of carrito){
             const element = document.createElement('div');
+            element.setAttribute("id", `producto${producto.id}`);
             element.innerHTML = `
             <div class="lado">
                 <div class="img"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
@@ -57,7 +58,7 @@ function DesplegarProductosCarrito(carrito){
             </div>
             <button id='Comprar'>Comprar</button>
             `);
-        $('#vaciarCarrito').on('click',()=> EliminarDelCarrito('vaicarCarrito'));
+        $('#vaciarCarrito').on('click',()=> EliminarDelCarrito('vaciarCarrito'));
     }
 
 };

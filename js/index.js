@@ -44,6 +44,15 @@ let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 let storagevalues = localStorage.Carrito;
+
+// function scroll(e, scrollTo){
+//     e.preventDefault();
+//     $('html, body').animate({
+//         scrollTop: $(scrollTo).offser().top
+//     },2000);
+// }
+
+
 $(()=>  {
    
     // DisplayCarouselProductosyServicios();

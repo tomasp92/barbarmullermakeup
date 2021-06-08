@@ -1,6 +1,7 @@
-$('#menor').on('change',()=> Order(Productos, "menor"));
-$('#mayor').on('change',()=> Order(Productos, "mayor"));
-$('#porCategorias').on('change',()=> Order(Productos, "Categorias"));
+
+// $('#menor').on('change',()=> Order(Productos, "menor"));
+// $('#mayor').on('change',()=> Order(Productos, "mayor"));
+// $('#porCategorias').on('change',()=> Order(Productos, "Categorias"));
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
@@ -9,6 +10,7 @@ function DisplayProductos(productos){
 
     for (let producto of productos){
         const element = document.createElement('div');
+        element.setAttribute("id", `productoN${producto.id}`);
         if(Array.isArray(producto.Categoría)){
             let VariasCategorias = document.createElement('div');
             VariasCategorias.setAttribute("id", "VariasCategorias");
@@ -41,21 +43,25 @@ function DisplayProductos(productos){
     }
 } 
 
+$("#selectOrder").on("change", (e) => { 
+    const selected = $( "#selectOrder option:selected" ).text();
+    Order(Productos, selected);
+})
 
 function Order(productos, tipo) {
+    
     productos.sort(function (a,b) {
-        
-        if(a.precio > b.precio && tipo == "menor"){
+        if(a.precio > b.precio && tipo == " Menor precio"){
             return 1;
-        }else if(a.precio < b.precio && tipo == "menor"){
+        }else if(a.precio < b.precio && tipo == " Menor precio"){
                 return -1;
-        }else if(a.precio == b.precio && tipo == "menor"){
+        }else if(a.precio == b.precio && tipo == " Menor precio"){
                 return 0;
-        } else if(a.precio > b.precio && tipo == "mayor"){
+        } else if(a.precio > b.precio && tipo == " Mayor precio"){
             return -1;
-        }else if(a.precio < b.precio && tipo == "mayor"){
+        }else if(a.precio < b.precio && tipo == " Mayor precio"){
                 return 1;
-        }else if(a.precio == b.precio && tipo == "mayor"){
+        }else if(a.precio == b.precio && tipo == " Mayor precio"){
                 return 0;
         } else if(a.id > b.id){
             return 1;

@@ -335,13 +335,28 @@ h1{
     margin-right: 5%;
 }
 
-#Categorías{
+#filtros{
+    display: flex;
+    flex-direction: column;
     margin-top: 2%;
+}
+
+#Categorías{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+#Ordenar{
+    width: 40%;
+}
+#selectOrder{
+    width: 70%;
+}
+
+
 
 #opcionesCategorias{
     display: flex;
