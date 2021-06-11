@@ -1,5 +1,6 @@
 body{
     box-sizing: border-box;
+    background-color: rgb(252, 243, 240);
 }
 
 #menu-alternativo{
@@ -123,7 +124,6 @@ li > ul{
     height: 50px;
     text-align: center;
     border-radius: 50%;
-  
 }
 /*  fin Configuraciónes para el menu */
 
@@ -331,6 +331,7 @@ h1{
 #productos{
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 #filtros{
@@ -361,6 +362,9 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+#opcionesCategorias p{
+    margin: 2px;
 }
 
 #listadoproductos{
@@ -457,13 +461,6 @@ h1{
     padding: 10px;
     color: rgba(0,0,0,0.5);
 }
-/* #producto>div:hover{
-    background-color: rgb(239, 211, 200);
-    transition: all .3s;
-    cursor: pointer;
-    width: 25.5%;
-    height: 365px;
-} */
 
 #producto>div .row1{
     display: flex;
@@ -740,14 +737,16 @@ h1{
         max-height: auto;
     }
 }
-
-/* IPAD */
-@media screen and (max-width: 770px){
-    /* Productos */
-    #carrito{
-        width: 120px;
+/* IPAD 1024 */
+@media screen and (max-width: 1030px){
+    #listadoproductos>div{
+        width: 32%;
     }
-    /* Carrito */
+}
+
+/* IPAD 768 */
+@media screen and (max-width: 770px){
+    /* index */
     #QuienesSomos{
         flex-direction: column-reverse;
     }
@@ -772,20 +771,38 @@ h1{
         width: 90%;
         height: 100%;
     }
-    /*
-    
-    #listadoreseñas{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 2000px;
-        overflow:scroll;
-        width: 100%;
+    /* Productos */
+    #carrito{
+        width: 120px;
+    }
+    #listadoproductos>div{
+        width: 32%;
+    }
+
+    #listadoproductos>div img{
+        max-height: 100px;
     }
     
-    .titulo_reseñas{
+    #VariasCategorias{
+        flex-direction: column;
+    }
+    
+    /* Carrito */
+    
+}
+/* Surface Duo 550 */
+@media screen and (max-width: 550px){
+    #logo{
+        width:25px;
+        height: 25px;
         text-align: center;
-    } */
+        border-radius: 50%;
+    }
+    /* Productos */
+    #productos h1{
+        margin-top: 5%;
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 700px){
