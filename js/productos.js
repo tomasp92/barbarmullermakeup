@@ -6,7 +6,6 @@
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
-    console.log("🚀 ~ productos", productos)
     let listadoProductos = document.querySelector('#listadoproductos');
     listadoProductos.innerHTML = "";
 
@@ -113,8 +112,7 @@ $(async ()=>  {
     Productos = await getProducts();
     Productos = agregarCategorias(Productos, Categorias)
     DisplayProductos(Productos);
-    console.log("Productos en Productos",Productos);
-    
+
     storagevalues = localStorage.Carrito;
  
     if (storagevalues === null){
@@ -124,7 +122,6 @@ $(async ()=>  {
     }else{
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }
-    
     
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();

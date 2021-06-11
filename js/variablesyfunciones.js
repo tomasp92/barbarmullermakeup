@@ -3,10 +3,8 @@ const productosJson = 'js/productos.json'
 const getProducts = async ()=>{
     return await ($.getJSON(productosJson, (respuesta, estado)=>{
         if(estado === 'success'){
-            console.log(estado)
             const misDatos = respuesta;
             const Productos = misDatos;
-            console.log("🚀 ~ Productos", Productos);
             return Productos
         }
     }))
@@ -15,9 +13,7 @@ const getProducts = async ()=>{
 const getCategories = async ()=>{
     return await ($.getJSON(categoriasJson, (respuesta, estado)=>{
         if(estado === 'success'){
-            console.log(estado)
             const Categorias = respuesta;
-            console.log("🚀 ~ Categorias", Categorias);
             return Categorias
         }
     }))
@@ -55,7 +51,6 @@ function TotalDeProductos(){
 function ListadoCarrito(productoid){
     let productoEnCarrito = Carrito.find(element => element.id == productoid);
     if(productoEnCarrito === undefined){
-        console.log("todavía no agregue al carrito");
         productoEnCarrito = Object.assign({}, Productos.find(element => element.id == productoid));
         productoEnCarrito.cantidad = 1;
         Carrito.push(productoEnCarrito);
@@ -83,11 +78,9 @@ function RestarAlCarito(productoid){
 }
 
 function EliminarDelCarrito(productoid){
-    console.log("Carrito existe: ", Carrito);
     if(productoid == 'vaciarCarrito' || Carrito.length < 2){
         for(producto of Carrito){
             let id = `#producto${producto.id}`;
-            console.log(id)
             $(id).hide(1000);
         }
         Carrito = [];
@@ -100,7 +93,6 @@ function EliminarDelCarrito(productoid){
         $(id).animate({opacity: '0',},'slow')
         .slideUp(800);
         let productoEnCarrito = Carrito.find(element => element.id == productoid);
-        console.log("🚀 ~ productoEnCarrito", productoEnCarrito)
         Carrito.splice(Carrito.indexOf(productoEnCarrito), 1);
     }
     localStorage.setItem("ListaCarrito", JSON.stringify(Carrito));

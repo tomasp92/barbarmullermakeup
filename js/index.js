@@ -4,7 +4,6 @@ let divCarrito = document.querySelector('#carrito');
 let divShop = document.querySelector('#shop');
 
 function DisplayCarrito(carrito) {
-    console.log('carrito: ' + carrito);
     if(carrito > 0){
         divCarrito.style.display = 'block';
         divShop.style.display = 'none';
@@ -22,7 +21,6 @@ function DisplayCarouselProductosyServicios(){
     counterProductos = 0;
     counterServicios = 0;
     for (let producto of productos){
-        console.log(producto);
         const element = document.createElement('div');
         element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
         <div class="precio">$${producto.precio}</div>
@@ -55,20 +53,14 @@ let storagevalues = localStorage.Carrito;
 
 $(()=>  {
    
-    // DisplayCarouselProductosyServicios();
-    
-    
+    // DisplayCarouselProductosyServicios();    
     if (storagevalues === null){
         totaldeproductos = 0;
-        console.log("🚀 ~ totaldeproductos", totaldeproductos)
         totalcarrito = 0;
-        console.log("🚀 ~ totalcarrito", totalcarrito);
         Carrito = [];
-        console.log("🚀 ~ Carrito", Carrito);
+        
     }else{
         Carrito = JSON.parse(localStorage.ListaCarrito);
-        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
-    
     }
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();

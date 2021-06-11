@@ -9,7 +9,6 @@ function getParameterByName(name) {
 
 // Función para mostrar el producto elegido en la pagina
 function ShowProducto(Productos){
-    console.log("Show Producto: ", Productos)
     // Función que obtiene el parametro prodId de la url
     idproducto = getParameterByName('prodId');
     let producto = Productos.find(element => element.id == idproducto);
@@ -84,11 +83,8 @@ $(async ()=>  {
 
     if (storagevalues === null){
         totaldeproductos = 0;
-        console.log("🚀 ~ totaldeproductos", totaldeproductos)
         totalcarrito = 0;
-        console.log("🚀 ~ totalcarrito", totalcarrito);
         Carrito = [];
-        console.log("🚀 ~ Carrito", Carrito);
     }else{
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }

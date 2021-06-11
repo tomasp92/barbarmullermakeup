@@ -5,15 +5,11 @@
     storagevalues = localStorage.Carrito;
     if (storagevalues === null){
         totaldeproductos = 0;
-        console.log("🚀 ~ totaldeproductos storagevalues null", totaldeproductos)
         totalcarrito = 0;
-        console.log("🚀 ~ totalcarrito", totalcarrito);
         Carrito = [];
         
     }else{
         Carrito = JSON.parse(localStorage.ListaCarrito);
-        console.log("total de productos en carrito before function: " + typeof(totaldeproductos)); 
-    
     }
 
 
@@ -67,6 +63,5 @@ $(()=> {
     totaldeproductos = TotalDeProductos();
     $('#itemsnum').html(totaldeproductos);
     totalcarrito = PrecioTotal();
-    console.log(totalcarrito);
     DesplegarProductosCarrito(Carrito);
 });
