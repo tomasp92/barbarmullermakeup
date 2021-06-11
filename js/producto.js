@@ -8,10 +8,11 @@ function getParameterByName(name) {
 }
 
 // Función para mostrar el producto elegido en la pagina
-function ShowProducto(){
+function ShowProducto(Productos){
+    console.log("Show Producto: ", Productos)
     // Función que obtiene el parametro prodId de la url
     idproducto = getParameterByName('prodId');
-    producto = Productos.find(element => element.id == idproducto);
+    let producto = Productos.find(element => element.id == idproducto);
     const element = document.createElement('div');
         if(Array.isArray(producto.Categoría)){
             let VariasCategorias = document.createElement('div');
@@ -75,7 +76,10 @@ let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 
-$(()=>  {
+$(async ()=>  {
+    const Categorias = await getCategories();
+    let Productos = await getProducts();
+    Productos = agregarCategorias(Productos, Categorias)
     let storagevalues = localStorage.Carrito;
 
     if (storagevalues === null){
@@ -92,5 +96,5 @@ $(()=>  {
     totaldeproductos = TotalDeProductos();
     
     $('#itemsnum').html(totaldeproductos);
-    ShowProducto()
+    ShowProducto(Productos)
 });

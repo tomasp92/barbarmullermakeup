@@ -1,3 +1,4 @@
+                
 
 // $('#menor').on('change',()=> Order(Productos, "menor"));
 // $('#mayor').on('change',()=> Order(Productos, "mayor"));
@@ -5,6 +6,7 @@
 
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
+    console.log("🚀 ~ productos", productos)
     let listadoProductos = document.querySelector('#listadoproductos');
     listadoProductos.innerHTML = "";
 
@@ -93,31 +95,37 @@ function Order(productos, tipo) {
     DisplayProductos(productosCategoria);
  }
  
-function DesplegableCategorias(){
-    for (let Categoria of Categorias){
-        $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria}');" >${Categoria}</button></p>`);
+function DesplegableCategorias(categorias){
+    for (let Categoria of categorias){
+        $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria.Name}');" >${Categoria.Name}</button></p>`);
     }
+    $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('Todos');" >Todas</button></p>`);
+
 }
 
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
-
-$(()=>  {
+let Productos;
+$(async ()=>  {
+    const Categorias = await getCategories();
+    DesplegableCategorias(Categorias);
+    Productos = await getProducts();
+    Productos = agregarCategorias(Productos, Categorias)
     DisplayProductos(Productos);
-    DesplegableCategorias();
+    console.log("Productos en Productos",Productos);
+    
     storagevalues = localStorage.Carrito;
  
     if (storagevalues === null){
         totaldeproductos = 0;
-        console.log("🚀 ~ totaldeproductos", totaldeproductos)
         totalcarrito = 0;
-        console.log("🚀 ~ totalcarrito", totalcarrito);
         Carrito = [];
-        console.log("🚀 ~ Carrito", Carrito);
     }else{
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }
+    
+    
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
     

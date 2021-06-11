@@ -1,3 +1,43 @@
+const categoriasJson = 'js/categorias.json'
+const productosJson = 'js/productos.json'
+const getProducts = async ()=>{
+    return await ($.getJSON(productosJson, (respuesta, estado)=>{
+        if(estado === 'success'){
+            console.log(estado)
+            const misDatos = respuesta;
+            const Productos = misDatos;
+            console.log("🚀 ~ Productos", Productos);
+            return Productos
+        }
+    }))
+}
+
+const getCategories = async ()=>{
+    return await ($.getJSON(categoriasJson, (respuesta, estado)=>{
+        if(estado === 'success'){
+            console.log(estado)
+            const Categorias = respuesta;
+            console.log("🚀 ~ Categorias", Categorias);
+            return Categorias
+        }
+    }))
+}
+
+const agregarCategorias = (Productos, Categorias)=>{
+    for (let producto of Productos){
+        if (Array.isArray(producto.Categoría)){
+            for(let categoria of producto.Categoría){
+                let index = producto.Categoría.indexOf(categoria);
+                categoria = Categorias.find(element => element.id === categoria);
+                producto.Categoría[index]= categoria.Name;
+            }
+        } else{
+            producto.Categoría = Categorias.find(element => element.id === producto.Categoría)
+            producto.Categoría = producto.Categoría.Name
+        }
+    }
+    return Productos;
+}
 // funcion para sumar al total de productos del carrito
 function PrecioTotal(){
     let total = 0;

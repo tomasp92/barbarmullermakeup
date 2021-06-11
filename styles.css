@@ -14,13 +14,7 @@ body{
 
 /* Fondo */
 #content{
-    /* background-color: rgb(239, 211, 200); */
     background-color: rgb(252, 243, 240);
-    /* background-image: url("img/logo.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 50%;   
-    background-image: filter: blur(6px); */
 }
 
 #contenedor{
@@ -95,6 +89,10 @@ ul>li:hover>ul {
     width: fit-content;
     position: relative;
     display: inline;
+}
+
+button:focus{
+    outline: none;
 }
 
 /* no mostrar las opciones hasta que no pasemos con el mouse */
@@ -741,6 +739,53 @@ h1{
         max-width: 80%;
         max-height: auto;
     }
+}
+
+/* IPAD */
+@media screen and (max-width: 770px){
+    /* Productos */
+    #carrito{
+        width: 120px;
+    }
+    /* Carrito */
+    #QuienesSomos{
+        flex-direction: column-reverse;
+    }
+    #texto{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    #imagenesnosostras{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #imagenesnosostras img{
+        width: 45%;
+        max-height: auto;
+    }
+    #reseñas{
+        width: 90%;
+        height: 100%;
+    }
+    /*
+    
+    #listadoreseñas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 2000px;
+        overflow:scroll;
+        width: 100%;
+    }
+    
+    .titulo_reseñas{
+        text-align: center;
+    } */
 }
 
 @media screen and (max-width: 700px){

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "Name": "Servicios"
+    },
+    {
+        "id": 1,
+        "Name": "Limpieza"
+    },
+    {
+        "id": 2,
+        "Name": "Lociones"
+    },
+    {
+        "id": 3,
+        "Name": "Día"
+    },
+    {
+        "id": 4,
+        "Name": "Noche"
+    },
+    {
+        "id": 5,
+        "Name": "Renovadores celulares"
+    },
+    {
+        "id": 6,
+        "Name": "Ojos y labios"
+    },
+    {
+        "id": 7,
+        "Name": "Tratamientos especiales"
+    },
+    {
+        "id": 8,
+        "Name": "Ampollas"
+    },
+    {
+        "id": 9,
+        "Name": "Protección Solar"
+    }
+
+]
+
