@@ -739,6 +739,9 @@ h1{
 }
 /* IPAD 1024 */
 @media screen and (max-width: 1030px){
+    #productos .buscador{
+        width: 80%;
+    }
     #listadoproductos>div{
         width: 32%;
     }
@@ -790,21 +793,6 @@ h1{
     /* Carrito */
     
 }
-/* Surface Duo 550 */
-@media screen and (max-width: 550px){
-    #logo{
-        width:25px;
-        height: 25px;
-        text-align: center;
-        border-radius: 50%;
-    }
-    /* Productos */
-    #productos h1{
-        margin-top: 5%;
-        font-size: 30px;
-    }
-}
-
 @media screen and (max-width: 700px){
     .navegador{
         position: relative;
@@ -919,11 +907,7 @@ h1{
         color: rgba(0,0,0,0.5);
     }
 
-    
 
-    #carrito{
-        display: none;
-        }
     #carritoinicio{
         display: flex;
         background-color:  rgb(255, 196, 185);
@@ -940,4 +924,44 @@ h1{
         }
 
 }
+/* Surface Duo 550 */
+@media screen and (max-width: 550px){
+    #logo{
+        width:25px;
+        height: 25px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    /* Productos */
+    #productos h1{
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    #selectOrder{
+        width: 150px;
+    }
+}
+
+/* Galaxy Fold */
+@media screen and (max-width: 325px){
+    #logo{
+        width:25px;
+        height: 25px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    /* Productos */
+    #productos h1{
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    #productos{
+        
+    }
+    #misdatos{
+        font-size: 12px;
+    }
+}
+
+
 

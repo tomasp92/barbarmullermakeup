@@ -78,8 +78,9 @@ function Order(productos, tipo) {
  }
 
  function Filter(categoria){
-     let productosCategoria = Productos;
-    if (categoria != "Todos"){
+    let productosCategoria = Productos;
+    if (categoria != "Todas"){
+        console.log("true")
         productosCategoria = Productos.filter(elemento=> {
             if (elemento.Categoría == categoria){
                 return elemento
@@ -96,10 +97,17 @@ function Order(productos, tipo) {
  
 function DesplegableCategorias(categorias){
     for (let Categoria of categorias){
-        $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria.Name}');" >${Categoria.Name}</button></p>`);
+        $('#opcionesCategorias').append(` <option id="${Categoria.Name}" value="${Categoria.Name}">${Categoria.Name}</option>`);
     }
-    $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('Todos');" >Todas</button></p>`);
-
+    $('#opcionesCategorias').append(` <option selected d="Todas" value="Todas">Todas</option>`);
+    //     $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria.Name}');" >${Categoria.Name}</button></p>`);
+    // }
+    // $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('Todos');" >Todas</button></p>`);
+    // <option id="mayor" value="Mayor"> Mayor precio</option>
+    $("#opcionesCategorias").on("change", (e) => { 
+        const selected = $( "#opcionesCategorias option:selected" ).text();
+        Filter(selected);
+    })
 }
 
 let totaldeproductos = 0;
