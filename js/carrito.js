@@ -12,10 +12,12 @@
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }
 
-
+// Función que despliega todos los productos del carrito en caso de haber y sino devuelve otra vista
 function DesplegarProductosCarrito(carrito){
     let productosCarrito = document.querySelector('#listadocarrito');
+
     if (carrito.length > 0){
+        // En caso de que existan productos en el carrito los muestra
         productosCarrito.innerHTML = "";
         for (let producto of carrito){
             const element = document.createElement('div');
@@ -42,6 +44,7 @@ function DesplegarProductosCarrito(carrito){
         }
     }
     if(carrito.length < 1){
+        // Si no hay productos al carrito lo informa al usuario y le da la opción de ir a comprar
         productosCarrito.innerHTML = "No hay productos en el carrito";
         $('#totales').html("<a href='productos.html'>volver a productos</a>");
         $('#itemsnum').html("0");

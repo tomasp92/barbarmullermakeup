@@ -11,7 +11,11 @@ function getParameterByName(name) {
 function ShowProducto(Productos){
     // Función que obtiene el parametro prodId de la url
     idproducto = getParameterByName('prodId');
+
+    // encontrar ese producto por su id en la lista de productos
     let producto = Productos.find(element => element.id == idproducto);
+
+    // mostrarlo en el html
     const element = document.createElement('div');
         if(Array.isArray(producto.Categoría)){
             let VariasCategorias = document.createElement('div');

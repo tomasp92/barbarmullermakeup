@@ -1,9 +1,3 @@
-                
-
-// $('#menor').on('change',()=> Order(Productos, "menor"));
-// $('#mayor').on('change',()=> Order(Productos, "mayor"));
-// $('#porCategorias').on('change',()=> Order(Productos, "Categorias"));
-
 // Función para desplegar los productos en la pagina
 function DisplayProductos(productos){
     let listadoProductos = document.querySelector('#listadoproductos');
@@ -12,7 +6,9 @@ function DisplayProductos(productos){
     for (let producto of productos){
         const element = document.createElement('div');
         element.setAttribute("id", `productoN${producto.id}`);
+        
         if(Array.isArray(producto.Categoría)){
+            // cuando hay varias categorías será necesario iterar sobre las mismas para crear sus elementos html
             let VariasCategorias = document.createElement('div');
             VariasCategorias.setAttribute("id", "VariasCategorias");
             
@@ -44,11 +40,13 @@ function DisplayProductos(productos){
     }
 } 
 
+// El desplegable para seleccionar como estarán ordenados los productos de la pagina derivara a la función order con la condición que el usuario eligió
 $("#selectOrder").on("change", (e) => { 
     const selected = $( "#selectOrder option:selected" ).text();
     Order(Productos, selected);
 })
 
+// Función para dar un orden a los productos
 function Order(productos, tipo) {
     
     productos.sort(function (a,b) {
@@ -77,6 +75,20 @@ function Order(productos, tipo) {
     return productos;
  }
 
+ 
+// funcion para mostrar las opciones del desplegable de categorias que luego derivara a la funcion Filter con la condición de la categoría elegida
+function DesplegableCategorias(categorias){
+    for (let Categoria of categorias){
+        $('#opcionesCategorias').append(` <option id="${Categoria.Name}" value="${Categoria.Name}">${Categoria.Name}</option>`);
+    }
+    $('#opcionesCategorias').append(` <option selected d="Todas" value="Todas">Todas</option>`);
+    $("#opcionesCategorias").on("change", (e) => { 
+        const selected = $( "#opcionesCategorias option:selected" ).text();
+        Filter(selected);
+    })
+}
+
+ // Función para dar filtrar los productos por categorias
  function Filter(categoria){
     let productosCategoria = Productos;
     if (categoria != "Todas"){
@@ -94,21 +106,6 @@ function Order(productos, tipo) {
     }
     DisplayProductos(productosCategoria);
  }
- 
-function DesplegableCategorias(categorias){
-    for (let Categoria of categorias){
-        $('#opcionesCategorias').append(` <option id="${Categoria.Name}" value="${Categoria.Name}">${Categoria.Name}</option>`);
-    }
-    $('#opcionesCategorias').append(` <option selected d="Todas" value="Todas">Todas</option>`);
-    //     $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('${Categoria.Name}');" >${Categoria.Name}</button></p>`);
-    // }
-    // $('#opcionesCategorias').append(`<p><button class="categoria" onclick="Filter('Todos');" >Todas</button></p>`);
-    // <option id="mayor" value="Mayor"> Mayor precio</option>
-    $("#opcionesCategorias").on("change", (e) => { 
-        const selected = $( "#opcionesCategorias option:selected" ).text();
-        Filter(selected);
-    })
-}
 
 let totaldeproductos = 0;
 let totalcarrito = 0;
@@ -118,7 +115,8 @@ $(async ()=>  {
     const Categorias = await getCategories();
     DesplegableCategorias(Categorias);
     Productos = await getProducts();
-    Productos = agregarCategorias(Productos, Categorias)
+    Productos = agregarCategorias(Productos, Categorias);
+    
     DisplayProductos(Productos);
 
     storagevalues = localStorage.Carrito;
@@ -136,10 +134,3 @@ $(async ()=>  {
     
     $('#itemsnum').html(totaldeproductos);
 });
-
-
-
-
-
-
-// export const totalcarrito = 'totalcarrito';

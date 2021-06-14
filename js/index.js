@@ -1,5 +1,3 @@
-// import totalcarrito from './productos.js'
-
 let divCarrito = document.querySelector('#carrito');
 let divShop = document.querySelector('#shop');
 
@@ -14,45 +12,60 @@ function DisplayCarrito(carrito) {
     }
 }
 
-// carousels con productos y servicios
-function DisplayCarouselProductosyServicios(){
-    // let productos = fs.readFileSync('productos.json', 'utf8');
-    // productos = JSON.parse(productos);
-    counterProductos = 0;
-    counterServicios = 0;
-    for (let producto of productos){
-        const element = document.createElement('div');
-        element.innerHTML = `<button onclick="ListadoCarrito(${producto.precio});">Añadir al Carrito</button>
-        <div class="precio">$${producto.precio}</div>
-        <div class="categoria">${producto.Categoría}</div>
-        <div> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
-        <div class="subtitulo">${producto.subtitulo}</div>
-        <div class="titulo">${producto.titulo}</div>`;
-        if (producto.Categoría != 'Servicios'){
-            document.querySelector('#carouselproductos').appendChild(element);
-            counterProductos ++;
+function SeparateProductosSercicios(productos){
+    let Productos = [];
+    let Servicios = [];
+    for (producto of productos){
+      if (producto.Categoría != 'Servicios'){
+            Productos.push(producto);
         }else{
-            document.querySelector('#carouselservicios').appendChild(element);
-            counterServicios ++;
+            Servicios.push(producto);
         }
-        
     }
-} 
+    return [Productos,Servicios]
+}
+
+// carousels con productos y servicios
+function DisplayCarousel(items, itemTipe){
+    counterItem = 0;
+    for (let item of items){
+        let carouselItem = document.createElement('div');
+        card = ` 
+        <div class="carouselCard">  
+            <div onclick="DisplayOneProducto(${item.id});"> 
+                <img  src="${item.img}" alt="${item.titulo}"> 
+            </div>
+            <div class="tituloIndex titulo" onclick="DisplayOneProducto(${item.id});">${item.titulo}</div>
+            <div class="subtituloIndex subtitulo" onclick="DisplayOneProducto(${item.id});">${item.subtitulo}</div>
+            <div class="categoriaIndex categoria" onclick="DisplayOneProducto(${item.id});">${item.Categoría}</div>
+            <div class="precioIndex precio" onclick="DisplayOneProducto(${item.id});">$${item.precio}</div>
+            <button onclick="ListadoCarrito(${item.id});">Añadir al Carrito</button>
+        </div>
+        `;
+        if(counterItem < 1){
+            $(`#firstItem${itemTipe}`).html(card)
+        }else {
+            carouselItem.className = 'carousel-item';
+            carouselItem.innerHTML = card;
+            $(`#carouselInner${itemTipe}`).append(carouselItem)
+        }
+            counterItem ++;
+    }
+}
+
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 let storagevalues = localStorage.Carrito;
 
-// function scroll(e, scrollTo){
-//     e.preventDefault();
-//     $('html, body').animate({
-//         scrollTop: $(scrollTo).offser().top
-//     },2000);
-// }
-
-
-$(()=>  {
-   
+$(async ()=>  {
+    const Categorias = await getCategories();
+    let ProductosyServicios = await getProducts();
+    ProductosyServicios = agregarCategorias(ProductosyServicios, Categorias)
+    let [Productos, Servicios] = SeparateProductosSercicios(ProductosyServicios)
+    DisplayCarousel(Servicios, 'Servicios');
+    DisplayCarousel(Productos, 'Productos');
+    
     // DisplayCarouselProductosyServicios();    
     if (storagevalues === null){
         totaldeproductos = 0;
@@ -66,6 +79,3 @@ $(()=>  {
     totaldeproductos = TotalDeProductos();
     DisplayCarrito(totaldeproductos);
 });
-
-/* El boton del carrito en el index dirá shop y redirigirte a la pagina de productos 
- si no hay productos en el carrito No esta funcional todavía*/
