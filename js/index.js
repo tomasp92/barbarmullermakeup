@@ -39,7 +39,7 @@ function DisplayCarousel(items, itemTipe){
             <div class="subtituloIndex subtitulo" onclick="DisplayOneProducto(${item.id});">${item.subtitulo}</div>
             <div class="categoriaIndex categoria" onclick="DisplayOneProducto(${item.id});">${item.Categoría}</div>
             <div class="precioIndex precio" onclick="DisplayOneProducto(${item.id});">$${item.precio}</div>
-            <button onclick="ListadoCarrito(${item.id});">Añadir al Carrito</button>
+            <button onclick="ListadoCarrito(${item.id}, 'Index');">Añadir al Carrito</button>
         </div>
         `;
         if(counterItem < 1){
@@ -57,14 +57,15 @@ let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 let storagevalues = localStorage.Carrito;
-
+let Productos;
 $(async ()=>  {
     const Categorias = await getCategories();
     let ProductosyServicios = await getProducts();
     ProductosyServicios = agregarCategorias(ProductosyServicios, Categorias)
-    let [Productos, Servicios] = SeparateProductosSercicios(ProductosyServicios)
-    DisplayCarousel(Servicios, 'Servicios');
-    DisplayCarousel(Productos, 'Productos');
+    Productos = ProductosyServicios;
+    let [productos, servicios] = SeparateProductosSercicios(ProductosyServicios)
+    DisplayCarousel(servicios, 'Servicios');
+    DisplayCarousel(productos, 'Productos');
     
     // DisplayCarouselProductosyServicios();    
     if (storagevalues === null){

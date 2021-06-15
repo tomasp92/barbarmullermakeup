@@ -56,7 +56,7 @@ function TotalDeProductos(){
 }
 
 // Función para hacer el listado de productos del carrito y guardarlo en local storage
-function ListadoCarrito(productoid){
+function ListadoCarrito(productoid, page){
     // a partir del id del producto buscamos en el carrito si ese producto ya fue añadido al menos una vez
     let productoEnCarrito = Carrito.find(element => element.id == productoid);
     if(productoEnCarrito === undefined){
@@ -73,7 +73,13 @@ function ListadoCarrito(productoid){
     totalcarrito = PrecioTotal();
     totaldeproductos = TotalDeProductos();
     $('#itemsnum').html(totaldeproductos);
-    DesplegarProductosCarrito(Carrito);
+    if (page == 'Index'){
+        DisplayCarrito(totaldeproductos);
+    }else if (page == 'Carrito'){
+        DesplegarProductosCarrito(Carrito);
+    }
+    
+    
 }
 
 // Restarle 1 a la cantidad de un producto particular que ya se tiene en el carrito

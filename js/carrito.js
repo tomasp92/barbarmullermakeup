@@ -32,7 +32,7 @@ function DesplegarProductosCarrito(carrito){
             </div>
             <div class="lado">
                 <div class="cantidad">
-                    <div class="modify" onclick="RestarAlCarito(${producto.id});" >-</div><div> ${producto.cantidad}</div> <div class="modify" onclick="ListadoCarrito(${producto.id});">+</div>
+                    <div class="modify" onclick="RestarAlCarito(${producto.id});" >-</div><div> ${producto.cantidad}</div> <div class="modify" onclick="ListadoCarrito(${producto.id}, 'Carrito');">+</div>
                 </div>
                 <div class="precio">$${producto.precio}</div>
                 <svg onclick="EliminarDelCarrito(${producto.id});" class="svg-icon" viewBox="0 0 20 20">

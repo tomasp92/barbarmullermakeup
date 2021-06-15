@@ -21,14 +21,14 @@ function DisplayProductos(productos){
             VariasCategorias = VariasCategorias.outerHTML
             
             element.innerHTML = `
-            <button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
+            <button onclick="ListadoCarrito(${producto.id}, 'Productos');">Añadir al Carrito</button>
             <div class="precio" onclick="DisplayOneProducto(${producto.id});">$${producto.precio}</div>
             ${VariasCategorias}
             <div onclick="DisplayOneProducto(${producto.id});"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
             <div class="subtitulo" onclick="DisplayOneProducto(${producto.id});">${producto.subtitulo}</div>
             <div class="titulo" onclick="DisplayOneProducto(${producto.id});">${producto.titulo}</div>`;
         }else{
-            element.innerHTML = `<button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
+            element.innerHTML = `<button onclick="ListadoCarrito(${producto.id}, 'Productos');">Añadir al Carrito</button>
             <div class="precio" onclick="DisplayOneProducto(${producto.id});">$${producto.precio}</div>
             <div class="categoria">${producto.Categoría}</div>
             <div onclick="DisplayOneProducto(${producto.id});"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
