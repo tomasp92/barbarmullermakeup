@@ -83,7 +83,7 @@ ul>li:hover>ul {
     padding: 10px;
   }
 
-button:focus{
+button:focus, input:focus{
     outline: none;
 }
 
@@ -192,6 +192,9 @@ li > ul{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: rgb(251, 234, 230);
+    padding: 10px;
+    border-radius: 2%;
 }
 
 .carousel-item img{
@@ -235,9 +238,22 @@ li > ul{
     display: flex;
     flex-direction: column;
 }
+
+#imagenesnosostras{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 #imagenesnosostras img{
     max-width: 250px;
     max-height: auto;
+    margin-bottom: 3%;
+}
+#imagenesnosostras div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 #reseñas{
     background-color: white;

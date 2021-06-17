@@ -20,8 +20,6 @@
     $('#itemsnum').html("0");
 
  }
-
-
 // Función que despliega todos los productos del carrito en caso de haber y sino devuelve otra vista
 function DesplegarProductosCarrito(carrito){
     let productosCarrito = document.querySelector('#listadocarrito');
@@ -42,7 +40,7 @@ function DesplegarProductosCarrito(carrito){
             </div>
             <div class="lado">
                 <div class="cantidad">
-                    <div class="modify" onclick="RestarAlCarito(${producto.id});" >-</div><div> ${producto.cantidad}</div> <div class="modify" onclick="ListadoCarrito(${producto.id}, 'Carrito');">+</div>
+                    <div class="modify" onclick="RestarAlCarito(${producto.id});" >-</div><div> ${producto.cantidad}</div> <div class="modify" onclick="ListadoCarrito(${producto.id});">+</div>
                 </div>
                 <div class="precio">$${producto.precio}</div>
                 <svg onclick="EliminarDelCarrito(${producto.id});" class="svg-icon" viewBox="0 0 20 20">
