@@ -12,6 +12,16 @@
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }
 
+    // Función Comprar para llenar formulario con los datos.
+    function Comprar(costoTotal) {
+    $('#checkout').css('display', 'block');
+    $('#listadocarrito').html('');
+    $('#totales').html("");
+    $('#itemsnum').html("0");
+
+ }
+
+
 // Función que despliega todos los productos del carrito en caso de haber y sino devuelve otra vista
 function DesplegarProductosCarrito(carrito){
     let productosCarrito = document.querySelector('#listadocarrito');
@@ -55,7 +65,7 @@ function DesplegarProductosCarrito(carrito){
             <div id="preciototal" >
                 <p ><div>Total: $</div><div id="total"> ${totalcarrito}</div></p>
             </div>
-            <button id='Comprar'>Comprar</button>
+            <button onclick="Comprar(${totalcarrito});" id='Comprar'>Comprar</button>
             `);
         $('#vaciarCarrito').on('click',()=> EliminarDelCarrito('vaciarCarrito'));
     }
@@ -63,6 +73,7 @@ function DesplegarProductosCarrito(carrito){
 };
     
 $(()=> {
+    $('#checkout').css('display', 'none');
     totaldeproductos = TotalDeProductos();
     $('#itemsnum').html(totaldeproductos);
     totalcarrito = PrecioTotal();
