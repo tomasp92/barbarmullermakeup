@@ -25,31 +25,33 @@ function SeparateProductosSercicios(productos){
     return [Productos,Servicios]
 }
 
+
+function DisplayCarouselProductos(){}
 // carousels con productos y servicios
-function DisplayCarousel(items, itemTipe){
-    counterItem = 0;
-    for (let item of items){
+function DisplayCarouselServicios(servicios){
+    counterServicios = 0;
+    for (let servicio of servicios){
         let carouselItem = document.createElement('div');
         card = ` 
         <div class="carouselCard">  
-            <div onclick="DisplayOneProducto(${item.id});"> 
-                <img  src="${item.img}" alt="${item.titulo}"> 
+            <div onclick="DisplayOneProducto(${servicio.id});"> 
+                <img  src="${servicio.img}" alt="${servicio.titulo}"> 
             </div>
-            <div class="tituloIndex titulo" onclick="DisplayOneProducto(${item.id});">${item.titulo}</div>
-            <div class="subtituloIndex subtitulo" onclick="DisplayOneProducto(${item.id});">${item.subtitulo}</div>
-            <div class="categoriaIndex categoria" onclick="DisplayOneProducto(${item.id});">${item.Categoría}</div>
-            <div class="precioIndex precio" onclick="DisplayOneProducto(${item.id});">$${item.precio}</div>
-            <button onclick="ListadoCarrito(${item.id}, 'Index');">Añadir al Carrito</button>
+            <div class="tituloIndex titulo" onclick="DisplayOneProducto(${servicio.id});">${servicio.titulo}</div>
+            <div class="subtituloIndex subtitulo" onclick="DisplayOneProducto(${servicio.id});">${servicio.subtitulo}</div>
+            <div class="categoriaIndex categoria" onclick="DisplayOneProducto(${servicio.id});">${servicio.Categoría}</div>
+            <div class="precioIndex precio" onclick="DisplayOneProducto(${servicio.id});">$${servicio.precio}</div>
+            <button onclick="ListadoCarrito(${servicio.id});">Añadir al Carrito</button>
         </div>
         `;
-        if(counterItem < 1){
-            $(`#firstItem${itemTipe}`).html(card)
+        if(counterServicios < 1){
+            $('#firstItemServicios').html(card)
         }else {
             carouselItem.className = 'carousel-item';
             carouselItem.innerHTML = card;
-            $(`#carouselInner${itemTipe}`).append(carouselItem)
+            $('#carouselInnerServicios').append(carouselItem)
         }
-            counterItem ++;
+            counterServicios ++;
     }
 }
 
@@ -57,15 +59,13 @@ let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
 let storagevalues = localStorage.Carrito;
-let Productos;
+
 $(async ()=>  {
     const Categorias = await getCategories();
     let ProductosyServicios = await getProducts();
     ProductosyServicios = agregarCategorias(ProductosyServicios, Categorias)
-    Productos = ProductosyServicios;
-    let [productos, servicios] = SeparateProductosSercicios(ProductosyServicios)
-    DisplayCarousel(servicios, 'Servicios');
-    DisplayCarousel(productos, 'Productos');
+    let [Productos, Servicios] = SeparateProductosSercicios(ProductosyServicios)
+    DisplayCarouselServicios(Servicios);
     
     // DisplayCarouselProductosyServicios();    
     if (storagevalues === null){

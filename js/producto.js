@@ -38,7 +38,7 @@ function ShowProducto(Productos){
                     <div class="titulo">${producto.titulo}</div>
                     <div class="subtitulo">${producto.subtitulo}</div>
                     ${VariasCategorias}
-                    <button onclick="ListadoCarrito(${producto.id}, 'Producto');">Añadir al Carrito</button>
+                    <button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
                     <div class="precio">$${producto.precio}</div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ function ShowProducto(Productos){
                     <div class="titulo">${producto.titulo}</div>
                     <div class="subtitulo">${producto.subtitulo}</div>
                     <div class="categoria">${producto.Categoría}</div>
-                    <button onclick="ListadoCarrito(${producto.id}, 'Producto');">Añadir al Carrito</button>
+                    <button onclick="ListadoCarrito(${producto.id});">Añadir al Carrito</button>
                     <div class="precio">$${producto.precio}</div>
                 </div>
             </div>
@@ -78,10 +78,10 @@ function ShowProducto(Productos){
 let totaldeproductos = 0;
 let totalcarrito = 0;
 let Carrito = [];
-let Productos;
+
 $(async ()=>  {
     const Categorias = await getCategories();
-    Productos = await getProducts();
+    let Productos = await getProducts();
     Productos = agregarCategorias(Productos, Categorias)
     let storagevalues = localStorage.Carrito;
 
