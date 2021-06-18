@@ -172,7 +172,7 @@ li > ul{
 .carousel-item{
     position: relative;
     height: 400px;
-    width: 500px;    
+    width: 100%;    
 }
 .carousel-control-prev-icon{
     width: 30px;
@@ -297,13 +297,10 @@ li > ul{
     max-width: 50%;
 }
 
-.formulario{
-    width: 60%;
-    margin: auto;
-}
-
-.formulario ::placeholder {
-    color: white;
+iframe{
+    width: 400px;
+    height: 300px;
+    border:0;
 }
 
 .mb-3 .form-control{
@@ -553,6 +550,11 @@ h1{
     padding: 10px;
     margin: 20px;
     color: rgba(0,0,0,0.5);
+}
+
+#producto>div .row2{
+    width: 80%;
+    margin-top: 20px;
 }
 
 #producto>div .column2{
@@ -890,6 +892,20 @@ h1{
     }
 }
 
+@media screen and (max-width: 950px){
+    /* Index */
+    #ProductosIndex h2{
+        margin-left: 40px;
+    }
+    /* Carrito */
+    #listadocarrito{
+        width: 98%;
+    }
+
+    #listadocarrito>div{
+        width: 98%;
+    }
+}
 /* IPAD 768 */
 @media screen and (max-width: 770px){
     /* index */
@@ -911,9 +927,12 @@ h1{
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+    #imagenesnosostras{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     #imagenesnosostras img{
-        width: 45%;
+        width: 90%;
         max-height: auto;
     }
     #reseñas{
@@ -935,9 +954,53 @@ h1{
     #VariasCategorias{
         flex-direction: column;
     }
+
+    /* Producto */ 
+    #producto{
+        margin-top: 1;
+    }
+    #producto>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-between;
+    }
+    #producto>div .row1{
+        position: relative;
+        flex-direction:column;
+        margin-bottom: 10px;
+        min-height: 400px;
+    }
+
+    #producto>div img{
+        max-width: 250px;
+        max-height: 300px;
+    }
     
-    /* Carrito */
+    #producto>div .row2{
+        position: relative;
+        width: 90%;
+        margin-top: 15%;
+        padding-top: 10%;
+        max-height: 900px;
+    }
     
+    #producto>div .column2{
+        padding: 3px;
+        min-height: 100px;
+        margin-left: 50px;
+        justify-content: space-between;
+    } 
+
+    #producto .categoria{
+        font-size: 10px;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+
+    #producto .titulo{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 700px){
    /* index */
@@ -1063,8 +1126,28 @@ h1{
         justify-self: center;
         color:black;
 
-        }
+    }
 
+    #listadocarrito .izq{
+        width: 70%;
+    }
+
+    #listadocarrito .der{
+        width: 28%;
+    }
+
+        
+    #listadocarrito .titulo{
+        margin-bottom:10%;
+        font-size: 12px;
+    }
+    #listadocarrito svg{
+        height: 20px;
+        margin-right: 10px;
+    }
+    #listadocarrito .precio{
+        font-size: 15px;
+    }
 }
 /* Surface Duo 730 */
 @media screen and (max-width: 730px){
@@ -1081,6 +1164,45 @@ h1{
     }
 }
 
+@media screen and (max-width: 600px){
+    /* Carrito */
+    #listadocarrito>div{
+        height: 200px;
+    }
+    #listadocarrito .izq{
+        margin-top: 5px;
+        width: 40%;
+        flex-direction: column-reverse;
+        height: 150px;
+    }
+
+    #listadocarrito .der{
+        height: 200px;
+        width: 59%;
+        align-items: center;
+    }
+
+    #listadocarrito .titulos{
+        height: 20%;
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 4px;
+    }
+
+    #listadocarrito .titulo{
+        margin-bottom:2px;
+        font-size: 12px;
+    }
+
+    #listadocarrito .cantidad{
+        align-items: center;
+    }
+    
+}
+
+
 /* Surface Duo 550 */
 @media screen and (max-width: 550px){
     /* Productos */
@@ -1090,6 +1212,41 @@ h1{
     }
     #selectOrder{
         width: 150px;
+    }
+}
+
+@media screen and (max-width: 486px){
+    #misdatos{
+        font-size: 12px;
+    }
+    /* Index */
+    iframe{
+        width: 300px;
+        height: 300px;
+        border:0;
+    }
+
+    .redesparent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    /* Carrito */
+    #listadocarrito .izq{
+        width: 40%;
+    }
+    #listadocarrito img{
+        max-width: 100px;
+        height: auto;
+    }
+    #listadocarrito .der{
+        max-width: 66%;
+        justify-content: space-around;
+    }
+    #listadocarrito .titulos{
+        width: 100%;
     }
 }
 
@@ -1103,6 +1260,11 @@ h1{
     #misdatos{
         font-size: 12px;
     }
+    iframe{
+        height: 250px;
+        width:  250px;;
+    }
+
 }
 
 

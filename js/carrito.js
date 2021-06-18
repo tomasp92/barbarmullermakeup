@@ -17,8 +17,6 @@
     $('#checkout').css('display', 'block');
     $('#listadocarrito').html('');
     $('#totales').html("");
-    $('#itemsnum').html("0");
-
  }
 // Función que despliega todos los productos del carrito en caso de haber y sino devuelve otra vista
 function DesplegarProductosCarrito(carrito){
@@ -31,14 +29,14 @@ function DesplegarProductosCarrito(carrito){
             const element = document.createElement('div');
             element.setAttribute("id", `producto${producto.id}`);
             element.innerHTML = `
-            <div class="lado">
+            <div class="lado izq">
                 <div class="img"> <img src="${producto.img}" alt="foto del producto ${producto.titulo}"> </div>
                 <div class="titulos">
                     <div class="titulo">${producto.titulo}</div>
                     <div class="subtitulo">${producto.subtitulo}</div>
                 </div>
             </div>
-            <div class="lado">
+            <div class="lado der">
                 <div class="cantidad">
                     <div class="modify" onclick="RestarAlCarito(${producto.id});" >-</div><div> ${producto.cantidad}</div> <div class="modify" onclick="ListadoCarrito(${producto.id});">+</div>
                 </div>
