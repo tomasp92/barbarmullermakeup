@@ -909,6 +909,9 @@ h1{
 /* IPAD 768 */
 @media screen and (max-width: 770px){
     /* index */
+    #shop{
+        width: 100px;
+    }
     #QuienesSomos{
         flex-direction: column-reverse;
     }
