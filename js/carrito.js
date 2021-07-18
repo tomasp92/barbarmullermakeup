@@ -1,7 +1,8 @@
     let totaldeproductos = 0;
     let totalcarrito = 0;
     let Carrito = [];
-
+    let text = [];
+    let link = "https://api.whatsapp.com/send?phone=+5491150575667&text=Hola%20Barbara,%20quiero%20coordinar%20para%20hacer%20una%20compra%20de%20los%20siguientes%20productos:%20"
     storagevalues = localStorage.Carrito;
     if (storagevalues === null){
         totaldeproductos = 0;
@@ -12,8 +13,27 @@
         Carrito = JSON.parse(localStorage.ListaCarrito);
     }
 
+    const finalizarCompra = () => {
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        window.location = link + text.replace(' ', '%20');
+    };
+    
     // Función Comprar para llenar formulario con los datos.
     function Comprar(costoTotal) {
+        let counter = 1;
+        for (let producto of Carrito){
+        node = ` ${counter}) ${producto.titulo}, Cantidad: ${producto.cantidad};` ;
+        text = text + node
+        $('#textCompra').append(`<p>${node}</p>`);
+        counter += 1;
+    }
+    text = text.replace(/;*\s*$/, '.');
+    console.log('text: ', text)
     $('#checkout').css('display', 'block');
     $('#listadocarrito').html('');
     $('#totales').html("");
